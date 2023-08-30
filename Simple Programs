@@ -141,6 +141,39 @@ void convertTemp() {
     }
 }
 
+void findArea() {
+    float r;
+    cout << "Enter the radius of circle: ";
+    cin >> r;
+    float area = 3.142 * r * r;
+    cout << "Area of circle = " << area << endl;
+}
+
+void revNum() {
+    int num, revNum;
+    cout << "Enter any five digit number:";
+    cin >> num;
+    cout << "Entered num = " << num << endl;
+    
+    while(num > 0) {
+        revNum = revNum*10 + num%10; 
+        num = num/10;
+    }
+    cout << "Reversed num = " << revNum << endl;
+}
+
+void numSum() {
+    int num, sum;
+    cout << "Enter any five digit number: ";
+    cin >> num;
+    cout << "Entered num = " << num << endl;
+    
+    while(num > 0) {
+        sum = sum + num%10;
+        num = num/10;
+    }
+    cout << "Sum of entered digit = " << sum << endl;
+}
 
 
 int main() {
@@ -152,8 +185,11 @@ int main() {
     cout << "Enter 3 to find addition of two float no." << endl;
     cout << "Enter 4 to find average of two no." << endl;
     cout << "Enter 5 to find average marks scored in five subjects" << endl;
-    cout << "Enter 6 to exchange value of two variables" << endl;
-    cout << "Enter 7 to convert temperature (C and F)" << endl;
+    cout << "*Enter 6 to exchange value of two variables" << endl;
+    cout << "*Enter 7 to convert temperature (C and F)" << endl;
+    cout << "Enter 8 to find the area of circle" << endl;
+    cout << "*Enter 9 to find the reverse of number" << endl;
+    cout << "Enter 10 to find the sum of all digits entered" << endl;
     
     cout << endl;
     int prog;
@@ -186,6 +222,18 @@ int main() {
             
         case 7:
             convertTemp();
+            break;
+            
+        case 8:
+            findArea();
+            break;
+            
+        case 9:
+            revNum();
+            break;
+            
+        case 10:
+            numSum();
             break;
             
             
