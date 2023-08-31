@@ -1,1 +1,123 @@
 // If-Else programs
+#include <iostream>
+using namespace std;
+
+void findMaxAge() {
+    int a,b;
+    string stud1,stud2;
+    cout << "Enter the name of student 1: ";
+    cin >> stud1;
+    cout << "Enter the name of student 2: ";
+    cin >> stud2;
+    cout << "Enter the age of student 1: ";
+    cin >> a;
+    cout << "Enter the age of student 2: ";
+    cin >> b;
+    
+    if(a > b) {
+        cout << stud1 << " is older than " << stud2 << endl; 
+    }
+    else if(a == b) {
+        cout << "both students are of same age" << endl;
+    }
+    else {
+        cout << stud2 << " is older than " << stud1 << endl;
+    }
+}
+
+void findLargestAmongThree() {
+    int a,b,c;
+    cout << "Enter 1st num: ";
+    cin >> a;
+    cout << "Enter 2nd num: ";
+    cin >> b;
+    cout << "Enter 3rd num: ";
+    cin >> c;
+    
+    if((a > b) && (a > c)) {
+        cout << "Greatest number among all is: " << a;
+    }
+    else if((b > a) && (b > c)) {
+        cout << "Greatest number among all is: " << b;
+    }
+    else {
+        cout << "Greatest number among all is: " << c;
+    }
+}
+
+void isNegative() {
+    int num;
+    cout << "Enter any number: ";
+    cin >> num;
+    
+    if(num >= 0) {
+        cout << "Entered number is positive";
+    }
+    else {
+        cout << "Entered number is negative";
+    }
+}
+
+void isOdd() {
+    int num;
+    cout << "Enter any number: ";
+    cin >> num;
+    
+    if((num % 2) == 0) {
+        cout << "Entered number is even";
+    }
+    else {
+        cout << "Entered number is odd";
+    }
+}
+
+
+
+int main() {
+    // programs listing
+    cout << "---Super 100 programs by Mukhtar Khan---" << endl;
+    cout << endl;
+    cout << "Enter 1 to find the maximum age between two students" << endl;
+    cout << "Enter 2 to find largest number among three no." << endl;
+    cout << "Enter 3 to find whether a number is negative or positive." << endl;
+    cout << "Enter 4 to check if the number is even or odd." << endl;
+    cout << "*Enter 5 to check whether a year is a leap year or not." << endl;
+    cout << "Enter 6 to check whether the entered character is a vowel or consonant." << endl;
+    cout << "Enter 7 to find the largest number among two numbers." << endl;
+    
+    cout << endl;
+    int prog;
+    cout << "Enter the program number: ";
+    cin >> prog;
+    switch(prog) {
+        case 1:
+            findMaxAge();
+            break;
+            
+        case 2:
+            findLargestAmongThree();
+            break;
+            
+        case 3:
+            isNegative();
+            break;
+            
+        case 4:
+            isOdd();
+            break;
+            
+        // case 5:
+        //     isLeapYear();
+        //     break;
+            
+        // case 6:
+        //     isVowel();
+        //     break;
+            
+        // case 7:
+        //     findLargestAmongTwo();
+        //     break;
+    }
+
+    return 0;
+}
