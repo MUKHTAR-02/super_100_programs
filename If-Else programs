@@ -187,6 +187,56 @@ void isVowelBySwitch() {
     }
 }
 
+void displayDay() {
+    int year, month, day;
+
+    cout << "Enter date (YYYY MM DD): ";
+    cin >> year >> month >> day;
+
+    if (year < 0 || month < 1 || month > 12 || day < 1 || day > 31) {
+        cout << "Invalid date entered." << endl;
+    }
+    
+    if (month < 3) {
+        month += 12;
+        year--;
+    }
+    int k = year % 100;
+    int j = year / 100;
+    int dayOfWeek = (day + ((13 * (month + 1)) / 5) + k + (k / 4) + (j / 4) - (2 * j)) % 7;
+
+    // Convert dayOfWeek to 0-6 (0 = Saturday, 1 = Sunday, ..., 6 = Friday)
+    if (dayOfWeek < 0)
+        dayOfWeek += 7;
+    
+    switch (dayOfWeek) {
+        case 0:
+            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Saturday." << endl;
+            break;
+        case 1:
+            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Sunday." << endl;
+            break;
+        case 2:
+            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Monday." << endl;
+            break;
+        case 3:
+            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Tuesday." << endl;
+            break;
+        case 4:
+            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Wednesday." << endl;
+            break;
+        case 5:
+            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Thursday." << endl;
+            break;
+        case 6:
+            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Friday." << endl;
+            break;
+        default:
+            cout << "Invalid day of the week." << endl;
+            break;
+    }
+}
+
 
 int main() {
     // programs listing
@@ -245,9 +295,9 @@ int main() {
             isVowelBySwitch();
             break;
             
-        // case 10:
-        //     calculator();
-        //     break;
+        case 10:
+            displayDay();
+            break;
     }
 
     return 0;
