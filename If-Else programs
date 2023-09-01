@@ -1,4 +1,4 @@
-// If-Else programs
+// If-Else and Switch case programs
 #include <iostream>
 using namespace std;
 
@@ -102,6 +102,91 @@ void isVowel() {
     }
 }
 
+void findLargestAmongTwo() {
+    int a,b;
+    cout << "Enter 1st num: ";
+    cin >> a;
+    cout << "Enter 2nd num: ";
+    cin >> b;
+    
+    if(a > b) {
+        cout << "Greatest number is: " << a;
+    }
+    else {
+        cout << "Greatest number is: " << b;
+    }
+}
+
+void calculator() {
+    int x;
+    cout << "Enter 1 for Addition," << endl;
+    cout << "Enter 2 for Subtraction," << endl;
+    cout << "Enter 3 for Multiplication," << endl;
+    cout << "Enter 4 for Division" << endl;
+    cout << "Enter any number above mention: ";
+    cin >> x;
+    
+    float a,b,result;
+    cout << "Enter the value of a: ";
+    cin >> a;
+    cout << "Enter the value of b: ";
+    cin >> b;
+    
+    switch(x) {
+        case 1:
+            result = a+b;
+            cout << "Addition of " << a << " and " << b << " = " << result << endl;
+            break;
+            
+        case 2:
+            result = a-b;
+            cout << "Subtraction of " << a << " and " << b << " = " << result << endl;
+            break;
+            
+        case 3:
+            result = a*b;
+            cout << "Multiplication of " << a << " and " << b << " = " << result << endl;
+            break;
+            
+        case 4:
+            result = a/b;
+            cout << "Division of " << a << " and " << b << " = " << result << endl;
+            break;
+    }
+    
+}
+
+void isVowelBySwitch() {
+    char alpha;
+    cout << "Enter any alphabet: ";
+    cin >> alpha;
+    
+    switch(alpha) {
+        case 'a':
+            cout << "Entered alphabet is a Vowel" << endl;
+            break;
+            
+        case 'e':
+            cout << "Entered alphabet is a Vowel" << endl;
+            break;
+            
+        case 'i':
+            cout << "Entered alphabet is a Vowel" << endl;
+            break;
+            
+        case 'o':
+            cout << "Entered alphabet is a Vowel" << endl;
+            break;
+            
+        case 'u':
+            cout << "Entered alphabet is a Vowel" << endl;
+            break;
+            
+        default:
+            cout << "Entered alphabet is a consonant" << endl;
+    }
+}
+
 
 int main() {
     // programs listing
@@ -114,6 +199,10 @@ int main() {
     cout << "*Enter 5 to check whether a year is a leap year or not." << endl;
     cout << "Enter 6 to check whether the entered character is a vowel or consonant." << endl;
     cout << "Enter 7 to find the largest number among two numbers." << endl;
+    cout << "---Switch Case progs---" << endl;
+    cout << "Enter 8 to access the calculator." << endl;
+    cout << "Enter 9 to check whether the entered character is a vowel or consonant." << endl;
+    cout << "Enter 10 to display day of week as your choice." << endl;
     
     cout << endl;
     int prog;
@@ -144,8 +233,20 @@ int main() {
             isVowel();
             break;
             
-        // case 7:
-        //     findLargestAmongTwo();
+        case 7:
+            findLargestAmongTwo();
+            break;
+            
+        case 8:
+            calculator();
+            break;
+            
+        case 9:
+            isVowelBySwitch();
+            break;
+            
+        // case 10:
+        //     calculator();
         //     break;
     }
 
