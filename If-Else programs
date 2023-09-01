@@ -71,6 +71,36 @@ void isOdd() {
     }
 }
 
+void isLeapYear() {
+    int year;
+    cout << "Enter any year: ";
+    cin >> year;
+    
+    if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)){
+        if(year > 2023){
+            cout << "Entered year will be a Leap Year!" << endl;
+        }
+        else {
+            cout << "Entered year was a Leap Year!" << endl;
+        }
+    }
+    else {
+        cout << "Not a leap year" << endl;
+    }
+}
+
+void isVowel() {
+    char alpha;
+    cout << "Enter any alphabet: ";
+    cin >> alpha;
+    
+    if(alpha == 'a' || alpha == 'e' || alpha == 'i' || alpha == 'o' || alpha == 'u') {
+        cout << "Entered alphabet is a Vowel" << endl;
+    }
+    else {
+        cout << "Entered alphabet is a consonant" << endl;
+    }
+}
 
 
 int main() {
@@ -106,13 +136,13 @@ int main() {
             isOdd();
             break;
             
-        // case 5:
-        //     isLeapYear();
-        //     break;
+        case 5:
+            isLeapYear();
+            break;
             
-        // case 6:
-        //     isVowel();
-        //     break;
+        case 6:
+            isVowel();
+            break;
             
         // case 7:
         //     findLargestAmongTwo();
