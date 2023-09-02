@@ -1,1 +1,129 @@
-// code
+// Simple 10 programs
+#include <iostream>
+using namespace std;
+
+void printHello() {
+    for(int i=0; i<5; i++) {
+        cout << "Hello World" << endl;
+    }
+}
+
+void printNaturaNum() {
+    for(int i=1; i<=10; i++) {
+        cout << i << endl;
+    }
+}
+
+void printNaturalNumRev() {
+    for(int i=10; i>=1; i--) {
+        cout << i << endl;
+    }
+}
+
+void findFactorial() {
+    int num;
+    int fact = 1;
+    cout << "Enter any number to find the factorial: ";
+    cin >> num;
+    
+    while(num > 0) {
+        fact = fact * num;
+        num--;
+    }
+    cout << fact << endl;
+}
+
+void findFibonacci() {
+    int x;
+    cout << "Enter the number of terms until the Fibonacci series should be printed: ";
+    cin >> x;
+    
+    int a = 0;
+    int b = 1;
+    int temp;
+    cout << a << " ";
+    // int i = 0;
+    while(b <= x) {
+        cout << b << " ";
+        temp = b;
+        b = b + a;
+        a = temp;
+    }
+}
+
+void printNatualSum() {
+    cout << "Enter the number: ";
+    int num;
+    cin >> num;
+
+    int sum;
+    // by formula-
+    // sum = (num*(num+1)) / 2;
+    for(int i=1; i<=num; i++) {
+        sum += i;
+    }
+    cout << "Sum = " << sum << endl;
+}
+
+
+int main() {
+    // programs listing:
+    cout << "---Super 100 programs by Mukhtar Khan---" << endl;
+    cout << endl;
+    cout << "Enter 1 to print Hello World five times." << endl;
+    cout << "Enter 2 to print natural numbers (1 to 10)." << endl;
+    cout << "Enter 3 to print natural numbers in reverse order (10 to 1)" << endl;
+    cout << "Enter 4 to find the factorial of a number using a while loop" << endl;
+    cout << "Enter 5 to print Fibonacci series until given terms." << endl;
+    cout << "Enter 6 to display the sum of n natural numbers." << endl;
+    // cout << "Enter 7 display reverse of any number using loop." << endl;
+    
+    cout << endl;
+    int prog;
+    cout << "Enter the program number: ";
+    cin >> prog;
+    switch(prog) {
+        case 1: 
+            printHello();
+            break;
+            
+        case 2:
+            printNaturaNum();
+            break;
+            
+        case 3:
+            printNaturalNumRev();
+            break;
+            
+        case 4:
+            findFactorial();
+            break;
+            
+        case 5:
+            findFibonacci();
+            break;
+            
+        case 6:
+            printNatualSum();
+            break;
+            
+        // case 7:
+        //     convertTemp();
+        //     break;
+            
+        // case 8:
+        //     findArea();
+        //     break;
+            
+        // case 9:
+        //     revNum();
+        //     break;
+            
+        // case 10:
+        //     numSum();
+        //     break;
+            
+            
+    }
+    return 0;
+}
