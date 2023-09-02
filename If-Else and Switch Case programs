@@ -196,7 +196,8 @@ void displayDay() {
     if (year < 0 || month < 1 || month > 12 || day < 1 || day > 31) {
         cout << "Invalid date entered." << endl;
     }
-    
+
+// By Zeller's Congruence Theorem...
     if (month < 3) {
         month += 12;
         year--;
@@ -252,7 +253,7 @@ int main() {
     cout << "---Switch Case progs---" << endl;
     cout << "Enter 8 to access the calculator." << endl;
     cout << "Enter 9 to check whether the entered character is a vowel or consonant." << endl;
-    cout << "Enter 10 to display day of week as your choice." << endl;
+    cout << "***Enter 10 to display day of week as your choice." << endl;
     
     cout << endl;
     int prog;
