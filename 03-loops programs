@@ -77,6 +77,9 @@ void revNumLoop() {
     cout << "Reverse = " << rev << endl;
 }
 
+void fingSumUntilZero() {
+    // code
+}
 
 int main() {
     // programs listing:
@@ -89,6 +92,7 @@ int main() {
     cout << "Enter 5 to print Fibonacci series until given terms." << endl;
     cout << "Enter 6 to display the sum of n natural numbers." << endl;
     cout << "Enter 7 display reverse of any number using loop." << endl;
+    cout << "Enter 8 to print sum of all the numbers entered until typed 0." << endl;
     
     cout << endl;
     int prog;
@@ -123,9 +127,9 @@ int main() {
             revNumLoop();
             break;
             
-        // case 8:
-        //     findArea();
-        //     break;
+        case 8:
+            fingSumUntilZero();
+            break;
             
         // case 9:
         //     revNum();
