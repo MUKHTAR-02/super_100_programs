@@ -150,16 +150,16 @@ void findArea() {
 }
 
 void revNum() {
-    int num, revNum;
-    cout << "Enter any five digit number:";
+    int num, rem, rev;
+    cout << "Enter the Number: ";
     cin >> num;
-    cout << "Entered num = " << num << endl;
-    
-    while(num > 0) {
-        revNum = revNum*10 + num%10; 
+    CODESCRACKER:
+        rem = num%10;
+        rev = (rev*10) + rem;
         num = num/10;
-    }
-    cout << "Reversed num = " << revNum << endl;
+        if(num!=0)
+            goto CODESCRACKER;
+    cout << "Reverse = " << rev << endl;
 }
 
 void numSum() {
