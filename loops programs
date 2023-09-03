@@ -52,7 +52,7 @@ void findFibonacci() {
 }
 
 void printNatualSum() {
-    cout << "Enter the number: ";
+    cout << "Enter the num to print the sum: ";
     int num;
     cin >> num;
 
@@ -63,6 +63,18 @@ void printNatualSum() {
         sum += i;
     }
     cout << "Sum = " << sum << endl;
+}
+
+void revNumLoop() {
+    int num, rem, rev;
+    cout << "Enter the Number: ";
+    cin >> num;
+    while(num > 0) {
+        rem = num%10;
+        rev = (rev*10) + rem;
+        num = num/10;
+    }
+    cout << "Reverse = " << rev << endl;
 }
 
 
@@ -76,7 +88,7 @@ int main() {
     cout << "Enter 4 to find the factorial of a number using a while loop" << endl;
     cout << "Enter 5 to print Fibonacci series until given terms." << endl;
     cout << "Enter 6 to display the sum of n natural numbers." << endl;
-    // cout << "Enter 7 display reverse of any number using loop." << endl;
+    cout << "Enter 7 display reverse of any number using loop." << endl;
     
     cout << endl;
     int prog;
@@ -107,9 +119,9 @@ int main() {
             printNatualSum();
             break;
             
-        // case 7:
-        //     convertTemp();
-        //     break;
+        case 7:
+            revNumLoop();
+            break;
             
         // case 8:
         //     findArea();
