@@ -77,9 +77,58 @@ void revNumLoop() {
     cout << "Reverse = " << rev << endl;
 }
 
-void fingSumUntilZero() {
-    // code
+int fingSumUntilZero() {
+    int num, sum;
+    COUNTER:
+    cout << "Enter the Number to Add the number: " << endl; 
+    cout << "Enter 0 to terminate the program: ";
+    cin >> num;
+    
+    switch(num) {
+        case 0: 
+            cout << "End of the program, the total sum = " << sum << endl;
+            return 0;
+            
+        default:
+            sum = sum + num;
+            cout << "Sum = " << sum << endl;
+            break;
+    }
+    goto COUNTER;
+    return 0;
 }
+
+void revNumLoop2() {
+    int num, rem, rev;
+    cout << "Enter the five digit Number: ";
+    cin >> num;
+    if(num > 9999 && num <= 99999){
+        while(num > 0) {
+        rem = num%10;
+        rev = (rev*10) + rem;
+        num = num/10;
+        }
+        cout << "Reverse = " << rev << endl;
+    }
+    else {
+        cout << "Please enter a valid number." << endl;
+    }
+}
+
+void printNumInRange() {
+    int a,b;
+    cout << "Enter the starting range: ";
+    cin >> a;
+    cout << "Enter the ending range: ";
+    cin >> b;
+    
+    cout << "Range = ";
+    for(int i=a; i<=b; i++) {
+        cout << i << " ";
+    }
+    cout << endl;
+}
+
 
 int main() {
     // programs listing:
@@ -93,6 +142,9 @@ int main() {
     cout << "Enter 6 to display the sum of n natural numbers." << endl;
     cout << "Enter 7 display reverse of any number using loop." << endl;
     cout << "Enter 8 to print sum of all the numbers entered until typed 0." << endl;
+    cout << "Enter 9 to display reverse of five digits number using loop" << endl;
+    cout << "Enter 10 to to print numbers within the range." << endl;
+    
     
     cout << endl;
     int prog;
@@ -131,13 +183,13 @@ int main() {
             fingSumUntilZero();
             break;
             
-        // case 9:
-        //     revNum();
-        //     break;
+        case 9:
+            revNumLoop2();
+            break;
             
-        // case 10:
-        //     numSum();
-        //     break;
+        case 10:
+            printNumInRange();
+            break;
             
             
     }
