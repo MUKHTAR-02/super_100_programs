@@ -129,6 +129,50 @@ void printNumInRange() {
     cout << endl;
 }
 
+void multiNumTable() {
+    int num;
+    cout << "Enter the number to print the table: ";
+    cin >> num;
+    
+    for(int i=1; i<=10; i++) {
+        cout << "num * " << i << " = " << num*i << endl;
+    }
+}
+
+void addNumTable() {
+    int number;
+    cout << "Enter a number: ";
+    cin >> number;
+
+    cout << "Addition table of " << number << ":" << std::endl;
+ 
+    for (int i = 1; i <= 10; ++i) {
+        int result = number + i; // Calculate the addition table
+        cout << number << " + " << i << " = " << result << endl;
+    }
+}
+
+void findPrimeUptoN() {
+    int num;
+    cout << "Enter the number upto you want to print all prime number: ";
+    cin >> num;
+
+    int i=2;
+    int count;
+    while(i <= num) {
+        count = 0;
+        for(int j=2; j<i; j++) {
+            if(i % j == 0 && i != j) {
+                count++;
+            }
+        }
+        if(count < 1) {
+            cout << "prime no = " << i << endl;
+        }
+        i++;
+    }
+}
+
 
 int main() {
     // programs listing:
@@ -144,7 +188,9 @@ int main() {
     cout << "Enter 8 to print sum of all the numbers entered until typed 0." << endl;
     cout << "Enter 9 to display reverse of five digits number using loop" << endl;
     cout << "Enter 10 to to print numbers within the range." << endl;
-    
+    cout << "Enter 11 to print number table using multiplication operation." << endl;
+    cout << "Enter 12 to print number table using addition operator." << endl;
+    cout << "*Enter 13 to generate prime numbers series up to n numbers." << endl;
     
     cout << endl;
     int prog;
@@ -191,6 +237,17 @@ int main() {
             printNumInRange();
             break;
             
+        case 11:
+            multiNumTable();
+            break;
+            
+        case 12:
+            addNumTable();
+            break;
+            
+        case 13:
+            findPrimeUptoN();
+            break;
             
     }
     return 0;
