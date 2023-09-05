@@ -173,6 +173,9 @@ void findPrimeUptoN() {
     }
 }
 
+void allDigitSum() {
+    // code
+}
 
 int main() {
     // programs listing:
@@ -190,7 +193,8 @@ int main() {
     cout << "Enter 10 to to print numbers within the range." << endl;
     cout << "Enter 11 to print number table using multiplication operation." << endl;
     cout << "Enter 12 to print number table using addition operator." << endl;
-    cout << "*Enter 13 to generate prime numbers series up to n numbers." << endl;
+    cout << "Enter 13 to generate prime numbers series up to n numbers." << endl;
+    cout << "Enter 14 to find the sum of all digits of a digit" << endl;
     
     cout << endl;
     int prog;
@@ -247,6 +251,10 @@ int main() {
             
         case 13:
             findPrimeUptoN();
+            break;
+            
+        case 14:
+            allDigitSum();
             break;
             
     }
