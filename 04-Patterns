@@ -1,1 +1,93 @@
-// code
+// Simple 10 programs
+#include <iostream>
+using namespace std;
+
+void print1() {
+    for(int i=0; i<5; i++) {
+        for(int j=0; j<=i; j++) {
+            cout <<  "* ";
+        }
+        cout << endl;
+    }
+}
+
+void print2() {
+    for(int i=1; i<=5; i++) {
+        for(int j=1; j<=i; j++) {
+            cout <<  j << " ";
+        }
+        cout << endl;
+    }
+}
+
+void print3() {
+    for(char i='A'; i<='E'; i++) {
+        for(char j='A'; j<=i; j++) {
+            cout <<  j << " ";
+        }
+        cout << endl;
+    }
+}
+
+
+int main() {
+    // programs listing:
+    cout << "---Super 100 programs by Mukhtar Khan---" << endl;
+    cout << endl;
+    cout << "Enter 1 to print: " << endl << "* " << endl <<
+    "* * "<< endl << "* * * "<< endl << "* * * * "<< endl << "* * * * * "<< endl;
+    cout << "Enter 2 to print: " << endl << "1 " << endl <<
+    "1 2 "<< endl << "1 2 3 "<< endl << "1 2 3 4 "<< endl << "1 2 3 4 5 "<< endl;
+   cout << "Enter 3 to print: " << endl << "A " << endl <<
+    "A B "<< endl << "A B C "<< endl << "A B C D "<< endl << "A B C D E "<< endl;
+   
+    
+    cout << endl;
+    int prog;
+    cout << "Enter the program number: ";
+    cin >> prog;
+    switch(prog) {
+        case 1: 
+            print1();
+            break;
+            
+        case 2:
+            print2();
+            break;
+            
+        case 3:
+            print3();
+            break;
+            
+        // case 4:
+        //     print1();
+        //     break;
+            
+        // case 5:
+        //     print1();
+        //     break;
+            
+        // case 6:
+        //     print1();
+        //     break;
+            
+        // case 7:
+        //     print1();
+        //     break;
+            
+        // case 8:
+        //     print1();
+        //     break;
+            
+        // case 9:
+        //     print1();
+        //     break;
+            
+        // case 10:
+        //     print1();
+        //     break;
+            
+            
+    }
+    return 0;
+}
