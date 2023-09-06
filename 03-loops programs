@@ -174,7 +174,18 @@ void findPrimeUptoN() {
 }
 
 void allDigitSum() {
-    // code
+    int num, sum;
+    cout << "Enter any number for the sum: ";
+    cin >> num;
+    cout << "Entered digit = " << num << endl;
+    
+    int rem;
+    while(num > 0) {
+        rem = num % 10;
+        sum = sum + rem;
+        num = num/10;
+    }
+    cout << "Sum of all digit is = " << sum << endl;
 }
 
 int main() {
