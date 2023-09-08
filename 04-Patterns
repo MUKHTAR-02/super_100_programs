@@ -29,6 +29,33 @@ void print3() {
     }
 }
 
+void print4() {
+    for(int i=1; i<=5; i++) {
+        for(int j=1; j<=i; j++) {
+            cout <<  j << " ";
+        }
+        cout << endl;
+    }
+}
+
+void print5() {
+    for(int i=1; i<=5; i++) {
+        for(int j=5; j>=i; j--) {
+            cout << "* " << " ";
+        }
+        cout << endl;
+    }
+}
+
+void print6() {
+    for(int i=5; i>=0; i--) {
+        for(int j=1; j<=i; j++) {
+            cout << j  << " ";
+        }
+        cout << endl;
+    }
+}
+
 
 int main() {
     // programs listing:
@@ -38,8 +65,14 @@ int main() {
     "* * "<< endl << "* * * "<< endl << "* * * * "<< endl << "* * * * * "<< endl;
     cout << "Enter 2 to print: " << endl << "1 " << endl <<
     "1 2 "<< endl << "1 2 3 "<< endl << "1 2 3 4 "<< endl << "1 2 3 4 5 "<< endl;
-   cout << "Enter 3 to print: " << endl << "A " << endl <<
+    cout << "Enter 3 to print: " << endl << "A " << endl <<
     "A B "<< endl << "A B C "<< endl << "A B C D "<< endl << "A B C D E "<< endl;
+    cout << "Enter 4 to print: " << endl << "1 " << endl <<
+    "1 2 "<< endl << "1 2 3 " << endl << "1 2 3 4 "<< endl << "1 2 3 4 5 "<< endl;
+    cout << "Enter 5 to print: " << endl << "* * * * * " << endl <<
+    "* * * * "<< endl << "* * * "<< endl << "* * "<< endl << "* "<< endl;
+    cout << "Enter 6 to print: " << endl << "1 2 3 4 5 " << endl <<
+    "1 2 3 4 "<< endl << "1 2 3 "<< endl << "1 2 "<< endl << "1 "<< endl;
    
     
     cout << endl;
@@ -59,17 +92,17 @@ int main() {
             print3();
             break;
             
-        // case 4:
-        //     print1();
-        //     break;
+        case 4:
+            print4();
+            break;
             
-        // case 5:
-        //     print1();
-        //     break;
+        case 5:
+            print5();
+            break;
             
-        // case 6:
-        //     print1();
-        //     break;
+        case 6:
+            print6();
+            break;
             
         // case 7:
         //     print1();
