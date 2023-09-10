@@ -1,4 +1,9 @@
 // Simple 10 programs
+
+// TIPS for patterns:
+// no of rows depends on i
+// no of columns depends on j
+
 #include <iostream>
 using namespace std;
 
@@ -56,6 +61,24 @@ void print6() {
     }
 }
 
+void print7() {
+    for(char i='E'; i>='A'; i--) {
+        for(char j='A'; j<=i; j++) {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+
+int print8() {
+    for(int i=1; i<=5; i++) {
+        for(int j=i; j<=5; j++) {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+ 
 
 int main() {
     // programs listing:
@@ -73,6 +96,9 @@ int main() {
     "* * * * "<< endl << "* * * "<< endl << "* * "<< endl << "* "<< endl;
     cout << "Enter 6 to print: " << endl << "1 2 3 4 5 " << endl <<
     "1 2 3 4 "<< endl << "1 2 3 "<< endl << "1 2 "<< endl << "1 "<< endl;
+    cout << "Enter 7 to print: " << endl << "A B C D E " << endl <<
+    "A B C D "<< endl << "A B C "<< endl << "A B "<< endl << "A "<< endl;
+    cout << "*Enter 8 to print: " << endl << "1 2 3 4 5 " << endl << "2 3 4 5 "<< endl << "3 4 5 "<< endl << "4 5 "<< endl << "5 "<< endl;
    
     
     cout << endl;
@@ -104,13 +130,13 @@ int main() {
             print6();
             break;
             
-        // case 7:
-        //     print1();
-        //     break;
+        case 7:
+            print7();
+            break;
             
-        // case 8:
-        //     print1();
-        //     break;
+        case 8:
+            print8();
+            break;
             
         // case 9:
         //     print1();
