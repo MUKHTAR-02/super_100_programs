@@ -1,211 +1,115 @@
 // Simple 10 programs
+
+// TIPS for patterns:
+// no of rows depends on i
+// no of columns depends on j
+
 #include <iostream>
 using namespace std;
 
-void printHello() {
+void print1() {
     for(int i=0; i<5; i++) {
-        cout << "Hello World" << endl;
-    }
-}
-
-void printNaturaNum() {
-    for(int i=1; i<=10; i++) {
-        cout << i << endl;
-    }
-}
-
-void printNaturalNumRev() {
-    for(int i=10; i>=1; i--) {
-        cout << i << endl;
-    }
-}
-
-void findFactorial() {
-    int num;
-    int fact = 1;
-    cout << "Enter any number to find the factorial: ";
-    cin >> num;
-    
-    while(num > 0) {
-        fact = fact * num;
-        num--;
-    }
-    cout << fact << endl;
-}
-
-void findFibonacci() {
-    int x;
-    cout << "Enter the number of terms until the Fibonacci series should be printed: ";
-    cin >> x;
-    
-    int a = 0;
-    int b = 1;
-    int temp;
-    cout << a << " ";
-    // int i = 0;
-    while(b <= x) {
-        cout << b << " ";
-        temp = b;
-        b = b + a;
-        a = temp;
-    }
-}
-
-void printNatualSum() {
-    cout << "Enter the num to print the sum: ";
-    int num;
-    cin >> num;
-
-    int sum;
-    // by formula-
-    // sum = (num*(num+1)) / 2;
-    for(int i=1; i<=num; i++) {
-        sum += i;
-    }
-    cout << "Sum = " << sum << endl;
-}
-
-void revNumLoop() {
-    int num, rem, rev;
-    cout << "Enter the Number: ";
-    cin >> num;
-    while(num > 0) {
-        rem = num%10;
-        rev = (rev*10) + rem;
-        num = num/10;
-    }
-    cout << "Reverse = " << rev << endl;
-}
-
-int fingSumUntilZero() {
-    int num, sum;
-    COUNTER:
-    cout << "Enter the Number to Add the number: " << endl; 
-    cout << "Enter 0 to terminate the program: ";
-    cin >> num;
-    
-    switch(num) {
-        case 0: 
-            cout << "End of the program, the total sum = " << sum << endl;
-            return 0;
-            
-        default:
-            sum = sum + num;
-            cout << "Sum = " << sum << endl;
-            break;
-    }
-    goto COUNTER;
-    return 0;
-}
-
-void revNumLoop2() {
-    int num, rem, rev;
-    cout << "Enter the five digit Number: ";
-    cin >> num;
-    if(num > 9999 && num <= 99999){
-        while(num > 0) {
-        rem = num%10;
-        rev = (rev*10) + rem;
-        num = num/10;
+        for(int j=0; j<=i; j++) {
+            cout <<  "* ";
         }
-        cout << "Reverse = " << rev << endl;
-    }
-    else {
-        cout << "Please enter a valid number." << endl;
+        cout << endl;
     }
 }
 
-void printNumInRange() {
-    int a,b;
-    cout << "Enter the starting range: ";
-    cin >> a;
-    cout << "Enter the ending range: ";
-    cin >> b;
-    
-    cout << "Range = ";
-    for(int i=a; i<=b; i++) {
-        cout << i << " ";
-    }
-    cout << endl;
-}
-
-void multiNumTable() {
-    int num;
-    cout << "Enter the number to print the table: ";
-    cin >> num;
-    
-    for(int i=1; i<=10; i++) {
-        cout << "num * " << i << " = " << num*i << endl;
+void print2() {
+    for(int i=1; i<=5; i++) {
+        for(int j=1; j<=i; j++) {
+            cout <<  j << " ";
+        }
+        cout << endl;
     }
 }
 
-void addNumTable() {
-    int number;
-    cout << "Enter a number: ";
-    cin >> number;
+void print3() {
+    for(char i='A'; i<='E'; i++) {
+        for(char j='A'; j<=i; j++) {
+            cout <<  j << " ";
+        }
+        cout << endl;
+    }
+}
 
-    cout << "Addition table of " << number << ":" << std::endl;
+void print4() {
+    for(int i=1; i<=5; i++) {
+        for(int j=1; j<=i; j++) {
+            cout <<  j << " ";
+        }
+        cout << endl;
+    }
+}
+
+void print5() {
+    for(int i=1; i<=5; i++) {
+        for(int j=5; j>=i; j--) {
+            cout << "* " << " ";
+        }
+        cout << endl;
+    }
+}
+
+void print6() {
+    for(int i=5; i>=0; i--) {
+        for(int j=1; j<=i; j++) {
+            cout << j  << " ";
+        }
+        cout << endl;
+    }
+}
+
+void print7() {
+    for(char i='E'; i>='A'; i--) {
+        for(char j='A'; j<=i; j++) {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+
+int print8() {
+    for(int i=1; i<=5; i++) {
+        for(int j=i; j<=5; j++) {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+
+void print9() {
+    for(int i=5; i>=1; i--) {
+        for(int j=i; j<=5; j++) {
+            cout << "*" << " ";
+        }
+        cout << endl;
+    }
+}
  
-    for (int i = 1; i <= 10; ++i) {
-        int result = number + i; // Calculate the addition table
-        cout << number << " + " << i << " = " << result << endl;
-    }
-}
-
-void findPrimeUptoN() {
-    int num;
-    cout << "Enter the number upto you want to print all prime number: ";
-    cin >> num;
-
-    int i=2;
-    int count;
-    while(i <= num) {
-        count = 0;
-        for(int j=2; j<i; j++) {
-            if(i % j == 0 && i != j) {
-                count++;
-            }
-        }
-        if(count < 1) {
-            cout << "prime no = " << i << endl;
-        }
-        i++;
-    }
-}
-
-void allDigitSum() {
-    int num, sum;
-    cout << "Enter any number for the sum: ";
-    cin >> num;
-    cout << "Entered digit = " << num << endl;
-    
-    int rem;
-    while(num > 0) {
-        rem = num % 10;
-        sum = sum + rem;
-        num = num/10;
-    }
-    cout << "Sum of all digit is = " << sum << endl;
-}
 
 int main() {
     // programs listing:
     cout << "---Super 100 programs by Mukhtar Khan---" << endl;
     cout << endl;
-    cout << "Enter 1 to print Hello World five times." << endl;
-    cout << "Enter 2 to print natural numbers (1 to 10)." << endl;
-    cout << "Enter 3 to print natural numbers in reverse order (10 to 1)" << endl;
-    cout << "Enter 4 to find the factorial of a number using a while loop" << endl;
-    cout << "Enter 5 to print Fibonacci series until given terms." << endl;
-    cout << "Enter 6 to display the sum of n natural numbers." << endl;
-    cout << "Enter 7 display reverse of any number using loop." << endl;
-    cout << "Enter 8 to print sum of all the numbers entered until typed 0." << endl;
-    cout << "Enter 9 to display reverse of five digits number using loop" << endl;
-    cout << "Enter 10 to to print numbers within the range." << endl;
-    cout << "Enter 11 to print number table using multiplication operation." << endl;
-    cout << "Enter 12 to print number table using addition operator." << endl;
-    cout << "Enter 13 to generate prime numbers series up to n numbers." << endl;
-    cout << "Enter 14 to find the sum of all digits of a digit" << endl;
+    cout << "Enter 1 to print: " << endl << "* " << endl <<
+    "* * "<< endl << "* * * "<< endl << "* * * * "<< endl << "* * * * * "<< endl;
+    cout << "Enter 2 to print: " << endl << "1 " << endl <<
+    "1 2 "<< endl << "1 2 3 "<< endl << "1 2 3 4 "<< endl << "1 2 3 4 5 "<< endl;
+    cout << "Enter 3 to print: " << endl << "A " << endl <<
+    "A B "<< endl << "A B C "<< endl << "A B C D "<< endl << "A B C D E "<< endl;
+    cout << "Enter 4 to print: " << endl << "1 " << endl <<
+    "1 2 "<< endl << "1 2 3 " << endl << "1 2 3 4 "<< endl << "1 2 3 4 5 "<< endl;
+    cout << "Enter 5 to print: " << endl << "* * * * * " << endl <<
+    "* * * * "<< endl << "* * * "<< endl << "* * "<< endl << "* "<< endl;
+    cout << "Enter 6 to print: " << endl << "1 2 3 4 5 " << endl <<
+    "1 2 3 4 "<< endl << "1 2 3 "<< endl << "1 2 "<< endl << "1 "<< endl;
+    cout << "Enter 7 to print: " << endl << "A B C D E " << endl <<
+    "A B C D "<< endl << "A B C "<< endl << "A B "<< endl << "A "<< endl;
+    cout << "*Enter 8 to print: " << endl << "1 2 3 4 5 " << endl << "2 3 4 5 "<< endl << "3 4 5 "<< endl << "4 5 "<< endl << "5 "<< endl;
+    cout << "Enter 9 to print: " << endl << "         *" << endl << "       * *"<< endl << "     * * *"<< endl << "   * * * *"<< endl << " * * * * *"<< endl;
+   
     
     cout << endl;
     int prog;
@@ -213,60 +117,45 @@ int main() {
     cin >> prog;
     switch(prog) {
         case 1: 
-            printHello();
+            print1();
             break;
             
         case 2:
-            printNaturaNum();
+            print2();
             break;
             
         case 3:
-            printNaturalNumRev();
+            print3();
             break;
             
         case 4:
-            findFactorial();
+            print4();
             break;
             
         case 5:
-            findFibonacci();
+            print5();
             break;
             
         case 6:
-            printNatualSum();
+            print6();
             break;
             
         case 7:
-            revNumLoop();
+            print7();
             break;
             
         case 8:
-            fingSumUntilZero();
+            print8();
             break;
             
         case 9:
-            revNumLoop2();
+            print9();
             break;
             
-        case 10:
-            printNumInRange();
-            break;
+        // case 10:
+        //     print1();
+        //     break;
             
-        case 11:
-            multiNumTable();
-            break;
-            
-        case 12:
-            addNumTable();
-            break;
-            
-        case 13:
-            findPrimeUptoN();
-            break;
-            
-        case 14:
-            allDigitSum();
-            break;
             
     }
     return 0;
