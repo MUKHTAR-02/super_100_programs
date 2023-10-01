@@ -132,6 +132,21 @@ void print11() {
         cout << endl;
     }
 }
+
+void print12() {
+    cout << "line for proper code" << endl;
+    for(int i=1; i<=5; i++) {
+        int x = i;
+        for(int j=5; j>i; j--) {
+            cout << "  ";
+        }
+    for(int k=1; k<=i; k++) {
+        cout << x << " ";
+        x++;
+    }
+    cout << endl;
+    }
+}
  
 
 int main() {
@@ -156,6 +171,7 @@ int main() {
     cout << "*Enter 9 to print: " << endl << "         *" << endl << "       * *"<< endl << "     * * *"<< endl << "   * * * *"<< endl << " * * * * *"<< endl;
     cout << "Enter 10 to print: " << endl << "         1" << endl << "       1 2"<< endl << "     1 2 3"<< endl << "   1 2 3 4"<< endl << " 1 2 3 4 5"<< endl;
     cout << "Enter 11 to print: " << endl << "         A" << endl << "       A B"<< endl << "     A B C"<< endl << "   A B C D"<< endl << " A B C D E"<< endl;
+    cout << "*Enter 12 to print: " << endl << "         1" << endl << "       2 3"<< endl << "     3 4 5"<< endl << "   4 5 6 7"<< endl << " 5 6 7 8 9"<< endl;
    
     
     cout << endl;
@@ -207,9 +223,9 @@ int main() {
             print11();
             break;
             
-        // case 2:
-        //     print2();
-        //     break;
+        case 12:
+            print12();
+            break;
             
         // case 3:
         //     print3();
