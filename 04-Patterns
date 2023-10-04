@@ -160,6 +160,18 @@ void print13() {
         cout << endl;
     }
 }
+
+void print14() {
+    for(int i=5; i>=1; i--) {
+        for(int j=i; j<5; j++) {
+            cout << "  ";
+        }
+        for(int k=1; k<=i; k++) {
+            cout << k << " ";
+        }
+        cout << endl;
+    }
+}
  
 
 int main() {
@@ -186,6 +198,8 @@ int main() {
     cout << "Enter 11 to print: " << endl << "         A" << endl << "       A B"<< endl << "     A B C"<< endl << "   A B C D"<< endl << " A B C D E"<< endl;
     cout << "*Enter 12 to print: " << endl << "         1" << endl << "       2 3"<< endl << "     3 4 5"<< endl << "   4 5 6 7"<< endl << " 5 6 7 8 9"<< endl;
     cout << "*Enter 13 to print: " << endl << "& & & & &" << endl << "  & & & &"<< endl << "    & & &"<< endl << "      & &"<< endl << "        &"<< endl;
+    cout << "Enter 14 to print: " << endl << "1 2 3 4 5" << endl <<
+    "  1 2 3 4"<< endl << "    1 2 3"<< endl << "      1 2"<< endl << "        1"<< endl;
    
     
     cout << endl;
@@ -245,9 +259,9 @@ int main() {
             print13();
             break;
             
-        // case 4:
-        //     print4();
-        //     break;
+        case 14:
+            print14();
+            break;
             
         // case 5:
         //     print5();
