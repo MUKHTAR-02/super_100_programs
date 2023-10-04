@@ -172,6 +172,19 @@ void print14() {
         cout << endl;
     }
 }
+
+void print15() {
+    cout << "formality line" << endl;
+    for(char i='E'; i>='A'; i--) {
+        for(char j=i; j<'E'; j++) {
+            cout << "  ";
+        }
+        for(char k='A'; k<=i; k++) {
+            cout << k << " ";
+        }
+        cout << endl;
+    }
+}
  
 
 int main() {
@@ -200,6 +213,8 @@ int main() {
     cout << "*Enter 13 to print: " << endl << "& & & & &" << endl << "  & & & &"<< endl << "    & & &"<< endl << "      & &"<< endl << "        &"<< endl;
     cout << "Enter 14 to print: " << endl << "1 2 3 4 5" << endl <<
     "  1 2 3 4"<< endl << "    1 2 3"<< endl << "      1 2"<< endl << "        1"<< endl;
+    cout << "Enter 15 to print: " << endl << "A B C D E" << endl <<
+    "  A B C D"<< endl << "    A B C"<< endl << "      A B"<< endl << "        A"<< endl;
    
     
     cout << endl;
@@ -263,9 +278,9 @@ int main() {
             print14();
             break;
             
-        // case 5:
-        //     print5();
-        //     break;
+        case 15:
+            print15();
+            break;
             
         // case 6:
         //     print6();
