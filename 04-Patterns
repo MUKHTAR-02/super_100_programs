@@ -235,14 +235,25 @@ void print19() {
             cout << "&";
         }
         x = x + 2;
-        
-        // here's is another way (reduced space complexity)
-        // for (int k = 1; k <= (2 * i) - 1; k++) {
-        //     cout << "&";
-        // }
         cout << endl;
     }
 }
+
+// here's is another way (reduced space complexity)
+//  for (int i = 1; i <= n; i++) {
+//         // Print leading spaces
+//         int n = 5;
+//         for (int j = 1; j <= n - i; j++) {
+//             cout << " ";
+//         }
+
+//         // Print '&' symbols
+//         for (int k = 1; k <= 2 * i - 1; k++) {
+//             cout << "&";
+//         }
+
+//         cout << endl;
+//     }
  
 
 int main() {
