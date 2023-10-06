@@ -239,7 +239,7 @@ void print19() {
     }
 }
 
-// here's is another way (reduced space complexity)
+// here's is another way for prog 11 (reduced space complexity)
 //  for (int i = 1; i <= n; i++) {
 //         // Print leading spaces
 //         int n = 5;
@@ -254,6 +254,50 @@ void print19() {
 
 //         cout << endl;
 //     }
+ 
+ void print20() {
+     cout << "line formality" << endl;
+     int x = 9;
+     for(int i=5; i>=1; i--) {
+         for(int j=i; j<=5; j++) {
+             cout << " ";
+         }
+         for(int k=x; k>=1; k--) {
+             cout << "&";
+         }
+         x = x - 2; 
+         cout << endl;
+     }
+ }
+ 
+ void print21() {
+     cout << "line formality" << endl;
+     //  upper part
+     int x1 = 1;
+     for(int i=1; i<=5; i++) {
+         for(int j=i; j<=5; j++) {
+             cout << " ";
+         }
+         for(int k=x1; k>=1; k--) {
+             cout << "&";
+         }
+         x1 += 2;
+         cout << endl;
+     }
+     
+    //  lower part
+    int x2 = 7;
+    for(int i=1; i<=4; i++) {
+        for(int j=i; j>=0; j--) {
+            cout << " ";
+        }
+        for(int k=x2; k>=1; k--) {
+            cout << "&";
+        }
+        x2 -= 2;
+        cout << endl;
+    }
+ }
  
 
 int main() {
@@ -289,6 +333,8 @@ int main() {
     cout << "Enter 17 to print: " << endl << "     &     " << endl << "    & &     "<< endl << "   & & &      "<< endl << "  & & & &      "<< endl << " & & & & &      "<< endl;
    cout << "Enter 18 to print: " << endl << " & & & & &      " << endl << "  & & & &      "<< endl << "   & & &      "<< endl << "    & &     "<< endl << "     &     "<< endl;
    cout << "Enter 19 to print: " << endl << "     &" << endl << "    &&&"<< endl << "   &&&&&"<< endl << "  &&&&&&&"<< endl << " &&&&&&&&&"<< endl;
+   cout << "Enter 20 to print: " << endl << " &&&&&&&&&"<< endl << "  &&&&&&&" << endl << "   &&&&&"<< endl << "    &&&"<< endl << "     &"<< endl;
+   cout << "Enter 21 to print: " << endl << "     &" << endl << "    &&&"<< endl << "   &&&&&"<< endl << "  &&&&&&&"<< endl << " &&&&&&&&&"<< endl << "  &&&&&&&" << endl << "   &&&&&"<< endl << "    &&&"<< endl << "     &"<< endl;
     
     cout << endl;
     int prog;
@@ -370,6 +416,46 @@ int main() {
         case 19:
             print19();
             break;
+            
+        case 20:
+            print20();
+            break;
+            
+        case 21: 
+            print21();
+            break;
+            
+        // case 2:
+        //     print2();
+        //     break;
+            
+        // case 3:
+        //     print3();
+        //     break;
+            
+        // case 4:
+        //     print4();
+        //     break;
+            
+        // case 5:
+        //     print5();
+        //     break;
+            
+        // case 6:
+        //     print6();
+        //     break;
+            
+        // case 7:
+        //     print7();
+        //     break;
+            
+        // case 8:
+        //     print8();
+        //     break;
+            
+        // case 9:
+        //     print9();
+        //     break;
             
         // case 10:
         //     print10();
