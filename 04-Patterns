@@ -273,30 +273,87 @@ void print19() {
  void print21() {
      cout << "line formality" << endl;
      //  upper part
-     int x1 = 1;
+     int x = 1;
      for(int i=1; i<=5; i++) {
          for(int j=i; j<=5; j++) {
              cout << " ";
          }
-         for(int k=x1; k>=1; k--) {
+         for(int k=x; k>=1; k--) {
              cout << "&";
          }
-         x1 += 2;
+         x += 2;
          cout << endl;
      }
-     
     //  lower part
-    int x2 = 7;
+
+    x-=4;
     for(int i=1; i<=4; i++) {
         for(int j=i; j>=0; j--) {
             cout << " ";
         }
-        for(int k=x2; k>=1; k--) {
+        for(int k=x; k>=1; k--) {
             cout << "&";
         }
-        x2 -= 2;
+        x -= 2;
         cout << endl;
     }
+ }
+ 
+ void print22() {
+     int n = 5;
+     int s = 1;
+     cout << "line formality" << endl;
+     
+    //  upper part
+         for(int i=1; i<=n; i++) {
+         if(i == 1) {
+             cout << "&&&&&&&&&" << endl;
+         }
+        
+        // left upper side "&"  
+        for(int j=4; j>=i; j--) {
+            cout << "&";
+        }
+        // upper spaces
+        if(s <= 7) {
+            for(int k=s; k>=1; k--) {
+            cout << " ";
+        }
+        }
+        // right upper side "&"
+        for(int l=4; l>=i; l--) {
+            cout << "&";
+        }
+        s += 2;
+        if(i < n) {
+            cout << endl;
+        }
+     }
+    // lower part
+    s -= 6;
+    int x = 4;
+        for(int i=1; i<n-1; i++) {
+            // left lower side "&"
+            for(int j=x; j>=3; j--) {
+                cout << "&";
+            }
+            // lower space
+            for(int k=s; k>=1; k--) {
+                cout << " ";
+            }
+            // right lower side "&"
+            for(int l=x; l>=3; l--) {
+                cout << "&";
+            }
+            s -= 2;
+            if(i < n-1) {
+                x++;
+            }
+            cout << endl;
+            if(i == 3) {
+             cout << "&&&&&&&&&" << endl;
+            }
+        }
  }
  
 
@@ -335,6 +392,9 @@ int main() {
    cout << "Enter 19 to print: " << endl << "     &" << endl << "    &&&"<< endl << "   &&&&&"<< endl << "  &&&&&&&"<< endl << " &&&&&&&&&"<< endl;
    cout << "Enter 20 to print: " << endl << " &&&&&&&&&"<< endl << "  &&&&&&&" << endl << "   &&&&&"<< endl << "    &&&"<< endl << "     &"<< endl;
    cout << "Enter 21 to print: " << endl << "     &" << endl << "    &&&"<< endl << "   &&&&&"<< endl << "  &&&&&&&"<< endl << " &&&&&&&&&"<< endl << "  &&&&&&&" << endl << "   &&&&&"<< endl << "    &&&"<< endl << "     &"<< endl;
+   cout << "***Enter 22 to print: " << endl << "&&&&&&&&&" << endl << "&&&& &&&&" << endl << "&&&   &&&" << endl << "&&     &&" << endl << "&       &" << endl << "&&     &&" << endl << "&&&   &&&" << endl << "&&&& &&&&" << endl << "&&&&&&&&&" << endl;
+   
+   
     
     cout << endl;
     int prog;
@@ -425,9 +485,9 @@ int main() {
             print21();
             break;
             
-        // case 2:
-        //     print2();
-        //     break;
+        case 22:
+            print22();
+            break;
             
         // case 3:
         //     print3();
