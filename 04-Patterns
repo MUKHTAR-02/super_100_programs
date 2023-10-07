@@ -1,8 +1,9 @@
-// Simple 10 programs
+// Patterns programs
 
 // TIPS for patterns:
 // no of rows depends on i
 // no of columns depends on j
+// watch yt video (pattern trick @M2R) for a trick
 
 #include <iostream>
 using namespace std;
