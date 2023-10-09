@@ -81,7 +81,57 @@ void revoLoop() {
     cout << "Enter any number to reverse: ";
     cin >> x;
     
-    while(x > 0) kam baki hai
+    int rev = 0;
+    int rem = 0;
+    while(x > 0) {
+        rem = x % 10;
+        rev = (rev * 10) + rem;
+        x = x/10;
+    }
+    cout << "Reverse = " << rev << endl;
+}
+
+int sumoLoopTillZero() {
+    int sum = 0;
+    int i = 1;
+    int x;
+    while(i > 0) {
+        cout << "Add number: ";
+        cin >> x;
+        if(x == 0) {
+            cout << "Total sum = " << sum << endl;
+            return 0;
+        }
+        sum += x;
+    }
+    return 0;
+}
+
+int revoFiveLoop() {
+    int x;
+    cout << "Enter any five digit number to reverse: ";
+    cin >> x;
+    
+    if((x/10000 > 0) && (x/10000 < 10)) {
+        cout << "Number validated, reversing in progress..." << endl;
+    } else{
+       cout << "Enter a valid number!" << endl;
+       return 0;
+    }
+    
+    int rev = 0;
+    int rem = 0;
+    while(x > 0) {
+        rem = x % 10;
+        rev = (rev * 10) + rem;
+        x = x/10;
+    }
+    cout << "Reverse = " << rev << endl;
+    return 0;
+}
+
+void loop10() {
+    // code
 }
  
 
@@ -96,6 +146,9 @@ int main() {
    cout << "Enter 5 to print Fibonacci series until given terms " << endl;
    cout << "Enter 6 to display the sum of n natural numbers " << endl;
    cout << "Enter 7 to display reverse of any number " << endl;
+   cout << "Enter 8 to sum all the numbers until the you enters 0: " << endl;
+   cout << "Enter 9 to display reverse of any five digit number " << endl;
+   cout << "Enter 10 to print numbers within the range given by the you: " << endl;
    
     
     cout << endl;
@@ -131,17 +184,17 @@ int main() {
             revoLoop();
             break;
             
-        // case 8:
-        //     print8();
-        //     break;
+        case 8:
+            sumoLoopTillZero();
+            break;
             
-        // case 9:
-        //     print9();
-        //     break;
+        case 9:
+            revoFiveLoop();
+            break;
             
-        // case 10:
-        //     print1();
-        //     break;
+        case 10:
+            loop10();
+            break;
             
             
     }
