@@ -41,12 +41,41 @@ void array3() {
     cout << "Sum of all marks scored is: " << sum << endl;
 }
 
+int arrSearch() {
+    int key;
+    int n = 5;
+    int arr[n]= {5, 87, 96, 15, 6};
+    
+    cout << "Elements of array are: " << endl;
+    for(int i=0; i<n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    
+    cout << "Enter the element to search in array: ";
+    cin >> key;
+    
+    int i=0;
+    int count = 0;
+    while(i < n) {
+        if(arr[i] == key) {
+            cout << "Found at index: " << i << endl;
+            count++;
+        }
+        i++;
+    }
+    if(count != 1) {
+        cout << "Not found!" << endl;
+    }
+}
+
 int main() {
     cout << "---Array Programs---" << endl;
 
     cout << "Enter 1 to print the array: " << endl;
     cout << "Enter 2 to take an array from user: " << endl;
     cout << "Enter 3 to find the sum of five subjects: " << endl;
+    cout << "Enter 4 to search an element in an array: " << endl;
     
     cout << endl;
     int prog;
@@ -64,6 +93,10 @@ int main() {
             
         case 3:
             array3();
+            break;
+            
+        case 4:
+            arrSearch();
             break;
     }
     
