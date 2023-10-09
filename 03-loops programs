@@ -8,13 +8,95 @@ void helloFive() {
         cout << "Hello World" << endl;
     }
 }
+
+void loop2() {
+    int n=10;
+    for(int i=1; i<=n; i++) {
+        cout << i << endl;
+    }
+}
+
+void loop3() {
+    int n=10;
+    for(int i=n; i>=1; i--) {
+        cout << i << endl;
+    }
+}
+
+void factoLoop() {
+    int x;
+    cout << "Enter the number to find the factorial: ";
+    cin >> x;
+    
+    int fact = 1;
+    while(x > 0) {
+        fact = fact * x;
+        
+        x--;
+    }
+    cout << "Factorial = " << fact << endl;
+}
+
+int fiboLoop() {
+    int x;
+    cout << "Enter the number till you want to print fibonacci series: ";
+    cin >> x;
+    
+    int i = 1;
+    // starting terms
+    int a = 0;
+    int b = 1;
+    cout << a << " " << b << " "; // starting terms
+    int c;
+    while(c < x) {
+        c = a + b;
+        if(c > x) {
+            return 0;
+        }
+        cout << c << " ";
+        a = b;
+        b = c;
+    }
+    cout << endl;
+    return 0;
+}
+
+void sumoLoop() {
+    int x;
+    cout << "Enter the number till you want to print the sum: ";
+    cin >> x;
+    
+    int sum = 0;
+    int i=1;
+    while(i <= x) {
+        sum += i;
+        
+        i++;
+    }
+    cout << "Sum = " << sum << endl;
+}
+
+void revoLoop() {
+    int x;
+    cout << "Enter any number to reverse: ";
+    cin >> x;
+    
+    while(x > 0) kam baki hai
+}
  
 
 int main() {
     // programs listing:
     cout << "---Loops" << endl;
     
-   cout << "Enter 1 to print Hello World five times: " << endl;
+   cout << "Enter 1 to print Hello World five times " << endl;
+   cout << "Enter 2 to print num (1-10) " << endl;
+   cout << "Enter 3 to print num (10-1) " << endl;
+   cout << "Enter 4 to print factorial " << endl;
+   cout << "Enter 5 to print Fibonacci series until given terms " << endl;
+   cout << "Enter 6 to display the sum of n natural numbers " << endl;
+   cout << "Enter 7 to display reverse of any number " << endl;
+   
     
     cout << endl;
     int prog;
@@ -25,29 +107,29 @@ int main() {
             helloFive();
             break;
             
-        // case 2:
-        //     print2();
-        //     break;
+        case 2:
+            loop2();
+            break;
             
-        // case 3:
-        //     print3();
-        //     break;
+        case 3:
+            loop3();
+            break;
             
-        // case 4:
-        //     print4();
-        //     break;
+        case 4:
+            factoLoop();
+            break;
             
-        // case 5:
-        //     print5();
-        //     break;
+        case 5:
+            fiboLoop();
+            break;
             
-        // case 6:
-        //     print6();
-        //     break;
+        case 6:
+            sumoLoop();
+            break;
             
-        // case 7:
-        //     print7();
-        //     break;
+        case 7:
+            revoLoop();
+            break;
             
         // case 8:
         //     print8();
