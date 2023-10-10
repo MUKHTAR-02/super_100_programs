@@ -69,6 +69,32 @@ int arrSearch() {
     }
 }
 
+void largestInArray() {
+    int n = 5;
+    cout << "Size of array is 5" << endl;
+    int arr[n];
+    cout << "enter the elements of array: ";
+    for(int i=0; i<n; i++) {
+        cin >> arr[i];
+    }
+    cout << "entered elements are: " << endl;
+    for(int i=0; i<n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    
+    // By selection sort
+    int max = arr[0];
+    for(int i=1; i<n; i++) {
+        if(max < arr[i]) {
+            max = arr[i];
+        }
+    }
+    cout << "Largest element = " << max << endl;
+    
+}
+
+
 int main() {
     cout << "---Array Programs---" << endl;
 
@@ -76,6 +102,11 @@ int main() {
     cout << "Enter 2 to take an array from user: " << endl;
     cout << "Enter 3 to find the sum of five subjects: " << endl;
     cout << "Enter 4 to search an element in an array: " << endl;
+    cout << "Enter 5 to print the largest element in an array: " << endl;
+    cout << "Enter 6 to print smallest element in an array: " << endl;
+    cout << "Enter 7 to print the second largest element of an array: " << endl;
+    cout << "Enter 8 to print addition of two matrices using a multidimentional array: " << endl;
+    cout << "Enter 9 to print multiplication of two matrices using a multidimentional array: " << endl;
     
     cout << endl;
     int prog;
@@ -98,6 +129,26 @@ int main() {
         case 4:
             arrSearch();
             break;
+            
+        case 5:
+            largestInArray();
+            break;
+            
+        // case 2:
+        //     array2();
+        //     break;
+            
+        // case 3:
+        //     array3();
+        //     break;
+            
+        // case 4:
+        //     arrSearch();
+        //     break;
+            
+        // case 5:
+        //     largestInArray();
+        //     break;
     }
     
     return 0;
