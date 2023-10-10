@@ -69,7 +69,7 @@ int arrSearch() {
     }
 }
 
-void largestInArray() {
+void largestInArrayLoop() {
     int n = 5;
     cout << "Size of array is 5" << endl;
     int arr[n];
@@ -91,6 +91,68 @@ void largestInArray() {
         }
     }
     cout << "Largest element = " << max << endl;
+}
+
+void smallestInArrayLoop() {
+    int n = 5;
+    cout << "Size of array is 5" << endl;
+    int arr[n];
+    cout << "enter the elements of array: ";
+    for(int i=0; i<n; i++) {
+        cin >> arr[i];
+    }
+    cout << "entered elements are: " << endl;
+    for(int i=0; i<n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    
+    // By selection sort
+    int min = arr[0];
+    for(int i=1; i<n; i++) {
+        if(min > arr[i]) {
+            min = arr[i];
+        }
+    }
+    cout << "Smallest element = " << min << endl;
+}
+
+void secondLargestElementLoop() {
+    int n = 5;
+    cout << "Size of array is 5" << endl;
+    int arr[n];
+    cout << "enter the elements of array: ";
+    for(int i=0; i<n; i++) {
+        cin >> arr[i];
+    }
+    cout << "entered elements are: " << endl;
+    for(int i=0; i<n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    
+    // By selection sort
+    int max = arr[1];
+    int secLargest = arr[0];
+    for(int i=0; i<n; i++) {
+        if(max < arr[i]) {
+            secLargest = max;   // back up
+            max = arr[i];
+        }
+        else if((secLargest < arr[i]) && (arr[i] != max)) { // if not max then it may secLargest
+            secLargest = arr[i];
+        }
+    }
+    // if(max == secLargest) {
+    //         for(int j=0; j<n; j++) {
+    //             if((secLargest < arr[j]) && (arr[j] != max)) {
+    //                 secLargest = arr[j];
+    //             }
+    //         }
+    //     }
+    
+    cout << "Largest element = " << max << endl;
+    cout << "Second largest element = " << secLargest << endl;
     
 }
 
@@ -131,16 +193,16 @@ int main() {
             break;
             
         case 5:
-            largestInArray();
+            largestInArrayLoop();
             break;
             
-        // case 2:
-        //     array2();
-        //     break;
+        case 6:
+            smallestInArrayLoop();
+            break;
             
-        // case 3:
-        //     array3();
-        //     break;
+        case 7:
+            secondLargestElementLoop();
+            break;
             
         // case 4:
         //     arrSearch();
