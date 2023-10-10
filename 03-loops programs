@@ -141,6 +141,65 @@ void loop10() {
         cout << i << endl;
     }
 }
+
+void multiNumTable() {
+    int num;
+    cout << "Enter the number to print the table: ";
+    cin >> num;
+
+    for(int i=1; i<=10; i++) {
+        cout << "num * " << i << " = " << num*i << endl;
+    }
+}
+
+void addNumTable() {
+    int number;
+    cout << "Enter a number: ";
+    cin >> number;
+
+    cout << "Addition table of " << number << ":" << std::endl;
+
+    for (int i = 1; i <= 10; ++i) {
+        int result = number + i; // Calculate the addition table
+        cout << number << " + " << i << " = " << result << endl;
+    }
+}
+
+void findPrimeUptoN() {
+    int num;
+    cout << "Enter the number upto you want to print all prime number: ";
+    cin >> num;
+
+    int i=2;
+    int count;
+    while(i <= num) {
+        count = 0;
+        for(int j=2; j<i; j++) {
+            if(i % j == 0 && i != j) {
+                count++;
+            }
+        }
+        if(count < 1) {
+            cout << "prime no = " << i << endl;
+        }
+        i++;
+    }
+}
+
+void allDigitSum() {
+    int num, sum;
+    cout << "Enter any number for the sum: ";
+    cin >> num;
+    cout << "Entered digit = " << num << endl;
+
+    int rem;
+    while(num > 0) {
+        rem = num % 10;
+        sum = sum + rem;
+        num = num/10;
+    }
+    cout << "Sum of all digit is = " << sum << endl;
+}
  
 
 int main() {
@@ -157,6 +216,10 @@ int main() {
    cout << "Enter 8 to sum all the numbers until the you enters 0: " << endl;
    cout << "Enter 9 to display reverse of any five digit number " << endl;
    cout << "Enter 10 to print numbers within the range given by the you: " << endl;
+   cout << "Enter 11 to print number table using multiplication operation." << endl;
+   cout << "Enter 12 to print number table using addition operator." << endl;
+   cout << "*Enter 13 to generate prime numbers series up to n numbers." << endl;
+   cout << "Enter 14 to find the sum of all digits of a digit" << endl;
    
     
     cout << endl;
@@ -202,6 +265,22 @@ int main() {
             
         case 10:
             loop10();
+            break;
+            
+        case 11:
+            multiNumTable();
+            break;
+
+        case 12:
+            addNumTable();
+            break;
+
+        case 13:
+            findPrimeUptoN();
+            break;
+            
+        case 14:
+            allDigitSum();
             break;
             
             
