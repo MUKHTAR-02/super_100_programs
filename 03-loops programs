@@ -112,6 +112,7 @@ int revoFiveLoop() {
     cout << "Enter any five digit number to reverse: ";
     cin >> x;
     
+    // if(num > 9999 && num <= 99999)
     if((x/10000 > 0) && (x/10000 < 10)) {
         cout << "Number validated, reversing in progress..." << endl;
     } else{
