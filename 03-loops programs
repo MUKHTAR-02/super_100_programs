@@ -131,7 +131,14 @@ int revoFiveLoop() {
 }
 
 void loop10() {
-    // code
+    int a,b;
+    cout << "Enter the starting number: ";
+    cin >> a;
+    cout << "Enter the end number: ";
+    cin >> b;
+    for(int i=a; i<=b; i++) {
+        cout << i << endl;
+    }
 }
  
 
