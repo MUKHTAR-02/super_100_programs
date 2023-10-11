@@ -1,4 +1,163 @@
-// first matrix
+// Array Programs
+
+#include <iostream>
+using namespace std;
+
+void array() {
+    int n = 5;
+    int arr[n] = {5, 89, 95, 1, 57};
+    cout << "Elements of are: " << endl;
+    for(int i=0; i<n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+void array2() {
+    int n = 5;
+    int arr[n];
+    cout << "enter the elements of array: ";
+    for(int i=0; i<n; i++) {
+        cin >> arr[i];
+    }
+    cout << "entered elements are: " << endl;
+    for(int i=0; i<n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+void array3() {
+    int sum = 0;
+    int n = 5;
+    int arr[n];
+    cout << "Enter the five digit marks: ";
+    for(int i=0; i<n; i++) {
+        cin >> arr[i];
+    }
+    for(int i=0; i<n; i++) {
+        sum = sum + arr[i];
+    }
+    cout << "Sum of all marks scored is: " << sum << endl;
+}
+
+int arrSearch() {
+    int key;
+    int n = 5;
+    int arr[n]= {5, 87, 96, 15, 6};
+
+    cout << "Elements of array are: " << endl;
+    for(int i=0; i<n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    cout << "Enter the element to search in array: ";
+    cin >> key;
+
+    int i=0;
+    int count = 0;
+    while(i < n) {
+        if(arr[i] == key) {
+            cout << "Found at index: " << i << endl;
+            count++;
+        }
+        i++;
+    }
+    if(count != 1) {
+        cout << "Not found!" << endl;
+    }
+}
+
+void largestInArrayLoop() {
+    int n = 5;
+    cout << "Size of array is 5" << endl;
+    int arr[n];
+    cout << "enter the elements of array: ";
+    for(int i=0; i<n; i++) {
+        cin >> arr[i];
+    }
+    cout << "entered elements are: " << endl;
+    for(int i=0; i<n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    // By selection sort
+    int max = arr[0];
+    for(int i=1; i<n; i++) {
+        if(max < arr[i]) {
+            max = arr[i];
+        }
+    }
+    cout << "Largest element = " << max << endl;
+}
+
+void smallestInArrayLoop() {
+    int n = 5;
+    cout << "Size of array is 5" << endl;
+    int arr[n];
+    cout << "enter the elements of array: ";
+    for(int i=0; i<n; i++) {
+        cin >> arr[i];
+    }
+    cout << "entered elements are: " << endl;
+    for(int i=0; i<n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    // By selection sort
+    int min = arr[0];
+    for(int i=1; i<n; i++) {
+        if(min > arr[i]) {
+            min = arr[i];
+        }
+    }
+    cout << "Smallest element = " << min << endl;
+}
+
+void secondLargestElementLoop() {
+    int n = 5;
+    cout << "Size of array is 5" << endl;
+    int arr[n];
+    cout << "enter the elements of array: ";
+    for(int i=0; i<n; i++) {
+        cin >> arr[i];
+    }
+    cout << "entered elements are: " << endl;
+    for(int i=0; i<n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    // By selection sort
+    int max = arr[1];
+    int secLargest = arr[0];
+    for(int i=0; i<n; i++) {
+        if(max < arr[i]) {
+            secLargest = max;   // back up
+            max = arr[i];
+        }
+        else if((secLargest < arr[i]) && (arr[i] != max)) { // if not max then it may secLargest
+            secLargest = arr[i];
+        }
+    }
+    // if(max == secLargest) {
+    //         for(int j=0; j<n; j++) {
+    //             if((secLargest < arr[j]) && (arr[j] != max)) {
+    //                 secLargest = arr[j];
+    //             }
+    //         }
+    //     }
+
+    cout << "Largest element = " << max << endl;
+    cout << "Second largest element = " << secLargest << endl;
+
+}
+
+void addMatrix() {
+    // first matrix
     int n, m;
     cout << "Enter the size of row and col of matrix-1: ";
     cin >> n >> m;
@@ -64,3 +223,64 @@
     } else {
         cout << "Enter the correct order of matrix!" << endl;
     }
+}
+
+
+int main() {
+    cout << "---Array Programs---" << endl;
+
+    cout << "Enter 1 to print the array: " << endl;
+    cout << "Enter 2 to take an array from user: " << endl;
+    cout << "Enter 3 to find the sum of five subjects: " << endl;
+    cout << "Enter 4 to search an element in an array: " << endl;
+    cout << "Enter 5 to print the largest element in an array: " << endl;
+    cout << "Enter 6 to print smallest element in an array: " << endl;
+    cout << "Enter 7 to print the second largest element of an array: " << endl;
+    cout << "Enter 8 to print addition of two matrices using a multidimentional array: " << endl;
+    cout << "Enter 9 to print multiplication of two matrices using a multidimentional array: " << endl;
+
+    cout << endl;
+    int prog;
+    cout << "Enter the program number: ";
+    cin >> prog;
+
+    switch(prog) {
+        case 1: 
+            array();
+            break;
+
+        case 2:
+            array2();
+            break;
+
+        case 3:
+            array3();
+            break;
+
+        case 4:
+            arrSearch();
+            break;
+
+        case 5:
+            largestInArrayLoop();
+            break;
+
+        case 6:
+            smallestInArrayLoop();
+            break;
+
+        case 7:
+            secondLargestElementLoop();
+            break;
+
+        case 8:
+            addMatrix();
+            break;
+
+        // case 5:
+        //     largestInArray();
+        //     break;
+    }
+
+    return 0;
+}
