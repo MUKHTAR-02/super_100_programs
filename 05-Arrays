@@ -169,7 +169,7 @@ void addMatrix() {
     int arr2[x][y];
     
     if((n == x) && (m == y)) {
-        cout << "Enter the elements: " << endl;
+        cout << "Enter the elements of Matrix-1: " << endl;
         for(int i=0; i<n; i++) {
             for(int j=0; j<m; j++) {
                 cin >> arr1[i][j];
@@ -178,7 +178,7 @@ void addMatrix() {
     
     // second matrix
         
-        cout << "Enter the elements: " << endl;
+        cout << "Enter the elements of Matrix-2: " << endl;
         for(int i=0; i<x; i++) {
             for(int j=0; j<y; j++) {
                 cin >> arr2[i][j];
@@ -225,6 +225,76 @@ void addMatrix() {
     }
 }
 
+void multiMatrix() {
+    int r1, c1, r2, c2;
+    cout << "Enter the size of rows and col of matrix-1: ";
+    cin >> r1 >> c1;
+    cout << "Enter the size of rows and col of matrix-2: ";
+    cin >> r2 >> c2;
+    int arr1[r1][c1];
+    int arr2[r2][c2];
+    
+    if(c1 == r2) {
+        cout << "Enter the elements of Matrix-1: " << endl;
+        for(int i=0; i<r1; i++) {
+            for(int j=0; j<c1; j++) {
+                cin >> arr1[i][j];
+            }
+        }
+    
+    // second matrix
+        cout << "Enter the elements of Matrix-2: " << endl;
+        for(int i=0; i<r2; i++) {
+            for(int j=0; j<c2; j++) {
+                cin >> arr2[i][j];
+            }
+        }
+    
+    // printing both matrix
+        cout << "Elements of matrix-1 are: " << endl;
+        for(int i=0; i<r1; i++) {
+            for(int j=0; j<c1; j++) {
+                cout << arr1[i][j] << " ";
+            }
+            cout << endl;
+        }
+    
+        cout << "Elements of matrix-2 are: " << endl;
+        for(int i=0; i<r2; i++) {
+            for(int j=0; j<c2; j++) {
+                cout << arr2[i][j] << " ";
+            }
+            cout << endl;
+        }
+        
+    // Multiplication of both Matrix
+        int arr3[r1][c2];
+        
+        for(int i=0; i<r1; i++) {
+            for(int j=0; j<c2; j++) {
+                arr3[i][j] = 0;
+                // for(int k=0; k<c1; k++) {r2 == c1} kuch bhi lelo
+                for(int k=0; k<r2; k++) {
+                    arr3[i][j] = (arr1[i][k] * arr2[k][j]) + arr3[i][j];
+
+                } 
+            }
+        }
+        
+    // Printing the result
+        cout << "Multiplication of both matrix: " << endl;
+        for(int i=0; i<r1; i++) {
+            for(int j=0; j<c2; j++) {
+                cout << arr3[i][j] << " ";
+            }
+            cout << endl;
+        }
+        
+    } else {
+        cout << "Multiplication is not possible for such size of matrix!" << endl;
+    }
+}
+
 
 int main() {
     cout << "---Array Programs---" << endl;
@@ -235,9 +305,9 @@ int main() {
     cout << "Enter 4 to search an element in an array: " << endl;
     cout << "Enter 5 to print the largest element in an array: " << endl;
     cout << "Enter 6 to print smallest element in an array: " << endl;
-    cout << "Enter 7 to print the second largest element of an array: " << endl;
-    cout << "Enter 8 to print addition of two matrices using a multidimentional array: " << endl;
-    cout << "Enter 9 to print multiplication of two matrices using a multidimentional array: " << endl;
+    cout << "*Enter 7 to print the second largest element of an array: " << endl;
+    cout << "*Enter 8 to print addition of two matrices using a multidimentional array: " << endl;
+    cout << "***Enter 9 to print multiplication of two matrices using a multidimentional array: " << endl;
 
     cout << endl;
     int prog;
@@ -277,9 +347,9 @@ int main() {
             addMatrix();
             break;
 
-        // case 5:
-        //     largestInArray();
-        //     break;
+        case 9:
+            multiMatrix();
+            break;
     }
 
     return 0;
