@@ -1,0 +1,138 @@
+// function programs
+#include <iostream>
+using namespace std;
+
+void callByValue(int x, int y) {
+    cout << "Before Swapping: " << endl;
+    cout << "A = " << x << endl;
+    cout << "B = " << y << endl;
+    
+    swap(x, y);
+    
+    cout << "After swapping: " << endl;
+    cout << "A = " << x << endl;
+    cout << "B = " << y << endl;
+}
+
+void callByReference(int &x, int &y) {
+    cout << "Before Swapping: " << endl;
+    cout << "A = " << x << endl;
+    cout << "B = " << y << endl;
+    
+    swap(x, y);
+    
+    cout << "After swapping: " << endl;
+    cout << "A = " << x << endl;
+    cout << "B = " << y << endl;
+}
+
+void callByAddress(int *x, int *y) {
+    cout << "Before Swapping: " << endl;
+    cout << "A = " << *x << endl;
+    cout << "B = " << *y << endl;
+    
+    swap(*x, *y);
+    
+    cout << "After swapping: " << endl;
+    cout << "A = " << *x << endl;
+    cout << "B = " << *y << endl;
+}
+
+void swapFunction() {
+    int x;
+    cout << "Enter 1 to swap two number using call by value function: " << endl;
+    cout << "Enter 2 to swap two number using call by reference function: " << endl;
+    cout << "Enter 3 to swap two number using call by address function: " << endl;
+    cin >> x;
+    
+    int a,b;
+    cout << "Enter the value of A and B: ";
+    cin >> a >> b;
+    
+    switch(x) {
+        case 1: 
+            callByValue(a, b);
+            cout << "Original value: " << endl;
+            cout << "A = " << a << " " << "B = " << b << endl;
+            break;
+            
+        case 2:
+            callByReference(a, b);
+            cout << "Original value: " << endl;
+            cout << "A = " << a << " " << "B = " << b << endl;
+            break;
+            
+        case 3:
+            callByAddress(&a, &b);
+            cout << "Original value: " << endl;
+            cout << "A = " << a << " " << "B = " << b << endl;
+            break;
+            
+    }
+}
+
+
+int main() {
+    // programs listing:
+    cout << "---Function programs---" << endl;
+    cout << endl;
+    cout << "Enter 1 to swap two number." << endl;
+    cout << "Enter 2 to find addition of two int no." << endl;
+    cout << "Enter 3 to find addition of two float no." << endl;
+    cout << "Enter 4 to find average of two no." << endl;
+    cout << "Enter 5 to find average marks scored in five subjects" << endl;
+    cout << "*Enter 6 to exchange value of two variables" << endl;
+    cout << "*Enter 7 to convert temperature (C and F)" << endl;
+    cout << "Enter 8 to find the area of circle" << endl;
+    cout << "*Enter 9 to find the reverse of number" << endl;
+    cout << "Enter 10 to find the sum of all digits entered" << endl;
+    
+    cout << endl;
+    int prog;
+    cout << "Enter the program number: ";
+    cin >> prog;
+    switch(prog) {
+        case 1: 
+            swapFunction();
+            break;
+            
+        // case 2:
+        //     addTwoInt();
+        //     break;
+            
+        // case 3:
+        //     addTwoFloat();
+        //     break;
+            
+        // case 4:
+        //     findAvg();
+        //     break;
+            
+        // case 5:
+        //     findAvgFiveSub();
+        //     break;
+            
+        // case 6:
+        //     findExchange();
+        //     break;
+            
+        // case 7:
+        //     convertTemp();
+        //     break;
+            
+        // case 8:
+        //     findArea();
+        //     break;
+            
+        // case 9:
+        //     revNum();
+        //     break;
+            
+        // case 10:
+        //     numSum();
+        //     break;
+            
+            
+    }
+    return 0;
+}
