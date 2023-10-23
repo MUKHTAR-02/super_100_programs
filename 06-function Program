@@ -91,6 +91,13 @@ void simpleInterest() {
     cout << "Simple Interest = " << findSimpleInterest(amount, tyme, rate);
 }
 
+void accessValuePointer(int number) {
+    int *p;
+    p = &number;
+    cout << "Address of entered number = " << p << endl;
+    cout << "Value of entered number using pointer = " << *p << endl;
+}
+
 
 int main() {
     // programs listing:
@@ -98,7 +105,7 @@ int main() {
     cout << endl;
     cout << "Enter 1 to swap two number." << endl;
     cout << "Enter 2 to find simple interest." << endl;
-    cout << "Enter 3 to find addition of two float no." << endl;
+    cout << "Enter 3 to access the value of variable through a pointer." << endl;
     cout << "Enter 4 to find average of two no." << endl;
     cout << "Enter 5 to find average marks scored in five subjects" << endl;
     cout << "*Enter 6 to exchange value of two variables" << endl;
@@ -120,9 +127,12 @@ int main() {
             simpleInterest();
             break;
             
-        // case 3:
-        //     addTwoFloat();
-        //     break;
+        case 3:
+            int number;
+            cout << "Enter any number: ";
+            cin >> number;
+            accessValuePointer(number);
+            break;
             
         // case 4:
         //     findAvg();
