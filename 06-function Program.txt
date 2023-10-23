@@ -71,13 +71,33 @@ void swapFunction() {
     }
 }
 
+float findSimpleInterest(float amount, float tyme, float rate) {
+    // S.I. = (P × R × T)/100
+    rate = rate/100;
+    float ans;
+    ans = amount*(1 + (rate * tyme));
+    return ans;
+}
+
+void simpleInterest() {
+    float rate, tyme, amount, interest;
+    cout << "Enter the amount on which you want to calculate simple interest: ";
+    cin >> amount;
+    cout << "Enter the rate: ";
+    cin >> rate;
+    cout << "Enter the time: ";
+    cin >> tyme;
+    // interest = findSimpleInterest(amount, tyme, rate);
+    cout << "Simple Interest = " << findSimpleInterest(amount, tyme, rate);
+}
+
 
 int main() {
     // programs listing:
     cout << "---Function programs---" << endl;
     cout << endl;
     cout << "Enter 1 to swap two number." << endl;
-    cout << "Enter 2 to find addition of two int no." << endl;
+    cout << "Enter 2 to find simple interest." << endl;
     cout << "Enter 3 to find addition of two float no." << endl;
     cout << "Enter 4 to find average of two no." << endl;
     cout << "Enter 5 to find average marks scored in five subjects" << endl;
@@ -96,9 +116,9 @@ int main() {
             swapFunction();
             break;
             
-        // case 2:
-        //     addTwoInt();
-        //     break;
+        case 2:
+            simpleInterest();
+            break;
             
         // case 3:
         //     addTwoFloat();
