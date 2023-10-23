@@ -98,6 +98,15 @@ void accessValuePointer(int number) {
     cout << "Value of entered number using pointer = " << *p << endl;
 }
 
+int recurSum(int number1) {
+    if(number1 != 0) {
+        return number1 + recurSum(number1-1);
+    } else {
+        return number1;
+    }
+    
+}
+
 
 int main() {
     // programs listing:
@@ -106,7 +115,7 @@ int main() {
     cout << "Enter 1 to swap two number." << endl;
     cout << "Enter 2 to find simple interest." << endl;
     cout << "Enter 3 to access the value of variable through a pointer." << endl;
-    cout << "Enter 4 to find average of two no." << endl;
+    cout << "Enter 4 to find sum of first N natural number using recursion." << endl;
     cout << "Enter 5 to find average marks scored in five subjects" << endl;
     cout << "*Enter 6 to exchange value of two variables" << endl;
     cout << "*Enter 7 to convert temperature (C and F)" << endl;
@@ -134,9 +143,13 @@ int main() {
             accessValuePointer(number);
             break;
             
-        // case 4:
-        //     findAvg();
-        //     break;
+        case 4:
+            int number1;
+            cout << "Enter the number till you want to print the sum: ";
+            cin >> number1;
+            int sum = recurSum(number1);
+            cout << "Sum = " << sum << endl;
+            break;
             
         // case 5:
         //     findAvgFiveSub();
