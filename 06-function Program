@@ -104,7 +104,18 @@ int recurSum(int number1) {
     } else {
         return number1;
     }
-    
+}
+
+int recurFibo(int term, int first, int sec, int nTerm) {
+    if(term != 2) {
+        nTerm = first + sec;
+        first = sec;
+        sec = nTerm;
+        cout << nTerm << " ";
+        return recurFibo(term - 1, first, sec, nTerm);
+    } else {
+        return 0;
+    }
 }
 
 
@@ -116,7 +127,7 @@ int main() {
     cout << "Enter 2 to find simple interest." << endl;
     cout << "Enter 3 to access the value of variable through a pointer." << endl;
     cout << "Enter 4 to find sum of first N natural number using recursion." << endl;
-    cout << "Enter 5 to find average marks scored in five subjects" << endl;
+    cout << "Enter 5 to print Fibonacci series using recursion." << endl;
     cout << "*Enter 6 to exchange value of two variables" << endl;
     cout << "*Enter 7 to convert temperature (C and F)" << endl;
     cout << "Enter 8 to find the area of circle" << endl;
@@ -147,13 +158,30 @@ int main() {
             int number1;
             cout << "Enter the number till you want to print the sum: ";
             cin >> number1;
-            int sum = recurSum(number1);
+            int sum;
+            sum = recurSum(number1);
             cout << "Sum = " << sum << endl;
             break;
             
-        // case 5:
-        //     findAvgFiveSub();
-        //     break;
+        case 5:
+            // starting terms
+            int first = 0; 
+            int sec = 1;
+            int nTerm; // next Term
+            int term;
+            cout << "Enter the term which you want to print fibonacci series: ";
+            cin >> term;
+            if(term <= 0) {
+                cout << "given term should be greater than 0." << endl;
+            } else if(term == 1) {
+                cout << first << endl;
+            } else if(term == 2) {
+                cout << first << " " << sec << endl; 
+            } else if(term > 2) {
+                cout << first << " " << sec << " "; //if considering this first and sec term..
+                recurFibo(term, first, sec, nTerm); 
+            }
+            break;
             
         // case 6:
         //     findExchange();
