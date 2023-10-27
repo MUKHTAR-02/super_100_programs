@@ -80,7 +80,7 @@ float findSimpleInterest(float amount, float tyme, float rate) {
 }
 
 void simpleInterest() {
-    float rate, tyme, amount, interest;
+    float rate, tyme, amount;
     cout << "Enter the amount on which you want to calculate simple interest: ";
     cin >> amount;
     cout << "Enter the rate: ";
@@ -113,8 +113,16 @@ int recurFibo(int term, int first, int sec, int nTerm) {
         sec = nTerm;
         cout << nTerm << " ";
         return recurFibo(term - 1, first, sec, nTerm);
+    }
+    return 0;
+}
+
+int recurFact(int number2) {
+    if(number2 != 0) {
+        cout << number2 << endl;
+        return number2 *= recurFact(number2 - 1);
     } else {
-        return 0;
+        return 1;
     }
 }
 
@@ -128,11 +136,7 @@ int main() {
     cout << "Enter 3 to access the value of variable through a pointer." << endl;
     cout << "Enter 4 to find sum of first N natural number using recursion." << endl;
     cout << "Enter 5 to print Fibonacci series using recursion." << endl;
-    cout << "*Enter 6 to exchange value of two variables" << endl;
-    cout << "*Enter 7 to convert temperature (C and F)" << endl;
-    cout << "Enter 8 to find the area of circle" << endl;
-    cout << "*Enter 9 to find the reverse of number" << endl;
-    cout << "Enter 10 to find the sum of all digits entered" << endl;
+    cout << "Enter 6 to find the factorial of number using recursion" << endl;
     
     cout << endl;
     int prog;
@@ -165,9 +169,12 @@ int main() {
             
         case 5:
             // starting terms
-            int first = 0; 
-            int sec = 1;
+            int first;
+            first = 0;
+            int sec;
+            sec = 1;
             int nTerm; // next Term
+            nTerm = 0;
             int term;
             cout << "Enter the term which you want to print fibonacci series: ";
             cin >> term;
@@ -183,27 +190,15 @@ int main() {
             }
             break;
             
-        // case 6:
-        //     findExchange();
-        //     break;
+        case 6:
+            int number2;
+            int ans;
+            cout << "Enter the number to print factorial: ";
+            cin >> number2;
             
-        // case 7:
-        //     convertTemp();
-        //     break;
-            
-        // case 8:
-        //     findArea();
-        //     break;
-            
-        // case 9:
-        //     revNum();
-        //     break;
-            
-        // case 10:
-        //     numSum();
-        //     break;
-            
-            
+            ans = recurFact(number2);
+            cout << "Factorial of " << number2 << " = " << ans << endl;
+            break;
     }
     return 0;
 }
