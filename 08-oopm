@@ -1,0 +1,120 @@
+// OOPM programs
+#include <iostream>
+using namespace std;
+
+class ScopeRes{
+    private:
+        int a,b;
+    public:
+        static void setValue() {
+            cout << "Enter the values of A and B: ";
+            cin >> a >> b;
+        }
+        void getValue() {
+            cout << "Entered numbers are: " << endl;
+            cout << "A = " << a << endl;
+            cout << "B = " << b << endl;
+        }
+};
+
+
+
+class Addition{
+    private:
+        int a,b;
+
+    public:
+        void setValue() {
+            cout << "Enter the values of A and B: ";
+            cin >> a >> b;
+        }
+        void getValue() {
+            cout << "Entered numbers are: " << endl;
+            cout << "A = " << a << endl;
+            cout << "B = " << b << endl;
+        }
+        void addValue() {
+            cout << "Addition of A and B = " << a+b << endl;
+        }
+};
+
+class It{
+    private:
+        int a, b;   //data member
+    
+    public:
+        void setValue() {   //member function-1
+            cout << "Enter the values of A and B: ";
+            cin >> a >> b;
+        }
+        void getValue() {   //member function-2
+            cout << "A = " << a << endl;
+            cout << "B = " << b << endl;
+        }
+};
+
+// scope resolution operator
+ScopeRes::setValue();
+
+int main() {
+    // programs listing:
+    cout << "Enter 1 to demontrate class and objects." << endl;
+    cout << "Enter 2 to add two numbers using member functions of a class." << endl;
+    cout << "Enter 3 to demonstrate the use of scope resolution operator." << endl;
+    
+    cout << endl;
+    int prog;
+    cout << "Enter the program number: ";
+    cin >> prog;
+    switch(prog) {
+        case 1:
+            It obj;
+            obj.setValue();
+            obj.getValue();
+            break;
+            
+        case 2:
+            Addition obj2;
+            obj2.setValue();
+            obj2.getValue();
+            obj2.addValue();
+            break;
+            
+        case 3:
+            ScopeRes obj3;
+            
+            obj3.getValue();
+            break;
+            
+        // case 4:
+        //     findAvg();
+        //     break;
+            
+        // case 5:
+        //     findAvgFiveSub();
+        //     break;
+            
+        // case 6:
+        //     findEachange();
+        //     break;
+            
+        // case 7:
+        //     convertTemp();
+        //     break;
+            
+        // case 8:
+        //     findArea();
+        //     break;
+            
+        // case 9:
+        //     revNum();
+        //     break;
+            
+        // case 10:
+        //     numSum();
+        //     break;
+            
+            
+    }
+    return 0;
+}
