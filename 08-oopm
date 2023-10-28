@@ -2,20 +2,20 @@
 #include <iostream>
 using namespace std;
 
-int globalVar = 100;    //global varialble
-
-class ScopeRes{
+class It{
+    private:
+        int a, b;   //data member
+    
     public:
-        void localFun() {
-            cout << "Inside the Local Function." << endl;
+        void setValue() {   //member function-1
+            cout << "Enter the values of A and B: ";
+            cin >> a >> b;
         }
-        void globalFun();
-        
+        void getValue() {   //member function-2
+            cout << "A = " << a << endl;
+            cout << "B = " << b << endl;
+        }
 };
-
-void ScopeRes::globalFun() {
-    cout << "Inside the Global Function." << endl;
-}
 
 class Addition{
     private:
@@ -36,19 +36,49 @@ class Addition{
         }
 };
 
-class It{
-    private:
-        int a, b;   //data member
-    
+int globalVar = 100;    //global varialble
+
+class ScopeRes{
     public:
-        void setValue() {   //member function-1
-            cout << "Enter the values of A and B: ";
-            cin >> a >> b;
+        void localFun() {
+            cout << "Inside the Local Function." << endl;
         }
-        void getValue() {   //member function-2
-            cout << "A = " << a << endl;
-            cout << "B = " << b << endl;
+        void globalFun();
+        
+};
+
+void ScopeRes::globalFun() {
+    cout << "Inside the Global Function." << endl;
+}
+
+class Car{
+    public:
+        Car() {
+            cout << "Inside constructor." << endl;
         }
+        ~Car() {
+            cout << "Inside destructor." << endl;
+        }
+};
+
+class A{
+    int a;
+    float b;
+    public:
+    A() {
+        cout << "Enter the value of A: ";
+        cin >> a;
+        cout << "Enter the float value of B: ";
+        cin >> b;
+        cout << "Default constructor values: " << endl;
+        cout << "A = " << a << endl << "B = " << b << endl;
+    }
+    A(int x, int y) {
+        a = x;
+        b = y;
+        cout << "Parameterized constructor values: " << endl;
+        cout << "A = " << a << endl << "B = " << b << endl;
+    }
 };
 
 int main() {
@@ -56,6 +86,8 @@ int main() {
     cout << "Enter 1 to demontrate class and objects." << endl;
     cout << "Enter 2 to add two numbers using member functions of a class." << endl;
     cout << "Enter 3 to demonstrate the use of scope resolution operator." << endl;
+    cout << "Enter 4 to display the concept of constructor & destructor." << endl;
+    cout << "Enter 5 for Constructor overloading." << endl;
     
     cout << endl;
     int prog;
@@ -77,42 +109,24 @@ int main() {
             
         case 3:
             ScopeRes obj3;
-            int localVar = 10;
+            int localVar;
+            localVar = 10;
             cout << "Local Variable = " << localVar << endl;
             cout << "Global Variable = " << ::globalVar << endl;
             obj3.localFun();
             obj3.globalFun();
             break;
             
-        // case 4:
-        //     findAvg();
-        //     break;
-            
-        // case 5:
-        //     findAvgFiveSub();
-        //     break;
-            
-        // case 6:
-        //     findEachange();
-        //     break;
-            
-        // case 7:
-        //     convertTemp();
-        //     break;
-            
-        // case 8:
-        //     findArea();
-        //     break;
-            
-        // case 9:
-        //     revNum();
-        //     break;
-            
-        // case 10:
-        //     numSum();
-        //     break;
-            
-            
+        case 4:
+            Car obj4;
+            break;
+    }
+    if(prog == 5) {
+        A obj5; 
+        A obj6(50,100);
+        cout << "Constructor overloaded." << endl;
+        // or simply,
+        // A obj5, obj6(5,10);
     }
     return 0;
 }
