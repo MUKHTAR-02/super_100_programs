@@ -27,7 +27,7 @@ class Addition{
             cin >> a >> b;
         }
         void getValue() {
-            cout << "Entered numbers are: " << endl;
+            cout << "Entered values are: " << endl;
             cout << "A = " << a << endl;
             cout << "B = " << b << endl;
         }
@@ -81,6 +81,41 @@ class A{
     }
 };
 
+class Father{
+    protected:
+        int a, b;
+    public:
+        void setValue() {
+            cout << "Enter the values of A and B: ";
+            cin >> a >> b;
+        }
+        // void getValue() {
+        //     cout << "parent class values are: " << endl;
+        //     cout << "A = " << a << endl;
+        //     cout << "B = " << b << endl;
+        // }
+};
+
+class Son : public Father {
+    private:
+        float x, y;
+    public:
+        void setValue2() {
+            cout << "Enter the float values of X and Y: ";
+            cin >> x >> y;
+        }
+        void getValue2() {
+            cout << "Entered values are: " << endl;
+            cout << "X = " << x << endl;
+            cout << "Y = " << y << endl;
+            
+            cout << "Derived values of parent class are: " << endl;
+            cout << "A = " << a << endl;
+            cout << "B = " << b << endl;
+            
+        }
+};
+
 int main() {
     // programs listing:
     cout << "Enter 1 to demontrate class and objects." << endl;
@@ -88,6 +123,7 @@ int main() {
     cout << "Enter 3 to demonstrate the use of scope resolution operator." << endl;
     cout << "Enter 4 to display the concept of constructor & destructor." << endl;
     cout << "Enter 5 for Constructor overloading." << endl;
+    cout << "Enter 6 to demonstrate the single inheritance." << endl;
     
     cout << endl;
     int prog;
@@ -127,6 +163,16 @@ int main() {
         cout << "Constructor overloaded." << endl;
         // or simply,
         // A obj5, obj6(5,10);
+    } else if(prog == 6) {
+        Father obj;  // no need 
+        Son obj2;
+        
+        cout << "Inside Parent Class" << endl;
+        // obj.setValue();  it will give garbage value in derived class...
+        obj2.setValue();    //calling father class function with child class object...
+        cout << "Inside Child Class" << endl;
+        obj2.setValue2();
+        obj2.getValue2();
     }
     return 0;
 }
