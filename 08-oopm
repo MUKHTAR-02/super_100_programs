@@ -2,22 +2,20 @@
 #include <iostream>
 using namespace std;
 
+int globalVar = 100;    //global varialble
+
 class ScopeRes{
-    private:
-        int a,b;
     public:
-        static void setValue() {
-            cout << "Enter the values of A and B: ";
-            cin >> a >> b;
+        void localFun() {
+            cout << "Inside the Local Function." << endl;
         }
-        void getValue() {
-            cout << "Entered numbers are: " << endl;
-            cout << "A = " << a << endl;
-            cout << "B = " << b << endl;
-        }
+        void globalFun();
+        
 };
 
-
+void ScopeRes::globalFun() {
+    cout << "Inside the Global Function." << endl;
+}
 
 class Addition{
     private:
@@ -53,9 +51,6 @@ class It{
         }
 };
 
-// scope resolution operator
-ScopeRes::setValue();
-
 int main() {
     // programs listing:
     cout << "Enter 1 to demontrate class and objects." << endl;
@@ -82,8 +77,11 @@ int main() {
             
         case 3:
             ScopeRes obj3;
-            
-            obj3.getValue();
+            int localVar = 10;
+            cout << "Local Variable = " << localVar << endl;
+            cout << "Global Variable = " << ::globalVar << endl;
+            obj3.localFun();
+            obj3.globalFun();
             break;
             
         // case 4:
