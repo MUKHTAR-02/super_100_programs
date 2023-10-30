@@ -81,7 +81,7 @@ class A{
     }
 };
 
-class Father{
+class Base{
     protected:
         int a, b;
     public:
@@ -96,7 +96,7 @@ class Father{
         // }
 };
 
-class Son : public Father {
+class Derived : public Base {
     private:
         float x, y;
     public:
@@ -116,6 +116,69 @@ class Son : public Father {
         }
 };
 
+class Animal {
+    protected:
+        int a,b;
+    public:
+        void setValue() {
+            cout << "Enter the values of A and B: ";
+            cin >> a >> b;
+        }
+};
+
+class Cat : public Animal {
+    protected:
+        int m,n;
+    public:
+        void setValue2() {
+            cout << "Enter the values of M and N: ";
+            cin >> m >> n;
+        }
+};
+
+class Kitten : public Cat {
+    protected:
+        int x,y;
+    public:
+        void setValue3() {
+            cout << "Enter the values of X and Y: ";
+            cin >> x >> y;
+        }
+        void display() {
+            cout << "X = " << x << " " << "Y = " << y << endl;
+        }
+        void showValue() {
+            cout << "Derived values are: " << endl;
+            cout << "A = " << a << " " << "B = " << b << endl;
+            cout << "M = " << m << " " << "N = " << n << endl;
+        }
+};
+
+class Father {
+    protected:
+        string name = "Abbu!";
+    public:
+        void sayName() {
+            cout << name << endl;
+        }
+};
+
+class Mother {
+    protected:
+        string name = "Ammi!";
+    public:
+        void sayName() {
+            cout << name << endl;
+        }
+};
+
+class Child : public Father, public Mother {
+    public:
+        string setName() {
+            return name;
+        }
+};
+
 int main() {
     // programs listing:
     cout << "Enter 1 to demontrate class and objects." << endl;
@@ -124,55 +187,85 @@ int main() {
     cout << "Enter 4 to display the concept of constructor & destructor." << endl;
     cout << "Enter 5 for Constructor overloading." << endl;
     cout << "Enter 6 to demonstrate the single inheritance." << endl;
+    cout << "Enter 7 to demonstrate the multilevel inheritance." << endl;
+    cout << "Enter 8 to demonstrate the multiple inheritance." << endl;
     
     cout << endl;
     int prog;
     cout << "Enter the program number: ";
     cin >> prog;
     switch(prog) {
-        case 1:
+        case 1: {
             It obj;
             obj.setValue();
             obj.getValue();
             break;
+        }
             
-        case 2:
+        case 2: {
             Addition obj2;
             obj2.setValue();
             obj2.getValue();
             obj2.addValue();
             break;
+        }
             
-        case 3:
+        case 3: {
             ScopeRes obj3;
-            int localVar;
-            localVar = 10;
+            int localVar = 10;
+            // localVar = 10;
             cout << "Local Variable = " << localVar << endl;
             cout << "Global Variable = " << ::globalVar << endl;
             obj3.localFun();
             obj3.globalFun();
             break;
+        }
             
-        case 4:
+        case 4: {
             Car obj4;
             break;
-    }
-    if(prog == 5) {
-        A obj5; 
-        A obj6(50,100);
-        cout << "Constructor overloaded." << endl;
-        // or simply,
-        // A obj5, obj6(5,10);
-    } else if(prog == 6) {
-        Father obj;  // no need 
-        Son obj2;
+        }
+    
+        case 5: {
+            A obj5; 
+            A obj6(50,100);
+            cout << "Constructor overloaded." << endl;
+            // or simply,
+            // A obj5, obj6(5,10);
+            break;
+        } 
+        case 6: {
+            Base obj;  // no need 
+            Derived obj2;
         
-        cout << "Inside Parent Class" << endl;
-        // obj.setValue();  it will give garbage value in derived class...
-        obj2.setValue();    //calling father class function with child class object...
-        cout << "Inside Child Class" << endl;
-        obj2.setValue2();
-        obj2.getValue2();
+            cout << "Inside Base Class" << endl;
+            // obj.setValue();  it will give garbage value in Derived class...
+            obj2.setValue();    //calling Base class function with Derived class object...
+            cout << "Inside Derived Class" << endl;
+            obj2.setValue2();
+            obj2.getValue2();
+            break;
+        }
+        case 7: {
+            // Animal obj;
+            // Cat obj2;
+            Kitten obj3;
+            
+            obj3.setValue();
+            obj3.setValue2();
+            obj3.setValue3();
+            obj3.display();
+            obj3.showValue();
+        }
+        case 8: {
+            // Father obj;
+            // Mother obj2;
+            Child obj3;
+            
+            obj3.Father::sayName();
+            string callName = obj3.setName();
+            cout << "Child said " << callName << endl;
+        }
     }
     return 0;
 }
