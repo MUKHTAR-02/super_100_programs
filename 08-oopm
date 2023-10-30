@@ -165,17 +165,17 @@ class Father {
 
 class Mother {
     protected:
-        string name = "Ammi!";
+        string name2 = "Ammi!";
     public:
         void sayName() {
-            cout << name << endl;
+            cout << name2 << endl;
         }
 };
 
 class Child : public Father, public Mother {
     public:
-        string setName() {
-            return name;
+        void msg() {
+            cout << "child said...!" << endl;
         }
 };
 
@@ -258,13 +258,12 @@ int main() {
             obj3.showValue();
         }
         case 8: {
-            // Father obj;
-            // Mother obj2;
             Child obj3;
             
+            // obj3.sayName(); -> this will give ambiguity
             obj3.Father::sayName();
-            string callName = obj3.setName();
-            cout << "Child said " << callName << endl;
+            obj3.Mother::sayName();
+            obj3.msg(); 
         }
     }
     return 0;
