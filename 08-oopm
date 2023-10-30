@@ -179,6 +179,71 @@ class Child : public Father, public Mother {
         }
 };
 
+class Vehicle {
+    protected:
+        int a;
+    public:
+        void setValue() {
+            cout << "Enter the value of A: ";
+            cin >> a;
+        }
+};
+
+class Scooty : public Vehicle {
+    protected:
+        int b;
+    public:
+        void setValue1() {
+            cout << "Enter the value of B: ";
+            cin >> b;
+        }
+        void display1() {
+            cout << "Sum of A and B = " << a + b << endl;
+        }
+};
+
+class Bike : public Vehicle {
+    protected:
+        int c;
+    public:
+        void setValue2() {
+            cout << "Enter the value of C: ";
+            cin >> c;
+        }
+        void display2() {
+            cout << "Sum of A and C = " << a + c << endl;
+        }
+};
+
+class Technology {
+    public:
+        void display() {
+            cout << "Congrats! You have accessed Technology through coding..." << endl;
+        }
+};
+
+class Laptop : virtual public Technology {
+    public:
+        void show1() {
+            cout << "This is class -> Laptop" << endl;
+        }
+};
+
+class Computer : virtual public Technology {
+    public:
+        void show2() {
+            cout << "This is class -> Computer" << endl;
+        }
+};
+
+class Coding : public Laptop, public Computer {
+    public:
+        void show3() {
+            cout << "This is class -> Coding" << endl;
+        }
+};
+
+
 int main() {
     // programs listing:
     cout << "Enter 1 to demontrate class and objects." << endl;
@@ -189,6 +254,8 @@ int main() {
     cout << "Enter 6 to demonstrate the single inheritance." << endl;
     cout << "Enter 7 to demonstrate the multilevel inheritance." << endl;
     cout << "Enter 8 to demonstrate the multiple inheritance." << endl;
+    cout << "Enter 9  to demonstrate the hierarchical inheritance." << endl;
+    cout << "Enter 10 to demonstrate the hybrid inheritance." << endl;
     
     cout << endl;
     int prog;
@@ -264,6 +331,34 @@ int main() {
             obj3.Father::sayName();
             obj3.Mother::sayName();
             obj3.msg(); 
+        }
+        case 9: {
+            Vehicle obj;
+            Scooty obj1;
+            Bike obj2;
+            
+            // obj.setValue();
+            obj1.setValue();
+            obj1.setValue1();
+            obj1.display1();
+            
+            obj2.setValue();
+            obj2.setValue2();
+            obj2.display2();
+        }
+        case 10: {
+            // Technology ob1;
+            // Laptop obj2;
+            // Computer obj3;
+            Coding obj4;
+            
+            // ...normal approach...
+            // obj4.display();
+            
+            // ***pointerISH approach***
+            Technology *p;  
+            p = &obj4;
+            p -> display();
         }
     }
     return 0;
