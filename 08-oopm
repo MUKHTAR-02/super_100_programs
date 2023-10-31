@@ -243,6 +243,30 @@ class Coding : public Laptop, public Computer {
         }
 };
 
+class Dost {
+    private:
+        int a;
+    public:
+        void setValue() {
+            cout << "Enter the value of A: ";
+            cin >> a;
+        }
+        void showValue() {
+            cout << "Entered Value = " << a << endl;
+        }
+        
+        // declaration of friend function
+        friend void addValue(Dost &refrenceVariable);
+};
+
+// definition of friend function
+void addValue(Dost &refrenceVariable) {
+    int b;
+    cout << "Enter the value to add through friend function: ";
+    cin >> b;
+    refrenceVariable.a = refrenceVariable.a + b;
+}
+
 
 int main() {
     // programs listing:
@@ -256,6 +280,8 @@ int main() {
     cout << "Enter 8 to demonstrate the multiple inheritance." << endl;
     cout << "Enter 9  to demonstrate the hierarchical inheritance." << endl;
     cout << "Enter 10 to demonstrate the hybrid inheritance." << endl;
+    cout << "Enter 11 to demonstrate the use of friend function." << endl;
+    cout << "Enter 12 to demonstrate the use of operator overloading using friend function." << endl;
     
     cout << endl;
     int prog;
@@ -359,6 +385,17 @@ int main() {
             Technology *p;  
             p = &obj4;
             p -> display();
+        }
+        case 11: {
+            Dost obj;
+            
+            obj.setValue();
+            obj.showValue();
+            addValue(obj);
+            obj.showValue();
+        }
+        case 12: {
+            // code
         }
     }
     return 0;
