@@ -267,21 +267,72 @@ void addValue(Dost &refrenceVariable) {
     refrenceVariable.a = refrenceVariable.a + b;
 }
 
+class Sample{
+    // operator overloading function:
+    // op overloading doen't meaning that ki kisi operator ki functioning ko bdalna (+ operator values ko plus hi krega minus nhi, functioning nhi bdlegi), it just meaning that to invoke the particular operator(as per our choise) with the help of an object...
+    
+    int x,y;
+    public: 
+        void get(int a, int b) {
+            x = a;
+            y = b;
+        }
+        
+        void display() {
+            cout << "A = " << x << endl;
+            cout << "B = " << y << endl;
+        }
+        
+        Sample operator ++() {  // `void operator ++()` ye bhi likh skte...
+            x = x + 1;
+            y = y + 1;
+        }
+};
+
+class Chappu{
+    int x;
+    public:
+        void get(int c) {
+            x = c;
+        }
+        
+        void display() {
+            cout << x << endl;
+        }
+        
+        friend Chappu operator *(Chappu, Chappu); // (Chappu, Chappu) specifies that the operator* function takes two parameters, both of type Chappu class...
+};
+
+Chappu operator *(Chappu obj1, Chappu obj2){    // here, Chappu is the return type of the function `operator *()` and obj1 and obj2 are objects of type Chappu.
+    Chappu obj3;  
+    obj3.x = obj1.x * obj2.x;
+    return obj3;  // obj3 ek obj hai, koi integer nhi jo `int` return type se return ho jai, is liye apn n class (Chappu) ko hi ek return type bna diya take uska object return krva ske...
+}
 
 int main() {
     // programs listing:
+    cout << "Class and object programs: " << endl;
     cout << "Enter 1 to demontrate class and objects." << endl;
     cout << "Enter 2 to add two numbers using member functions of a class." << endl;
-    cout << "Enter 3 to demonstrate the use of scope resolution operator." << endl;
+    cout << "Enter 3 to demonstrate the use of scope resolution operator." << endl << endl;
+    
+    cout << "Constructor and destructor programs: " << endl;
     cout << "Enter 4 to display the concept of constructor & destructor." << endl;
-    cout << "Enter 5 for Constructor overloading." << endl;
+    cout << "Enter 5 for Constructor overloading." << endl << endl;
+    
+    cout << "Inheritance programs: " << endl;
     cout << "Enter 6 to demonstrate the single inheritance." << endl;
     cout << "Enter 7 to demonstrate the multilevel inheritance." << endl;
     cout << "Enter 8 to demonstrate the multiple inheritance." << endl;
     cout << "Enter 9  to demonstrate the hierarchical inheritance." << endl;
-    cout << "Enter 10 to demonstrate the hybrid inheritance." << endl;
+    cout << "Enter 10 to demonstrate the hybrid inheritance." << endl << endl;
+    
+    cout << "Friend programs:" << endl;
     cout << "Enter 11 to demonstrate the use of friend function." << endl;
-    cout << "Enter 12 to demonstrate the use of operator overloading using friend function." << endl;
+    cout << "Enter 12 to demonstrate the use of operator overloading using friend function." << endl << endl;
+    
+    cout << "Polymorphism programs:" << endl;
+    cout << "Enter 13 to demonstrate the use of unary operator overloading." << endl;
     
     cout << endl;
     int prog;
@@ -349,6 +400,7 @@ int main() {
             obj3.setValue3();
             obj3.display();
             obj3.showValue();
+            break;
         }
         case 8: {
             Child obj3;
@@ -357,6 +409,7 @@ int main() {
             obj3.Father::sayName();
             obj3.Mother::sayName();
             obj3.msg(); 
+            break;
         }
         case 9: {
             Vehicle obj;
@@ -371,6 +424,7 @@ int main() {
             obj2.setValue();
             obj2.setValue2();
             obj2.display2();
+            break;
         }
         case 10: {
             // Technology ob1;
@@ -385,6 +439,7 @@ int main() {
             Technology *p;  
             p = &obj4;
             p -> display();
+            break;
         }
         case 11: {
             Dost obj;
@@ -393,9 +448,41 @@ int main() {
             obj.showValue();
             addValue(obj);
             obj.showValue();
+            break;
         }
         case 12: {
-            // code
+            Chappu obj1, obj2, obj3;
+            
+            int a,b;
+            cout << "Enter the value of A: ";
+            cin >> a;
+            cout << "Enter the value of B: ";
+            cin >> b;
+            
+            obj1.get(a);
+            obj2.get(b);
+            cout << "After overloading: " << endl;
+            obj3 = obj1 * obj2; // background working kuch is trah hori -> obj3 = obj1.operator *(obj2)...
+            obj3.display();
+            break;
+        }
+        
+        case 13: {
+            Sample obj;
+            
+            int a,b;
+            cout << "Enter the value of A: ";
+            cin >> a;
+            cout << "Enter the value of B: ";
+            cin >> b;
+            
+            obj.get(a,b);
+            cout << "Before overloading: " << endl;
+            obj.display();
+            cout << "After oveloading: " << endl;
+            ++obj;  // obj.operator++() ki jgah sirf ++obj, which is showing that object 'obj' is invoking the operator '++'...
+            obj.display();
+            break;
         }
     }
     return 0;
