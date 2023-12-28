@@ -309,6 +309,40 @@ Chappu operator *(Chappu obj1, Chappu obj2){    // here, Chappu is the return ty
     return obj3;  // obj3 ek obj hai, koi integer nhi jo `int` return type se return ho jai, is liye apn n class (Chappu) ko hi ek return type bna diya take uska object return krva ske...
 }
 
+class Complex{
+    // binary op overloading
+    int x,y;
+    public:
+        Complex() { // default constructor
+        x = 0;
+        y = 0;
+    }
+    
+    Complex(int a, int b) { // parameterised constructor
+        x = a;
+        y = b;
+    }
+    
+    Complex operator +(Complex c) { // yaha pr c -> obj2 hai...
+        Complex obj3;
+        obj3.x = x + c.x;
+        obj3.y = y + c.y;
+        
+        cout << "x or y ka chakkar" << endl;
+        cout << "x = " << x << endl;
+        cout << "y = " << y << endl;
+        cout << "c.x = " << c.x << endl;
+        cout << "c.y = " << c.y << endl;
+        return obj3;
+    }
+    
+    void display() {
+        cout << "Sum of Real values = " << x << endl;
+        cout << "Sum of Imaginary values = " << y << endl;
+    }
+    
+};
+
 int main() {
     // programs listing:
     cout << "Class and object programs: " << endl;
@@ -333,6 +367,7 @@ int main() {
     
     cout << "Polymorphism programs:" << endl;
     cout << "Enter 13 to demonstrate the use of unary operator overloading." << endl;
+    cout << "Enter 14 to demonstrate the use of binary operator overloading" << endl;
     
     cout << endl;
     int prog;
@@ -482,6 +517,18 @@ int main() {
             cout << "After oveloading: " << endl;
             ++obj;  // obj.operator++() ki jgah sirf ++obj, which is showing that object 'obj' is invoking the operator '++'...
             obj.display();
+            break;
+        }
+        
+        case 14: {
+            Complex obj1, obj2, obj3;
+            obj1 = Complex(1,5);
+            obj2 = Complex(2,4);
+            obj1.display();
+            obj2.display();
+            obj3 = obj1 + obj2; // obj3 = obj1.operator+(obj2);
+            // obj1 is invoking the operator and obj2 is passed as argument...(in the line no 326)
+            obj3.display();
             break;
         }
     }
