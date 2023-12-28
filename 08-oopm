@@ -343,6 +343,16 @@ class Complex{
     
 };
 
+// function overloading prog
+// sirf argument/parameter different hona...
+float add(int a, int b, float c) {
+    return (a + b + c);
+}
+
+int add(int a, int b) {
+    return (a + b);
+}
+
 int main() {
     // programs listing:
     cout << "Class and object programs: " << endl;
@@ -368,6 +378,9 @@ int main() {
     cout << "Polymorphism programs:" << endl;
     cout << "Enter 13 to demonstrate the use of unary operator overloading." << endl;
     cout << "Enter 14 to demonstrate the use of binary operator overloading" << endl;
+    cout << "Enter 15 to demonstrate the use of function overloading." << endl;
+    cout << "Enter 16 WAP to demonstrate the use of function overriding." << endl;
+    cout << "Enter 17 to demonstrate the use of virtual functions." << endl;
     
     cout << endl;
     int prog;
@@ -531,6 +544,20 @@ int main() {
             obj3.display();
             break;
         }
+        
+        case 15: {
+            cout << "Addition = " << add(5,2) << endl;
+            cout << "Addition = " << add(5,2,2.1) << endl;
+            break;
+        }
+        
+        // case 16: {
+            // break;
+        // }
+        
+        // case 17: {
+            // break;
+        // }
     }
     return 0;
 }
