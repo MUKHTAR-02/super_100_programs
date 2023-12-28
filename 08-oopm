@@ -283,7 +283,7 @@ class Sample{
             cout << "B = " << y << endl;
         }
         
-        Sample operator ++() {  // `void operator ++()` ye bhi likh skte...
+        void operator ++() {  // `Sample operator ++()` ye bhi likh skte...
             x = x + 1;
             y = y + 1;
         }
@@ -343,6 +343,7 @@ class Complex{
     
 };
 
+
 // function overloading prog
 // sirf argument/parameter different hona...
 float add(int a, int b, float c) {
@@ -352,6 +353,24 @@ float add(int a, int b, float c) {
 int add(int a, int b) {
     return (a + b);
 }
+
+// function overriding
+// run time poly hai ye, isme sb kuch same hona (arg/para bhi...)
+class baseClass {
+    public:
+// agr virtual lga diya to pointer isko call nhi kr skta...
+//      virtual void fun() { 
+        void fun() {
+            cout << "Inside Base class" << endl;
+        }
+};
+
+class derivedClass: public baseClass {
+    public: 
+        void fun() {
+            cout << "Inside Derived class" << endl;
+        }
+};
 
 int main() {
     // programs listing:
@@ -551,9 +570,18 @@ int main() {
             break;
         }
         
-        // case 16: {
-            // break;
-        // }
+        case 16: {
+            derivedClass obj;
+            // obj.baseClass::fun();
+            obj.fun();
+            
+            // pointer approach
+            // agr virtual lga diya to pointer base class k fun() ko call nhi kr skta... (see line 362)
+            baseClass *p;
+            p = &obj;
+            p -> fun();
+            break;
+        }
         
         // case 17: {
             // break;
