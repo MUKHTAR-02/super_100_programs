@@ -372,6 +372,29 @@ class derivedClass: public baseClass {
         }
 };
 
+
+// virtual fun prog (function overriding m aata ye)
+class bas {
+    public:
+        virtual void disp(int a, int b) {   /* hmesha base class ka func virtual hoga bcoz (function overriding m hmesha base or derived class k fun same rehte with arg/para sb same...
+            -> To jab sb same hi hai to derived class se hi access krlo or base ko virtual bna do...
+            -> obj bhi hmesha derived class ka hi bnta to derived class k fun ko call krne m bhi masle nhi honge) 
+            -> or agr kabhi base class k fun ki zarurat pde to virtual keyword hta do... */
+            cout << "Base class called" << endl;
+            cout << "A = " << a << endl;
+            cout << "B = " << b << endl;
+        }
+};
+
+class der: public bas{
+    public:
+        void disp(int a, int b) {
+            cout << "Derived class called" << endl;
+            cout << "A = " << a << endl;
+            cout << "B = " << b << endl;
+        }
+};
+
 // Row and Column major order demonstration of array...
 void rowMajor(int arr[][4], int n, int m) {
     for(int i=0; i<n; i++) {
@@ -390,7 +413,6 @@ void colMajor(int arr[][4], int n, int m) {
     }
     cout << endl;
 }
-
 
 int main() {
     // programs listing:
@@ -418,8 +440,14 @@ int main() {
     cout << "Enter 13 to demonstrate the use of unary operator overloading." << endl;
     cout << "Enter 14 to demonstrate the use of binary operator overloading" << endl;
     cout << "Enter 15 to demonstrate the use of function overloading." << endl;
-    cout << "Enter 16 WAP to demonstrate the use of function overriding." << endl;
-    cout << "Enter 17 to demonstrate the use of virtual functions." << endl;
+    cout << "Enter 16 to demonstrate the use of function overriding." << endl;
+    cout << "Enter 17 to demonstrate the use of virtual functions." << endl << endl;
+    
+    cout << "Data Structure programs: " << endl;
+    cout << "Enter 18 to demonstrate the array using row major order and column major order." << endl;
+    cout << "Enter 19 to demonstrate the use of Stack." << endl;
+    cout << "Enter 20 to demonstrate the use of Queue." << endl;
+    cout << "Enter 21 to to demonstrate the use of Linked List." << endl;
     
     cout << endl;
     int prog;
@@ -596,10 +624,18 @@ int main() {
             obj.fun();
             
             // pointer approach
-            // agr virtual lga diya to pointer base class k fun() ko call nhi kr skta... (see line 362)
+            // agr virtual lga diya to pointer base class k fun() ko call nhi kr skte... (see line 362)
             baseClass *p;
             p = &obj;
             p -> fun();
+            break;
+        }
+        
+        case 17: {
+            der obj;
+            bas *p;
+            p = &obj;
+            p -> disp(5,10);
             break;
         }
         
@@ -625,6 +661,21 @@ int main() {
             
             break;
         }
+        
+        // case 19: {
+            
+        //     break;
+        // }
+        
+        // case 20: {
+            
+        //     break;
+        // }
+        
+        // case 21: {
+            
+        //     break;
+        // }
     }
     return 0;
 }
