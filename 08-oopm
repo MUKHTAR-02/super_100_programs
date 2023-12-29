@@ -396,6 +396,10 @@ class der: public bas{
 };
 
 // Row and Column major order demonstration of array...
+/* In C++, when you pass a 2D array to a function, you need tospecify the size of the second dimension (the number of columns) except for the first dimension (the number of rows). This is because the compiler needs to know the size of the columns to correctly calculate memory offsets when accessing elements.
+    eg - arr[][4];
+*/
+
 void rowMajor(int arr[][4], int n, int m) {
     for(int i=0; i<n; i++) {
         for(int j=0; j<m; j++) {
