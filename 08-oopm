@@ -418,6 +418,53 @@ void colMajor(int arr[][4], int n, int m) {
     cout << endl;
 }
 
+// Stack Implementation
+class Stack {
+    
+    public: 
+    int top = -1;
+        void push(int arr[], int n, int a) {
+            if(top < n-1) {
+                top++;  
+                arr[top] = a;
+            } else {
+                cout << "Stack Overflow!" << endl;
+            }
+        }
+        
+        void pop(int arr[], int n) {
+            if(top > -1) {
+                top = top - 1;
+            } else {
+                cout << "Stack Underflow!" << endl;
+            }
+        }
+        
+        void peek(int arr[], int n) {
+            if(top > -1) {
+                cout << "Top element = " << arr[top] << endl;
+            } else {
+                cout << "Stack Underflow!" << endl;
+            }
+        }
+        
+        void size(int arr[], int n) {
+            if(top > -1) {
+                cout << "Size of stack = " << top << endl;
+            } else {
+                cout << "Stack is empty!" << endl;
+            }
+        }
+        
+        bool isEmpty(int arr[], int n) {
+            if(top <= -1) {
+                cout << "true" << endl;
+            } else {
+                cout << "false" << endl;
+            }
+        }
+};
+
 int main() {
     // programs listing:
     cout << "Class and object programs: " << endl;
@@ -666,10 +713,53 @@ int main() {
             break;
         }
         
-        // case 19: {
+        case 19: {
+            int n = 5;
+            int arr[n];
             
-        //     break;
-        // }
+            Stack s;
+            s.push(arr, n, 5);
+            s.push(arr, n, 10);
+            s.push(arr, n, 12);
+            s.push(arr, n, 50);
+            s.push(arr, n, 1);
+            
+            s.push(arr, n, 2);
+            // stack overflow;
+            
+            s.peek(arr, n);
+            // 1
+            
+            s.size(arr, n);
+            // 4
+            
+            s.pop(arr, n);
+            
+            s.size(arr, n);
+            // 3
+            
+            s.pop(arr, n);
+            
+            s.peek(arr, n);
+            // 12
+            
+            s.pop(arr, n);
+            s.pop(arr, n);
+            s.pop(arr, n);
+            
+            s.pop(arr, n);
+            // stack underflow;
+            
+            s.size(arr, n);
+            // stack underflow
+            
+            s.isEmpty(arr, n);
+            
+            // cout << "loop hole 2 = " << arr[3] << endl;
+            // still memory is not free...
+            
+            break;
+        }
         
         // case 20: {
             
