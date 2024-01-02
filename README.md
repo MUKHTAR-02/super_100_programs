@@ -12,16 +12,7 @@ Welcome to the C++ Programming Examples repository! This project contains over 1
   - [Navigate to the Project Directory](#navigate-to-the-project-directory)
   - [Compile and Run Programs](#compile-and-run-programs)
   - [Follow On-Screen Instructions](#follow-on-screen-instructions)
-- [Program Categories]
-  - [Simple Programs]
-  - [If-Else Programs]
-  - [Loops]
-  - [Patterns]
-  - [Arrays]
-  - [Functions]
-  - [Structure and Union]
-  - [OOPM]
-  - [Data Structure]
+- [Program Categories](#programs-categories)
 - [Contributions](#contributions)
 - [License](#license)
 
@@ -55,7 +46,22 @@ git clone https://github.com/MUKHTAR-02/super_100_programs/tree/main
 ### Follow On-Screen Instructions
 - Follow On-Screen Instructions to make the life easier.
 
+## Program Categories
+- [Simple Programs]
+  - If-Else Programs
+  - Loops
+  - Patterns
+  - Arrays
+  - Functions
+  - Structure and Union
+  - OOPM
+  - Data Structure
+
 ## Contributions
 - Join us in building a rich learning environment. Contribute new programs, refine existing ones, or suggest improvements.
 
-   
+## License
+
+- This project is licensed under the <a href = "LICENSE"> MIT License</a>
+- Feel free to suggest about more features and improvements.
+  Happy Coding! 🖥️✨
