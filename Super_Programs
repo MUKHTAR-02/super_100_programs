@@ -1,12 +1,14 @@
-// Simple 10 programs
+// ---Super Programs---
 #include <iostream>
 using namespace std;
 
-void printHello() {
+void printHello()
+{
     cout << "Hello World" << endl;
 }
 
-void addTwoInt() {
+void addTwoInt()
+{
     int a, b;
     cout << "enter value of a = ";
     cin >> a;
@@ -16,7 +18,8 @@ void addTwoInt() {
     cout << "Addition of two integer no. = " << result << endl;
 }
 
-void addTwoFloat() {
+void addTwoFloat()
+{
     float a, b;
     cout << "enter float value of a = ";
     cin >> a;
@@ -26,7 +29,8 @@ void addTwoFloat() {
     cout << "Addition of two float no. = " << result << endl;
 }
 
-void findAvg() {
+void findAvg()
+{
     float a, b;
     cout << "enter any int or float value of a = ";
     cin >> a;
@@ -36,7 +40,8 @@ void findAvg() {
     cout << "Average of two integer or float no. = " << result << endl;
 }
 
-void findAvgFiveSub() {
+void findAvgFiveSub()
+{
     float eng, hindi, maths, phy, chem;
     cout << "enter marks obtained in eng: ";
     cin >> eng;
@@ -52,96 +57,103 @@ void findAvgFiveSub() {
     cout << "Average of marks scored in five subjects = " << result << endl;
 }
 
-void findExchangeByThirdVar() {
+void findExchangeByThirdVar()
+{
     int A,B;
     int temp;
     cout << "Enter value of A: ";
     cin >> A;
     cout << "Enter value of B: ";
     cin >> B;
-    
+
     cout << "value before swapping:" << endl;
     cout << "value of A = " << A << endl;
     cout << "value of B = " << B << endl;
-    
+
     temp = A;
-    A = B; 
+    A = B;
     B = temp;
-    
+
     cout << "value after swapping:" << endl;
     cout << "value of A = " << A << endl;
     cout << "value of B = " << B << endl;
 }
-void findExchangeWithoutThirdVar() {
+void findExchangeWithoutThirdVar()
+{
     int A,B;
     cout << "Enter value of A: ";
     cin >> A;
     cout << "Enter value of B: ";
     cin >> B;
-    
+
     cout << "value before swapping:" << endl;
     cout << "value of A = " << A << endl;
     cout << "value of B = " << B << endl;
-    
+
     A = A+B;
     B = A-B;
     A = A-B;
-    
+
     cout << "value after swapping:" << endl;
     cout << "value of A = " << A << endl;
     cout << "value of B = " << B << endl;
 }
-void findExchange() {
+void findExchange()
+{
     int x;
     cout << "Enter 1 to exchage value using the third variable:" << endl;
     cout << "Enter 2 to exchange value without the third variable:" << endl;
     cout << "Enter the number to execute the prog from above: ";
     cin >> x;
-    
+
     switch(x) {
-        case 1:
-            findExchangeByThirdVar();
-            break;
-        
-        case 2:
-            findExchangeWithoutThirdVar();
-            break;
+    case 1:
+        findExchangeByThirdVar();
+        break;
+
+    case 2:
+        findExchangeWithoutThirdVar();
+        break;
     }
 }
 
-void convertC_to_F() {
+void convertC_to_F()
+{
     float celsius, fahrenheit;
     cout << "Enter the value in Celsius: ";
     cin >> celsius;
     fahrenheit = ((celsius  * 9.0) / 5.0) + 32;
     cout << "value in Fahrenheit is = " << fahrenheit << endl;
 }
-void convertF_to_C() {
+void convertF_to_C()
+{
     float celsius, fahrenheit;
     cout << "Enter the value in Fahrenheit: ";
     cin >> fahrenheit;
     celsius = ((fahrenheit  - 32) * 5.0) / 9.0;
     cout << "value in Celsius is = " << celsius << endl;
 }
-void convertTemp() {
+void convertTemp()
+{
     int x;
     cout << "Enter 1 to convert temp C to F:" << endl;
     cout << "Enter 2 to convert temp F to C:" << endl;
     cout << "Enter the number to execute the prog from above: ";
     cin >> x;
-    
+
     switch(x) {
-        case 1:
-            convertC_to_F();
-            break;
-        
-        case 2:
-            convertF_to_C();
-            break;
+    case 1:
+        convertC_to_F();
+        break;
+
+    case 2:
+        convertF_to_C();
+        break;
     }
 }
 
-void findArea() {
+void findArea()
+{
     float r;
     cout << "Enter the radius of circle: ";
     cin >> r;
@@ -149,25 +161,27 @@ void findArea() {
     cout << "Area of circle = " << area << endl;
 }
 
-void revNum() {
+void revNum()
+{
     int num, rem, rev;
     cout << "Enter the Number: ";
     cin >> num;
-    CODESCRACKER:
-        rem = num%10;
-        rev = (rev*10) + rem;
-        num = num/10;
-        if(num!=0)
-            goto CODESCRACKER;
+CODESCRACKER:
+    rem = num%10;
+    rev = (rev*10) + rem;
+    num = num/10;
+    if(num!=0)
+        goto CODESCRACKER;
     cout << "Reverse = " << rev << endl;
 }
 
-void numSum() {
+void numSum()
+{
     int num, sum;
     cout << "Enter any five digit number: ";
     cin >> num;
     cout << "Entered num = " << num << endl;
-    
+
     while(num > 0) {
         sum = sum + num%10;
         num = num/10;
@@ -176,7 +190,8 @@ void numSum() {
 }
 
 // If else prog
-void findMaxAge() {
+void findMaxAge()
+{
     int a,b;
     string stud1,stud2;
     cout << "Enter the name of student 1: ";
@@ -187,19 +202,18 @@ void findMaxAge() {
     cin >> a;
     cout << "Enter the age of student 2: ";
     cin >> b;
-    
+
     if(a > b) {
-        cout << stud1 << " is older than " << stud2 << endl; 
-    }
-    else if(a == b) {
+        cout << stud1 << " is older than " << stud2 << endl;
+    } else if(a == b) {
         cout << "both students are of same age" << endl;
-    }
-    else {
+    } else {
         cout << stud2 << " is older than " << stud1 << endl;
     }
 }
 
-void findLargestAmongThree() {
+void findLargestAmongThree()
+{
     int a,b,c;
     cout << "Enter 1st num: ";
     cin >> a;
@@ -207,91 +221,89 @@ void findLargestAmongThree() {
     cin >> b;
     cout << "Enter 3rd num: ";
     cin >> c;
-    
+
     if((a > b) && (a > c)) {
         cout << "Greatest number among all is: " << a;
-    }
-    else if((b > a) && (b > c)) {
+    } else if((b > a) && (b > c)) {
         cout << "Greatest number among all is: " << b;
-    }
-    else {
+    } else {
         cout << "Greatest number among all is: " << c;
     }
 }
 
-void isNegative() {
+void isNegative()
+{
     int num;
     cout << "Enter any number: ";
     cin >> num;
-    
+
     if(num >= 0) {
         cout << "Entered number is positive";
-    }
-    else {
+    } else {
         cout << "Entered number is negative";
     }
 }
 
-void isOdd() {
+void isOdd()
+{
     int num;
     cout << "Enter any number: ";
     cin >> num;
-    
+
     if((num % 2) == 0) {
         cout << "Entered number is even";
-    }
-    else {
+    } else {
         cout << "Entered number is odd";
     }
 }
 
-void isLeapYear() {
+void isLeapYear()
+{
     int year;
     cout << "Enter any year: ";
     cin >> year;
-    
-    if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)){
-        if(year > 2023){
+
+    if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+        if(year > 2023) {
             cout << "Entered year will be a Leap Year!" << endl;
-        }
-        else {
+        } else {
             cout << "Entered year was a Leap Year!" << endl;
         }
-    }
-    else {
+    } else {
         cout << "Not a leap year" << endl;
     }
 }
 
-void isVowel() {
+void isVowel()
+{
     char alpha;
     cout << "Enter any alphabet: ";
     cin >> alpha;
-    
+
     if(alpha == 'a' || alpha == 'e' || alpha == 'i' || alpha == 'o' || alpha == 'u') {
         cout << "Entered alphabet is a Vowel" << endl;
-    }
-    else {
+    } else {
         cout << "Entered alphabet is a consonant" << endl;
     }
 }
 
-void findLargestAmongTwo() {
+void findLargestAmongTwo()
+{
     int a,b;
     cout << "Enter 1st num: ";
     cin >> a;
     cout << "Enter 2nd num: ";
     cin >> b;
-    
+
     if(a > b) {
         cout << "Greatest number is: " << a;
-    }
-    else {
+    } else {
         cout << "Greatest number is: " << b;
     }
 }
 
-void calculator() {
+void calculator()
+{
     int x;
     cout << "Enter 1 for Addition," << endl;
     cout << "Enter 2 for Subtraction," << endl;
@@ -299,69 +311,71 @@ void calculator() {
     cout << "Enter 4 for Division" << endl;
     cout << "Enter any number above mention: ";
     cin >> x;
-    
+
     float a,b,result;
     cout << "Enter the value of a: ";
     cin >> a;
     cout << "Enter the value of b: ";
     cin >> b;
-    
+
     switch(x) {
-        case 1:
-            result = a+b;
-            cout << "Addition of " << a << " and " << b << " = " << result << endl;
-            break;
-            
-        case 2:
-            result = a-b;
-            cout << "Subtraction of " << a << " and " << b << " = " << result << endl;
-            break;
-            
-        case 3:
-            result = a*b;
-            cout << "Multiplication of " << a << " and " << b << " = " << result << endl;
-            break;
-            
-        case 4:
-            result = a/b;
-            cout << "Division of " << a << " and " << b << " = " << result << endl;
-            break;
+    case 1:
+        result = a+b;
+        cout << "Addition of " << a << " and " << b << " = " << result << endl;
+        break;
+
+    case 2:
+        result = a-b;
+        cout << "Subtraction of " << a << " and " << b << " = " << result << endl;
+        break;
+
+    case 3:
+        result = a*b;
+        cout << "Multiplication of " << a << " and " << b << " = " << result << endl;
+        break;
+
+    case 4:
+        result = a/b;
+        cout << "Division of " << a << " and " << b << " = " << result << endl;
+        break;
     }
-    
+
 }
 
-void isVowelBySwitch() {
+void isVowelBySwitch()
+{
     char alpha;
     cout << "Enter any alphabet: ";
     cin >> alpha;
-    
+
     switch(alpha) {
-        case 'a':
-            cout << "Entered alphabet is a Vowel" << endl;
-            break;
-            
-        case 'e':
-            cout << "Entered alphabet is a Vowel" << endl;
-            break;
-            
-        case 'i':
-            cout << "Entered alphabet is a Vowel" << endl;
-            break;
-            
-        case 'o':
-            cout << "Entered alphabet is a Vowel" << endl;
-            break;
-            
-        case 'u':
-            cout << "Entered alphabet is a Vowel" << endl;
-            break;
-            
-        default:
-            cout << "Entered alphabet is a consonant" << endl;
+    case 'a':
+        cout << "Entered alphabet is a Vowel" << endl;
+        break;
+
+    case 'e':
+        cout << "Entered alphabet is a Vowel" << endl;
+        break;
+
+    case 'i':
+        cout << "Entered alphabet is a Vowel" << endl;
+        break;
+
+    case 'o':
+        cout << "Entered alphabet is a Vowel" << endl;
+        break;
+
+    case 'u':
+        cout << "Entered alphabet is a Vowel" << endl;
+        break;
+
+    default:
+        cout << "Entered alphabet is a consonant" << endl;
     }
 }
 
-void displayDay() {
+void displayDay()
+{
     int year, month, day;
 
     cout << "Enter date (YYYY MM DD): ";
@@ -383,75 +397,80 @@ void displayDay() {
     // Convert dayOfWeek to 0-6 (0 = Saturday, 1 = Sunday, ..., 6 = Friday)
     if (dayOfWeek < 0)
         dayOfWeek += 7;
-    
+
     switch (dayOfWeek) {
-        case 0:
-            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Saturday." << endl;
-            break;
-        case 1:
-            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Sunday." << endl;
-            break;
-        case 2:
-            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Monday." << endl;
-            break;
-        case 3:
-            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Tuesday." << endl;
-            break;
-        case 4:
-            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Wednesday." << endl;
-            break;
-        case 5:
-            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Thursday." << endl;
-            break;
-        case 6:
-            cout << "The day of the week for " << year << "-" << month << "-" << day << " is Friday." << endl;
-            break;
-        default:
-            cout << "Invalid day of the week." << endl;
-            break;
+    case 0:
+        cout << "The day of the week for " << year << "-" << month << "-" << day << " is Saturday." << endl;
+        break;
+    case 1:
+        cout << "The day of the week for " << year << "-" << month << "-" << day << " is Sunday." << endl;
+        break;
+    case 2:
+        cout << "The day of the week for " << year << "-" << month << "-" << day << " is Monday." << endl;
+        break;
+    case 3:
+        cout << "The day of the week for " << year << "-" << month << "-" << day << " is Tuesday." << endl;
+        break;
+    case 4:
+        cout << "The day of the week for " << year << "-" << month << "-" << day << " is Wednesday." << endl;
+        break;
+    case 5:
+        cout << "The day of the week for " << year << "-" << month << "-" << day << " is Thursday." << endl;
+        break;
+    case 6:
+        cout << "The day of the week for " << year << "-" << month << "-" << day << " is Friday." << endl;
+        break;
+    default:
+        cout << "Invalid day of the week." << endl;
+        break;
     }
 }
 
 // Loops progs
-void helloFive() {
+void helloFive()
+{
     for(int i=0; i<5; i++) {
         cout << "Hello World" << endl;
     }
 }
 
-void loop2() {
+void loop2()
+{
     int n=10;
     for(int i=1; i<=n; i++) {
         cout << i << endl;
     }
 }
 
-void loop3() {
+void loop3()
+{
     int n=10;
     for(int i=n; i>=1; i--) {
         cout << i << endl;
     }
 }
 
-void factoLoop() {
+void factoLoop()
+{
     int x;
     cout << "Enter the number to find the factorial: ";
     cin >> x;
-    
+
     int fact = 1;
     while(x > 0) {
         fact = fact * x;
-        
+
         x--;
     }
     cout << "Factorial = " << fact << endl;
 }
 
-int fiboLoop() {
+int fiboLoop()
+{
     int x;
     cout << "Enter the number till you want to print fibonacci series: ";
     cin >> x;
-    
+
     int i = 1;
     // starting terms
     int a = 0;
@@ -471,26 +490,28 @@ int fiboLoop() {
     return 0;
 }
 
-void sumoLoop() {
+void sumoLoop()
+{
     int x;
     cout << "Enter the number till you want to print the sum: ";
     cin >> x;
-    
+
     int sum = 0;
     int i=1;
     while(i <= x) {
         sum += i;
-        
+
         i++;
     }
     cout << "Sum = " << sum << endl;
 }
 
-void revoLoop() {
+void revoLoop()
+{
     int x;
     cout << "Enter any number to reverse: ";
     cin >> x;
-    
+
     int rev = 0;
     int rem = 0;
     while(x > 0) {
@@ -501,7 +522,8 @@ void revoLoop() {
     cout << "Reverse = " << rev << endl;
 }
 
-int sumoLoopTillZero() {
+int sumoLoopTillZero()
+{
     int sum = 0;
     int i = 1;
     int x;
@@ -517,19 +539,20 @@ int sumoLoopTillZero() {
     return 0;
 }
 
-int revoFiveLoop() {
+int revoFiveLoop()
+{
     int x;
     cout << "Enter any five digit number to reverse: ";
     cin >> x;
-    
+
     // if(num > 9999 && num <= 99999)
     if((x/10000 > 0) && (x/10000 < 10)) {
         cout << "Number validated, reversing in progress..." << endl;
-    } else{
-       cout << "Enter a valid number!" << endl;
-       return 0;
+    } else {
+        cout << "Enter a valid number!" << endl;
+        return 0;
     }
-    
+
     int rev = 0;
     int rem = 0;
     while(x > 0) {
@@ -541,7 +564,8 @@ int revoFiveLoop() {
     return 0;
 }
 
-void loop10() {
+void loop10()
+{
     int a,b;
     cout << "Enter the starting number: ";
     cin >> a;
@@ -552,7 +576,8 @@ void loop10() {
     }
 }
 
-void multiNumTable() {
+void multiNumTable()
+{
     int num;
     cout << "Enter the number to print the table: ";
     cin >> num;
@@ -562,7 +587,8 @@ void multiNumTable() {
     }
 }
 
-void addNumTable() {
+void addNumTable()
+{
     int number;
     cout << "Enter a number: ";
     cin >> number;
@@ -575,7 +601,8 @@ void addNumTable() {
     }
 }
 
-void findPrimeUptoN() {
+void findPrimeUptoN()
+{
     int num;
     cout << "Enter the number upto you want to print all prime number: ";
     cin >> num;
@@ -596,7 +623,8 @@ void findPrimeUptoN() {
     }
 }
 
-void allDigitSum() {
+void allDigitSum()
+{
     int num, sum;
     cout << "Enter any number for the sum: ";
     cin >> num;
@@ -617,7 +645,8 @@ void allDigitSum() {
 // no of rows depends on i
 // no of columns depends on j
 // watch yt video (pattern trick @M2R) for a trick
-void print1() {
+void print1()
+{
     for(int i=0; i<5; i++) {
         for(int j=0; j<=i; j++) {
             cout <<  "* ";
@@ -626,7 +655,8 @@ void print1() {
     }
 }
 
-void print2() {
+void print2()
+{
     for(int i=1; i<=5; i++) {
         for(int j=1; j<=i; j++) {
             cout <<  j << " ";
@@ -635,7 +665,8 @@ void print2() {
     }
 }
 
-void print3() {
+void print3()
+{
     for(char i='A'; i<='E'; i++) {
         for(char j='A'; j<=i; j++) {
             cout <<  j << " ";
@@ -644,7 +675,8 @@ void print3() {
     }
 }
 
-void print4() {
+void print4()
+{
     for(int i=1; i<=5; i++) {
         for(int j=1; j<=i; j++) {
             cout <<  j << " ";
@@ -653,7 +685,8 @@ void print4() {
     }
 }
 
-void print5() {
+void print5()
+{
     for(int i=1; i<=5; i++) {
         for(int j=5; j>=i; j--) {
             cout << "* " << " ";
@@ -662,7 +695,8 @@ void print5() {
     }
 }
 
-void print6() {
+void print6()
+{
     for(int i=5; i>=0; i--) {
         for(int j=1; j<=i; j++) {
             cout << j  << " ";
@@ -671,7 +705,8 @@ void print6() {
     }
 }
 
-void print7() {
+void print7()
+{
     for(char i='E'; i>='A'; i--) {
         for(char j='A'; j<=i; j++) {
             cout << j << " ";
@@ -680,7 +715,8 @@ void print7() {
     }
 }
 
-void print8() {
+void print8()
+{
     for(int i=1; i<=5; i++) {
         for(int j=i; j<=5; j++) {
             cout << j << " ";
@@ -689,7 +725,8 @@ void print8() {
     }
 }
 
-void print9() {
+void print9()
+{
     cout << "ye line print kr vani zruri thi bcoz programiz compiler m dikkat aa rhi h agr ye line print n krvai to" << endl;
     for(int i=1; i<=5; i++) {
         for(int j=5; j>i; j--) {
@@ -702,7 +739,8 @@ void print9() {
     }
 }
 
-void print10() {
+void print10()
+{
     cout << "line for proper code" << endl;
     for(int i=1; i<=5; i++) {
         for(int j=5; j>i; j--) {
@@ -729,7 +767,8 @@ void print10() {
 //     }
 // }
 
-void print11() {
+void print11()
+{
     // --- Apna code ---
     cout << "line for proper code" << endl;
     for(char i='A'; i<='E'; i++) {
@@ -743,35 +782,38 @@ void print11() {
     }
 }
 
-void print12() {
+void print12()
+{
     cout << "line for proper code" << endl;
     for(int i=1; i<=5; i++) {
         int x = i;
         for(int j=5; j>i; j--) {
             cout << "  ";
         }
-    for(int k=1; k<=i; k++) {
-        cout << x << " ";
-        x++;
-    }
-    cout << endl;
+        for(int k=1; k<=i; k++) {
+            cout << x << " ";
+            x++;
+        }
+        cout << endl;
     }
 }
 
-void print13() {
+void print13()
+{
     cout << "line for formality" << endl;
     for(int i=5; i>=1; i--) {
         for(int j=i; j<5; j++) {
             cout << "  ";
         }
         for(int k=i; k>=1; k--) {
-            cout << "& "; 
+            cout << "& ";
         }
         cout << endl;
     }
 }
 
-void print14() {
+void print14()
+{
     for(int i=5; i>=1; i--) {
         for(int j=i; j<5; j++) {
             cout << "  ";
@@ -783,7 +825,8 @@ void print14() {
     }
 }
 
-void print15() {
+void print15()
+{
     cout << "formality line" << endl;
     for(char i='E'; i>='A'; i--) {
         for(char j=i; j<'E'; j++) {
@@ -796,7 +839,8 @@ void print15() {
     }
 }
 
-void print16() {
+void print16()
+{
     for(int i=1; i<=5; i++) {
         for(int j=1; j<i; j++) {
             cout << "  ";
@@ -808,7 +852,8 @@ void print16() {
     }
 }
 
-void print17() {
+void print17()
+{
     cout << "line formality" << endl;
     for(int i=1; i<=5; i++) {
         for(int j=i; j<=5; j++) {
@@ -821,7 +866,8 @@ void print17() {
     }
 }
 
-void print18() {
+void print18()
+{
     cout << "line formality" << endl;
     for(int i=5; i>=1; i--) {
         for(int j=i; j<=5; j++) {
@@ -834,7 +880,8 @@ void print18() {
     }
 }
 
-void print19() {
+void print19()
+{
     cout << "line formality" << endl;
     int x = 1;
     for(int i=5; i>=1; i--) {
@@ -864,36 +911,38 @@ void print19() {
 
 //         cout << endl;
 //     }
- 
- void print20() {
-     cout << "line formality" << endl;
-     int x = 9;
-     for(int i=5; i>=1; i--) {
-         for(int j=i; j<=5; j++) {
-             cout << " ";
-         }
-         for(int k=x; k>=1; k--) {
-             cout << "&";
-         }
-         x = x - 2; 
-         cout << endl;
-     }
- }
- 
- void print21() {
-     cout << "line formality" << endl;
-     //  upper part
-     int x = 1;
-     for(int i=1; i<=5; i++) {
-         for(int j=i; j<=5; j++) {
-             cout << " ";
-         }
-         for(int k=x; k>=1; k--) {
-             cout << "&";
-         }
-         x += 2;
-         cout << endl;
-     }
+
+void print20()
+{
+    cout << "line formality" << endl;
+    int x = 9;
+    for(int i=5; i>=1; i--) {
+        for(int j=i; j<=5; j++) {
+            cout << " ";
+        }
+        for(int k=x; k>=1; k--) {
+            cout << "&";
+        }
+        x = x - 2;
+        cout << endl;
+    }
+}
+
+void print21()
+{
+    cout << "line formality" << endl;
+    //  upper part
+    int x = 1;
+    for(int i=1; i<=5; i++) {
+        for(int j=i; j<=5; j++) {
+            cout << " ";
+        }
+        for(int k=x; k>=1; k--) {
+            cout << "&";
+        }
+        x += 2;
+        cout << endl;
+    }
     //  lower part
 
     x-=4;
@@ -907,28 +956,29 @@ void print19() {
         x -= 2;
         cout << endl;
     }
- }
- 
- void print22() {
-     int n = 5;
-     int s = 1;
-     cout << "line formality" << endl;
-     
+}
+
+void print22()
+{
+    int n = 5;
+    int s = 1;
+    cout << "line formality" << endl;
+
     //  upper part
-         for(int i=1; i<=n; i++) {
-         if(i == 1) {
-             cout << "&&&&&&&&&" << endl;
-         }
-        
-        // left upper side "&"  
+    for(int i=1; i<=n; i++) {
+        if(i == 1) {
+            cout << "&&&&&&&&&" << endl;
+        }
+
+        // left upper side "&"
         for(int j=4; j>=i; j--) {
             cout << "&";
         }
         // upper spaces
         if(s <= 7) {
             for(int k=s; k>=1; k--) {
-            cout << " ";
-        }
+                cout << " ";
+            }
         }
         // right upper side "&"
         for(int l=4; l>=i; l--) {
@@ -938,36 +988,37 @@ void print19() {
         if(i < n) {
             cout << endl;
         }
-     }
+    }
     // lower part
     s -= 6;
     int x = 4;
-        for(int i=1; i<n-1; i++) {
-            // left lower side "&"
-            for(int j=x; j>=3; j--) {
-                cout << "&";
-            }
-            // lower space
-            for(int k=s; k>=1; k--) {
-                cout << " ";
-            }
-            // right lower side "&"
-            for(int l=x; l>=3; l--) {
-                cout << "&";
-            }
-            s -= 2;
-            if(i < n-1) {
-                x++;
-            }
-            cout << endl;
-            if(i == 3) {
-             cout << "&&&&&&&&&" << endl;
-            }
+    for(int i=1; i<n-1; i++) {
+        // left lower side "&"
+        for(int j=x; j>=3; j--) {
+            cout << "&";
         }
- }
- 
- // Array Programs
- void array() {
+        // lower space
+        for(int k=s; k>=1; k--) {
+            cout << " ";
+        }
+        // right lower side "&"
+        for(int l=x; l>=3; l--) {
+            cout << "&";
+        }
+        s -= 2;
+        if(i < n-1) {
+            x++;
+        }
+        cout << endl;
+        if(i == 3) {
+            cout << "&&&&&&&&&" << endl;
+        }
+    }
+}
+
+// Array Programs
+void array()
+{
     int n = 5;
     int arr[n] = {5, 89, 95, 1, 57};
     cout << "Elements of are: " << endl;
@@ -977,7 +1028,8 @@ void print19() {
     cout << endl;
 }
 
-void array2() {
+void array2()
+{
     int n = 5;
     int arr[n];
     cout << "enter the elements of array: ";
@@ -991,7 +1043,8 @@ void array2() {
     cout << endl;
 }
 
-void array3() {
+void array3()
+{
     int sum = 0;
     int n = 5;
     int arr[n];
@@ -1005,7 +1058,8 @@ void array3() {
     cout << "Sum of all marks scored is: " << sum << endl;
 }
 
-int arrSearch() {
+int arrSearch()
+{
     int key;
     int n = 5;
     int arr[n]= {5, 87, 96, 15, 6};
@@ -1033,7 +1087,8 @@ int arrSearch() {
     }
 }
 
-void largestInArrayLoop() {
+void largestInArrayLoop()
+{
     int n = 5;
     cout << "Size of array is 5" << endl;
     int arr[n];
@@ -1057,7 +1112,8 @@ void largestInArrayLoop() {
     cout << "Largest element = " << max << endl;
 }
 
-void smallestInArrayLoop() {
+void smallestInArrayLoop()
+{
     int n = 5;
     cout << "Size of array is 5" << endl;
     int arr[n];
@@ -1081,7 +1137,8 @@ void smallestInArrayLoop() {
     cout << "Smallest element = " << min << endl;
 }
 
-void secondLargestElementLoop() {
+void secondLargestElementLoop()
+{
     int n = 5;
     cout << "Size of array is 5" << endl;
     int arr[n];
@@ -1102,8 +1159,7 @@ void secondLargestElementLoop() {
         if(max < arr[i]) {
             secLargest = max;   // back up
             max = arr[i];
-        }
-        else if((secLargest < arr[i]) && (arr[i] != max)) { // if not max then it may secLargest
+        } else if((secLargest < arr[i]) && (arr[i] != max)) { // if not max then it may secLargest
             secLargest = arr[i];
         }
     }
@@ -1120,18 +1176,19 @@ void secondLargestElementLoop() {
 
 }
 
-void addMatrix() {
+void addMatrix()
+{
     // first matrix
     int n, m;
     cout << "Enter the size of row and col of matrix-1: ";
     cin >> n >> m;
     int arr1[n][m];
-    
+
     int x, y;
     cout << "Enter the size of row and col of matrix-2: ";
     cin >> x >> y;
     int arr2[x][y];
-    
+
     if((n == x) && (m == y)) {
         cout << "Enter the elements of Matrix-1: " << endl;
         for(int i=0; i<n; i++) {
@@ -1139,17 +1196,17 @@ void addMatrix() {
                 cin >> arr1[i][j];
             }
         }
-    
-    // second matrix
-        
+
+        // second matrix
+
         cout << "Enter the elements of Matrix-2: " << endl;
         for(int i=0; i<x; i++) {
             for(int j=0; j<y; j++) {
                 cin >> arr2[i][j];
             }
         }
-    
-    // printing both matrix
+
+        // printing both matrix
         cout << "Elements of matrix-1 are: " << endl;
         for(int i=0; i<n; i++) {
             for(int j=0; j<m; j++) {
@@ -1157,7 +1214,7 @@ void addMatrix() {
             }
             cout << endl;
         }
-    
+
         cout << "Elements of matrix-2 are: " << endl;
         for(int i=0; i<x; i++) {
             for(int j=0; j<y; j++) {
@@ -1165,7 +1222,7 @@ void addMatrix() {
             }
             cout << endl;
         }
-        
+
         // Addition of both matrix
         int c = n;
         int d = m;
@@ -1175,7 +1232,7 @@ void addMatrix() {
                 res[i][j] = arr1[i][j] + arr2[i][j];
             }
         }
-        
+
         cout << "Addition of both matrix:" << endl;
         for(int i=0; i<c; i++) {
             for(int j=0; j<d; j++) {
@@ -1183,13 +1240,14 @@ void addMatrix() {
             }
             cout << endl;
         }
-        
+
     } else {
         cout << "Enter the correct order of matrix!" << endl;
     }
 }
 
-void multiMatrix() {
+void multiMatrix()
+{
     int r1, c1, r2, c2;
     cout << "Enter the size of rows and col of matrix-1: ";
     cin >> r1 >> c1;
@@ -1197,7 +1255,7 @@ void multiMatrix() {
     cin >> r2 >> c2;
     int arr1[r1][c1];
     int arr2[r2][c2];
-    
+
     if(c1 == r2) {
         cout << "Enter the elements of Matrix-1: " << endl;
         for(int i=0; i<r1; i++) {
@@ -1205,16 +1263,16 @@ void multiMatrix() {
                 cin >> arr1[i][j];
             }
         }
-    
-    // second matrix
+
+        // second matrix
         cout << "Enter the elements of Matrix-2: " << endl;
         for(int i=0; i<r2; i++) {
             for(int j=0; j<c2; j++) {
                 cin >> arr2[i][j];
             }
         }
-    
-    // printing both matrix
+
+        // printing both matrix
         cout << "Elements of matrix-1 are: " << endl;
         for(int i=0; i<r1; i++) {
             for(int j=0; j<c1; j++) {
@@ -1222,7 +1280,7 @@ void multiMatrix() {
             }
             cout << endl;
         }
-    
+
         cout << "Elements of matrix-2 are: " << endl;
         for(int i=0; i<r2; i++) {
             for(int j=0; j<c2; j++) {
@@ -1230,10 +1288,10 @@ void multiMatrix() {
             }
             cout << endl;
         }
-        
-    // Multiplication of both Matrix
+
+        // Multiplication of both Matrix
         int arr3[r1][c2];
-        
+
         for(int i=0; i<r1; i++) {
             for(int j=0; j<c2; j++) {
                 arr3[i][j] = 0;
@@ -1241,11 +1299,11 @@ void multiMatrix() {
                 for(int k=0; k<r2; k++) {
                     arr3[i][j] = (arr1[i][k] * arr2[k][j]) + arr3[i][j];
 
-                } 
+                }
             }
         }
-        
-    // Printing the result
+
+        // Printing the result
         cout << "Multiplication of both matrix: " << endl;
         for(int i=0; i<r1; i++) {
             for(int j=0; j<c2; j++) {
@@ -1253,83 +1311,88 @@ void multiMatrix() {
             }
             cout << endl;
         }
-        
+
     } else {
         cout << "Multiplication is not possible for such size of matrix!" << endl;
     }
 }
 
 // function programs
-void callByValue(int x, int y) {
+void callByValue(int x, int y)
+{
     cout << "Before Swapping: " << endl;
     cout << "A = " << x << endl;
     cout << "B = " << y << endl;
-    
+
     swap(x, y);
-    
+
     cout << "After swapping: " << endl;
     cout << "A = " << x << endl;
     cout << "B = " << y << endl;
 }
 
-void callByReference(int &x, int &y) {
+void callByReference(int &x, int &y)
+{
     cout << "Before Swapping: " << endl;
     cout << "A = " << x << endl;
     cout << "B = " << y << endl;
-    
+
     swap(x, y);
-    
+
     cout << "After swapping: " << endl;
     cout << "A = " << x << endl;
     cout << "B = " << y << endl;
 }
 
-void callByAddress(int *x, int *y) {
+void callByAddress(int *x, int *y)
+{
     cout << "Before Swapping: " << endl;
     cout << "A = " << *x << endl;
     cout << "B = " << *y << endl;
-    
+
     swap(*x, *y);
-    
+
     cout << "After swapping: " << endl;
     cout << "A = " << *x << endl;
     cout << "B = " << *y << endl;
 }
 
-void swapFunction() {
+void swapFunction()
+{
     int x;
     cout << "Enter 1 to swap two number using call by value function: " << endl;
     cout << "Enter 2 to swap two number using call by reference function: " << endl;
     cout << "Enter 3 to swap two number using call by address function: " << endl;
     cin >> x;
-    
+
     int a,b;
     cout << "Enter the value of A and B: ";
     cin >> a >> b;
-    
+
     switch(x) {
-        case 1: 
-            callByValue(a, b);
-            cout << "Original value: " << endl;
-            cout << "A = " << a << " " << "B = " << b << endl;
-            break;
-            
-        case 2:
-            callByReference(a, b);
-            cout << "Original value: " << endl;
-            cout << "A = " << a << " " << "B = " << b << endl;
-            break;
-            
-        case 3:
-            callByAddress(&a, &b);
-            cout << "Original value: " << endl;
-            cout << "A = " << a << " " << "B = " << b << endl;
-            break;
-            
+    case 1:
+        callByValue(a, b);
+        cout << "Original value: " << endl;
+        cout << "A = " << a << " " << "B = " << b << endl;
+        break;
+
+    case 2:
+        callByReference(a, b);
+        cout << "Original value: " << endl;
+        cout << "A = " << a << " " << "B = " << b << endl;
+        break;
+
+    case 3:
+        callByAddress(&a, &b);
+        cout << "Original value: " << endl;
+        cout << "A = " << a << " " << "B = " << b << endl;
+        break;
+
     }
 }
 
-float findSimpleInterest(float amount, float tyme, float rate) {
+float findSimpleInterest(float amount, float tyme, float rate)
+{
     // S.I. = (P × R × T)/100
     rate = rate/100;
     float ans;
@@ -1337,7 +1400,8 @@ float findSimpleInterest(float amount, float tyme, float rate) {
     return ans;
 }
 
-void simpleInterest() {
+void simpleInterest()
+{
     float rate, tyme, amount;
     cout << "Enter the amount on which you want to calculate simple interest: ";
     cin >> amount;
@@ -1349,14 +1413,16 @@ void simpleInterest() {
     cout << "Simple Interest = " << findSimpleInterest(amount, tyme, rate);
 }
 
-void accessValuePointer(int number) {
+void accessValuePointer(int number)
+{
     int *p;
     p = &number;
     cout << "Address of entered number = " << p << endl;
     cout << "Value of entered number using pointer = " << *p << endl;
 }
 
-int recurSum(int number1) {
+int recurSum(int number1)
+{
     if(number1 != 0) {
         return number1 + recurSum(number1-1);
     } else {
@@ -1364,7 +1430,8 @@ int recurSum(int number1) {
     }
 }
 
-int recurFibo(int term, int first, int sec, int nTerm) {
+int recurFibo(int term, int first, int sec, int nTerm)
+{
     if(term != 2) {
         nTerm = first + sec;
         first = sec;
@@ -1375,7 +1442,8 @@ int recurFibo(int term, int first, int sec, int nTerm) {
     return 0;
 }
 
-int recurFact(int number2) {
+int recurFact(int number2)
+{
     if(number2 != 0) {
         cout << number2 << endl;
         return number2 *= recurFact(number2 - 1);
@@ -1385,84 +1453,99 @@ int recurFact(int number2) {
 }
 
 // structure and union programs
-union money{
+union money {
     int salary;
     char moneySymbol;
     bool fitna;
 };
 
-typedef struct student1{
+typedef struct student1 {
     string name;
     int rollNo;
     int age;
-    float cgpa; 
+    float cgpa;
 } st;   //short-cut hai ye (st) ye likhne se main function m pura initialize nhi krha pdega (see main fun)...
 
 // OOPM programs
-class It{
-    private:
-        int a, b;   //data member
-    
-    public:
-        void setValue() {   //member function-1
-            cout << "Enter the values of A and B: ";
-            cin >> a >> b;
-        }
-        void getValue() {   //member function-2
-            cout << "A = " << a << endl;
-            cout << "B = " << b << endl;
-        }
+class It
+{
+private:
+    int a, b;   //data member
+
+public:
+    void setValue()     //member function-1
+    {
+        cout << "Enter the values of A and B: ";
+        cin >> a >> b;
+    }
+    void getValue()     //member function-2
+    {
+        cout << "A = " << a << endl;
+        cout << "B = " << b << endl;
+    }
 };
 
-class Addition{
-    private:
-        int a,b;
+class Addition
+{
+private:
+    int a,b;
 
-    public:
-        void setValue() {
-            cout << "Enter the values of A and B: ";
-            cin >> a >> b;
-        }
-        void getValue() {
-            cout << "Entered values are: " << endl;
-            cout << "A = " << a << endl;
-            cout << "B = " << b << endl;
-        }
-        void addValue() {
-            cout << "Addition of A and B = " << a+b << endl;
-        }
+public:
+    void setValue()
+    {
+        cout << "Enter the values of A and B: ";
+        cin >> a >> b;
+    }
+    void getValue()
+    {
+        cout << "Entered values are: " << endl;
+        cout << "A = " << a << endl;
+        cout << "B = " << b << endl;
+    }
+    void addValue()
+    {
+        cout << "Addition of A and B = " << a+b << endl;
+    }
 };
 
 int globalVar = 100;    //global varialble
 
-class ScopeRes{
-    public:
-        void localFun() {
-            cout << "Inside the Local Function." << endl;
-        }
-        void globalFun();
-        
+class ScopeRes
+{
+public:
+    void localFun()
+    {
+        cout << "Inside the Local Function." << endl;
+    }
+    void globalFun();
+
 };
 
-void ScopeRes::globalFun() {
+void ScopeRes::globalFun()
+{
     cout << "Inside the Global Function." << endl;
 }
 
-class Car{
-    public:
-        Car() {
-            cout << "Inside constructor." << endl;
-        }
-        ~Car() {
-            cout << "Inside destructor." << endl;
-        }
+class Car
+{
+public:
+    Car()
+    {
+        cout << "Inside constructor." << endl;
+    }
+    ~Car()
+    {
+        cout << "Inside destructor." << endl;
+    }
 };
 
-class A{
+class A
+{
     int a;
     float b;
-    public:
-    A() {
+public:
+    A()
+    {
         cout << "Enter the value of A: ";
         cin >> a;
         cout << "Enter the float value of B: ";
@@ -1470,7 +1553,8 @@ class A{
         cout << "Default constructor values: " << endl;
         cout << "A = " << a << endl << "B = " << b << endl;
     }
-    A(int x, int y) {
+    A(int x, int y)
+    {
         a = x;
         b = y;
         cout << "Parameterized constructor values: " << endl;
@@ -1478,253 +1562,304 @@ class A{
     }
 };
 
-class Base{
-    protected:
-        int a, b;
-    public:
-        void setValue() {
-            cout << "Enter the values of A and B: ";
-            cin >> a >> b;
-        }
-        // void getValue() {
-        //     cout << "parent class values are: " << endl;
-        //     cout << "A = " << a << endl;
-        //     cout << "B = " << b << endl;
-        // }
+class Base
+{
+protected:
+    int a, b;
+public:
+    void setValue()
+    {
+        cout << "Enter the values of A and B: ";
+        cin >> a >> b;
+    }
+    // void getValue() {
+    //     cout << "parent class values are: " << endl;
+    //     cout << "A = " << a << endl;
+    //     cout << "B = " << b << endl;
+    // }
 };
 
-class Derived : public Base {
-    private:
-        float x, y;
-    public:
-        void setValue2() {
-            cout << "Enter the float values of X and Y: ";
-            cin >> x >> y;
-        }
-        void getValue2() {
-            cout << "Entered values are: " << endl;
-            cout << "X = " << x << endl;
-            cout << "Y = " << y << endl;
-            
-            cout << "Derived values of parent class are: " << endl;
-            cout << "A = " << a << endl;
-            cout << "B = " << b << endl;
-            
-        }
+class Derived : public Base
+{
+private:
+    float x, y;
+public:
+    void setValue2()
+    {
+        cout << "Enter the float values of X and Y: ";
+        cin >> x >> y;
+    }
+    void getValue2()
+    {
+        cout << "Entered values are: " << endl;
+        cout << "X = " << x << endl;
+        cout << "Y = " << y << endl;
+
+        cout << "Derived values of parent class are: " << endl;
+        cout << "A = " << a << endl;
+        cout << "B = " << b << endl;
+
+    }
 };
 
-class Animal {
-    protected:
-        int a,b;
-    public:
-        void setValue() {
-            cout << "Enter the values of A and B: ";
-            cin >> a >> b;
-        }
+class Animal
+{
+protected:
+    int a,b;
+public:
+    void setValue()
+    {
+        cout << "Enter the values of A and B: ";
+        cin >> a >> b;
+    }
 };
 
-class Cat : public Animal {
-    protected:
-        int m,n;
-    public:
-        void setValue2() {
-            cout << "Enter the values of M and N: ";
-            cin >> m >> n;
-        }
+class Cat : public Animal
+{
+protected:
+    int m,n;
+public:
+    void setValue2()
+    {
+        cout << "Enter the values of M and N: ";
+        cin >> m >> n;
+    }
 };
 
-class Kitten : public Cat {
-    protected:
-        int x,y;
-    public:
-        void setValue3() {
-            cout << "Enter the values of X and Y: ";
-            cin >> x >> y;
-        }
-        void display() {
-            cout << "X = " << x << " " << "Y = " << y << endl;
-        }
-        void showValue() {
-            cout << "Derived values are: " << endl;
-            cout << "A = " << a << " " << "B = " << b << endl;
-            cout << "M = " << m << " " << "N = " << n << endl;
-        }
+class Kitten : public Cat
+{
+protected:
+    int x,y;
+public:
+    void setValue3()
+    {
+        cout << "Enter the values of X and Y: ";
+        cin >> x >> y;
+    }
+    void display()
+    {
+        cout << "X = " << x << " " << "Y = " << y << endl;
+    }
+    void showValue()
+    {
+        cout << "Derived values are: " << endl;
+        cout << "A = " << a << " " << "B = " << b << endl;
+        cout << "M = " << m << " " << "N = " << n << endl;
+    }
 };
 
-class Father {
-    protected:
-        string name = "Abbu!";
-    public:
-        void sayName() {
-            cout << name << endl;
-        }
+class Father
+{
+protected:
+    string name = "Abbu!";
+public:
+    void sayName()
+    {
+        cout << name << endl;
+    }
 };
 
-class Mother {
-    protected:
-        string name2 = "Ammi!";
-    public:
-        void sayName() {
-            cout << name2 << endl;
-        }
+class Mother
+{
+protected:
+    string name2 = "Ammi!";
+public:
+    void sayName()
+    {
+        cout << name2 << endl;
+    }
 };
 
-class Child : public Father, public Mother {
-    public:
-        void msg() {
-            cout << "child said...!" << endl;
-        }
+class Child : public Father, public Mother
+{
+public:
+    void msg()
+    {
+        cout << "child said...!" << endl;
+    }
 };
 
-class Vehicle {
-    protected:
-        int a;
-    public:
-        void setValue() {
-            cout << "Enter the value of A: ";
-            cin >> a;
-        }
+class Vehicle
+{
+protected:
+    int a;
+public:
+    void setValue()
+    {
+        cout << "Enter the value of A: ";
+        cin >> a;
+    }
 };
 
-class Scooty : public Vehicle {
-    protected:
-        int b;
-    public:
-        void setValue1() {
-            cout << "Enter the value of B: ";
-            cin >> b;
-        }
-        void display1() {
-            cout << "Sum of A and B = " << a + b << endl;
-        }
+class Scooty : public Vehicle
+{
+protected:
+    int b;
+public:
+    void setValue1()
+    {
+        cout << "Enter the value of B: ";
+        cin >> b;
+    }
+    void display1()
+    {
+        cout << "Sum of A and B = " << a + b << endl;
+    }
 };
 
-class Bike : public Vehicle {
-    protected:
-        int c;
-    public:
-        void setValue2() {
-            cout << "Enter the value of C: ";
-            cin >> c;
-        }
-        void display2() {
-            cout << "Sum of A and C = " << a + c << endl;
-        }
+class Bike : public Vehicle
+{
+protected:
+    int c;
+public:
+    void setValue2()
+    {
+        cout << "Enter the value of C: ";
+        cin >> c;
+    }
+    void display2()
+    {
+        cout << "Sum of A and C = " << a + c << endl;
+    }
 };
 
-class Technology {
-    public:
-        void display() {
-            cout << "Congrats! You have accessed Technology through coding..." << endl;
-        }
+class Technology
+{
+public:
+    void display()
+    {
+        cout << "Congrats! You have accessed Technology through coding..." << endl;
+    }
 };
 
-class Laptop : virtual public Technology {
-    public:
-        void show1() {
-            cout << "This is class -> Laptop" << endl;
-        }
+class Laptop : virtual public Technology
+{
+public:
+    void show1()
+    {
+        cout << "This is class -> Laptop" << endl;
+    }
 };
 
-class Computer : virtual public Technology {
-    public:
-        void show2() {
-            cout << "This is class -> Computer" << endl;
-        }
+class Computer : virtual public Technology
+{
+public:
+    void show2()
+    {
+        cout << "This is class -> Computer" << endl;
+    }
 };
 
-class Coding : public Laptop, public Computer {
-    public:
-        void show3() {
-            cout << "This is class -> Coding" << endl;
-        }
+class Coding : public Laptop, public Computer
+{
+public:
+    void show3()
+    {
+        cout << "This is class -> Coding" << endl;
+    }
 };
 
-class Dost {
-    private:
-        int a;
-    public:
-        void setValue() {
-            cout << "Enter the value of A: ";
-            cin >> a;
-        }
-        void showValue() {
-            cout << "Entered Value = " << a << endl;
-        }
-        
-        // declaration of friend function
-        friend void addValue(Dost &refrenceVariable);
+class Dost
+{
+private:
+    int a;
+public:
+    void setValue()
+    {
+        cout << "Enter the value of A: ";
+        cin >> a;
+    }
+    void showValue()
+    {
+        cout << "Entered Value = " << a << endl;
+    }
+
+    // declaration of friend function
+    friend void addValue(Dost &refrenceVariable);
 };
 
 // definition of friend function
-void addValue(Dost &refrenceVariable) {
+void addValue(Dost &refrenceVariable)
+{
     int b;
     cout << "Enter the value to add through friend function: ";
     cin >> b;
     refrenceVariable.a = refrenceVariable.a + b;
 }
 
-class Sample{
+class Sample
+{
     // operator overloading function:
     // op overloading doen't meaning that ki kisi operator ki functioning ko bdalna (+ operator values ko plus hi krega minus nhi, functioning nhi bdlegi), it just meaning that to invoke the particular operator(as per our choise) with the help of an object...
-    
+
     int x,y;
-    public: 
-        void get(int a, int b) {
-            x = a;
-            y = b;
-        }
-        
-        void display() {
-            cout << "A = " << x << endl;
-            cout << "B = " << y << endl;
-        }
-        
-        void operator ++() {  // `Sample operator ++()` ye bhi likh skte...
-            x = x + 1;
-            y = y + 1;
-        }
+public:
+    void get(int a, int b)
+    {
+        x = a;
+        y = b;
+    }
+
+    void display()
+    {
+        cout << "A = " << x << endl;
+        cout << "B = " << y << endl;
+    }
+
+    void operator ++()    // `Sample operator ++()` ye bhi likh skte...
+    {
+        x = x + 1;
+        y = y + 1;
+    }
 };
 
-class Chappu{
+class Chappu
+{
     int x;
-    public:
-        void get(int c) {
-            x = c;
-        }
-        
-        void display() {
-            cout << x << endl;
-        }
-        
-        friend Chappu operator *(Chappu, Chappu); // (Chappu, Chappu) specifies that the operator* function takes two parameters, both of type Chappu class...
+public:
+    void get(int c)
+    {
+        x = c;
+    }
+
+    void display()
+    {
+        cout << x << endl;
+    }
+
+    friend Chappu operator *(Chappu, Chappu); // (Chappu, Chappu) specifies that the operator* function takes two parameters, both of type Chappu class...
 };
 
-Chappu operator *(Chappu obj1, Chappu obj2){    // here, Chappu is the return type of the function `operator *()` and obj1 and obj2 are objects of type Chappu.
-    Chappu obj3;  
+Chappu operator *(Chappu obj1, Chappu obj2)     // here, Chappu is the return type of the function `operator *()` and obj1 and obj2 are objects of type Chappu.
+{
+    Chappu obj3;
     obj3.x = obj1.x * obj2.x;
     return obj3;  // obj3 ek obj hai, koi integer nhi jo `int` return type se return ho jai, is liye apn n class (Chappu) ko hi ek return type bna diya take uska object return krva ske...
 }
 
-class Complex{
+class Complex
+{
     // binary op overloading
     int x,y;
-    public:
-        Complex() { // default constructor
+public:
+    Complex()   // default constructor
+    {
         x = 0;
         y = 0;
     }
-    
-    Complex(int a, int b) { // parameterised constructor
+
+    Complex(int a, int b)   // parameterised constructor
+    {
         x = a;
         y = b;
     }
-    
-    Complex operator +(Complex c) { // yaha pr c -> obj2 hai...
+
+    Complex operator +(Complex c)   // yaha pr c -> obj2 hai...
+    {
         Complex obj3;
         obj3.x = x + c.x;
         obj3.y = y + c.y;
-        
+
         cout << "x or y ka chakkar" << endl;
         cout << "x = " << x << endl;
         cout << "y = " << y << endl;
@@ -1732,64 +1867,76 @@ class Complex{
         cout << "c.y = " << c.y << endl;
         return obj3;
     }
-    
-    void display() {
+
+    void display()
+    {
         cout << "Sum of Real values = " << x << endl;
         cout << "Sum of Imaginary values = " << y << endl;
     }
-    
+
 };
 
 
 // function overloading prog
 // sirf argument/parameter different hona...
-float add(int a, int b, float c) {
+float add(int a, int b, float c)
+{
     return (a + b + c);
 }
 
-int add(int a, int b) {
+int add(int a, int b)
+{
     return (a + b);
 }
 
 // function overriding
 // run time poly hai ye, isme sb kuch same hona (arg/para bhi...)
-class baseClass {
-    public:
+class baseClass
+{
+public:
 // agr virtual lga diya to pointer isko call nhi kr skta...
-//      virtual void fun() { 
-        void fun() {
-            cout << "Inside Base class" << endl;
-        }
+//      virtual void fun() {
+    void fun()
+    {
+        cout << "Inside Base class" << endl;
+    }
 };
 
-class derivedClass: public baseClass {
-    public: 
-        void fun() {
-            cout << "Inside Derived class" << endl;
-        }
+class derivedClass: public baseClass
+{
+public:
+    void fun()
+    {
+        cout << "Inside Derived class" << endl;
+    }
 };
 
 
 // virtual fun prog (function overriding m aata ye)
-class bas {
-    public:
-        virtual void disp(int a, int b) {   /* hmesha base class ka func virtual hoga bcoz (function overriding m hmesha base or derived class k fun same rehte with arg/para sb same...
+class bas
+{
+public:
+    virtual void disp(int a, int b)
+    {
+        /* hmesha base class ka func virtual hoga bcoz (function overriding m hmesha base or derived class k fun same rehte with arg/para sb same...
             -> To jab sb same hi hai to derived class se hi access krlo or base ko virtual bna do...
-            -> obj bhi hmesha derived class ka hi bnta to derived class k fun ko call krne m bhi masle nhi honge) 
+            -> obj bhi hmesha derived class ka hi bnta to derived class k fun ko call krne m bhi masle nhi honge)
             -> or agr kabhi base class k fun ki zarurat pde to virtual keyword hta do... */
-            cout << "Base class called" << endl;
-            cout << "A = " << a << endl;
-            cout << "B = " << b << endl;
-        }
+        cout << "Base class called" << endl;
+        cout << "A = " << a << endl;
+        cout << "B = " << b << endl;
+    }
 };
 
-class der: public bas{
-    public:
-        void disp(int a, int b) {
-            cout << "Derived class called" << endl;
-            cout << "A = " << a << endl;
-            cout << "B = " << b << endl;
-        }
+class der: public bas
+{
+public:
+    void disp(int a, int b)
+    {
+        cout << "Derived class called" << endl;
+        cout << "A = " << a << endl;
+        cout << "B = " << b << endl;
+    }
 };
 
 // Data Structure programs
@@ -1798,7 +1945,8 @@ class der: public bas{
     eg - arr[][4];
 */
 
-void rowMajor(int arr[][4], int n, int m) {
+void rowMajor(int arr[][4], int n, int m)
+{
     for(int i=0; i<n; i++) {
         for(int j=0; j<m; j++) {
             cout << arr[i][j] << " ";
@@ -1807,7 +1955,8 @@ void rowMajor(int arr[][4], int n, int m) {
     cout << endl;
 }
 
-void colMajor(int arr[][4], int n, int m) {
+void colMajor(int arr[][4], int n, int m)
+{
     for(int i=0; i<m; i++) {
         for(int j=0; j<n; j++) {
             cout << arr[j][i] << " ";
@@ -1817,118 +1966,133 @@ void colMajor(int arr[][4], int n, int m) {
 }
 
 // Stack Implementation
-class Stack {
-    
-    public: 
+class Stack
+{
+
+public:
     int top = -1;
-        void push(int arr[], int n, int a) {
-            if(top < n-1) {
-                top++;  
-                arr[top] = a;
-            } else {
-                cout << "Stack Overflow!" << endl;
-            }
+    void push(int arr[], int n, int a)
+    {
+        if(top < n-1) {
+            top++;
+            arr[top] = a;
+        } else {
+            cout << "Stack Overflow!" << endl;
         }
-        
-        void pop(int arr[], int n) {
-            if(top > -1) {
-                top = top - 1;
-            } else {
-                cout << "Stack Underflow!" << endl;
-            }
+    }
+
+    void pop(int arr[], int n)
+    {
+        if(top > -1) {
+            top = top - 1;
+        } else {
+            cout << "Stack Underflow!" << endl;
         }
-        
-        void peek(int arr[], int n) {
-            if(top > -1) {
-                cout << "Top element = " << arr[top] << endl;
-            } else {
-                cout << "Stack Underflow!" << endl;
-            }
+    }
+
+    void peek(int arr[], int n)
+    {
+        if(top > -1) {
+            cout << "Top element = " << arr[top] << endl;
+        } else {
+            cout << "Stack Underflow!" << endl;
         }
-        
-        void size(int arr[], int n) {
-            if(top > -1) {
-                cout << "Size of stack = " << top << endl;
-            } else {
-                cout << "Stack is empty!" << endl;
-            }
+    }
+
+    void size(int arr[], int n)
+    {
+        if(top > -1) {
+            cout << "Size of stack = " << top << endl;
+        } else {
+            cout << "Stack is empty!" << endl;
         }
-        
-        void isEmpty(int arr[], int n) {
-            if(top <= -1) {
-                cout << "true" << endl;
-            } else {
-                cout << "false" << endl;
-            }
+    }
+
+    void isEmpty(int arr[], int n)
+    {
+        if(top <= -1) {
+            cout << "true" << endl;
+        } else {
+            cout << "false" << endl;
         }
+    }
 };
 
 // Queue implementation
-class Queue{
-    public:
-        int front = -1;
-        int rear = -1;
-        int backup = 0;
-        
-        void push(int arr[], int n, int a) {
-            if(rear < n-1) {
-                rear++;
-                arr[rear] = a;
-            } else {
-                cout << "Queue overflow!" << endl;
-            }
+class Queue
+{
+public:
+    int front = -1;
+    int rear = -1;
+    int backup = 0;
+
+    void push(int arr[], int n, int a)
+    {
+        if(rear < n-1) {
+            rear++;
+            arr[rear] = a;
+        } else {
+            cout << "Queue overflow!" << endl;
         }
-        
-        void pop(int arr[], int n) {
-            if((front < n-1) && (front != rear)) {
-                front++;
-                cout << "Alwida = " << arr[front] << endl;
-                backup = arr[front];
-                arr[front] = -1;
-            } else if(front == rear) {
-                rear = -1;
-                front = -1;
-                cout << "Queue underflow!" << endl;
-            } else {
-                cout << "Queue underflow!" << endl;
-            }
+    }
+
+    void pop(int arr[], int n)
+    {
+        if((front < n-1) && (front != rear)) {
+            front++;
+            cout << "Alwida = " << arr[front] << endl;
+            backup = arr[front];
+            arr[front] = -1;
+        } else if(front == rear) {
+            rear = -1;
+            front = -1;
+            cout << "Queue underflow!" << endl;
+        } else {
+            cout << "Queue underflow!" << endl;
         }
-        
-        void size(int arr[], int n) {
-            if(rear > -1) {
-                cout << "Size of Queue = " << rear+1 << endl;
-            } else {
-                cout << "Queue is empty!" << endl;
-            }
+    }
+
+    void size(int arr[], int n)
+    {
+        if(rear > -1) {
+            cout << "Size of Queue = " << rear+1 << endl;
+        } else {
+            cout << "Queue is empty!" << endl;
         }
-        
-        void isEmpty(int arr[], int n) {
-            if(front == rear) {
-                cout << "True" << endl;
-            } else {
-                cout << "False" << endl;
-            }
+    }
+
+    void isEmpty(int arr[], int n)
+    {
+        if(front == rear) {
+            cout << "True" << endl;
+        } else {
+            cout << "False" << endl;
         }
-        
-        void getRear(int arr[], int n) {
-            cout << "Rear element = " << arr[rear] << endl;
-            cout << "Rear index = " << rear << endl;
-        }
-        
-        void getFront(int arr[], int n) {
-            cout << "Recently removed element = " << backup << endl;
-            cout << "Front index = " << front << endl;
-        }
+    }
+
+    void getRear(int arr[], int n)
+    {
+        cout << "Rear element = " << arr[rear] << endl;
+        cout << "Rear index = " << rear << endl;
+    }
+
+    void getFront(int arr[], int n)
+    {
+        cout << "Recently removed element = " << backup << endl;
+        cout << "Front index = " << front << endl;
+    }
 };
 
 // Linked-list implementation
-class Node{
-    public:
-        int data;
-        Node* next; // Node is dataType of pointer next
-        
+class Node
+{
+public:
+    int data;
+    Node* next; // Node is dataType of pointer next
+
     // constructor
-    Node(int data) {
+    Node(int data)
+    {
         this -> data = data;
         this -> next = NULL;
     }
@@ -1936,216 +2100,216 @@ class Node{
 
 
 // flag
-int main() {
+int main()
+{
     // programs listing:
     cout << "---Super 100 programs by Mukhtar Khan---" << endl;
     cout << endl;
     cout << "Enter 1 to explore Simple programs" << endl;
-    cout << "Enter 2 to explore if else programs" << endl;
-    cout << "Enter 3 to find addition of two float no." << endl;
-    cout << "Enter 4 to find average of two no." << endl;
-    cout << "Enter 5 to find average marks scored in five subjects" << endl;
-    cout << "*Enter 6 to exchange value of two variables" << endl;
-    cout << "*Enter 7 to convert temperature (C and F)" << endl;
-    cout << "Enter 8 to find the area of circle" << endl;
-    cout << "*Enter 9 to find the reverse of number" << endl;
-    cout << "Enter 10 to find the sum of all digits entered" << endl;
-    
+    cout << "Enter 2 to explore If-else programs" << endl;
+    cout << "Enter 3 to explore Loops programs" << endl;
+    cout << "Enter 4 to explore Patterns programs" << endl;
+    cout << "Enter 5 to explore Arrays programs" << endl;
+    cout << "Enter 6 to explore Function programs" << endl;
+    cout << "Enter 7 to explore Structure and Union programs" << endl;
+    cout << "Enter 8 to explore OOPM programs" << endl;
+    cout << "Enter 9 to explore Data Structure programs" << endl;
+
     cout << endl;
     int prog;
     cout << "Enter the program number: ";
     cin >> prog;
     switch(prog) {
-        case 1: 
-            // programs listing:
-            cout << "---Simple Programs---" << endl;
-            cout << endl;
-            cout << "Enter 1 to print hello world" << endl;
-            cout << "Enter 2 to find addition of two int no." << endl;
-            cout << "Enter 3 to find addition of two float no." << endl;
-            cout << "Enter 4 to find average of two no." << endl;
-            cout << "Enter 5 to find average marks scored in five subjects" << endl;
-            cout << "*Enter 6 to exchange value of two variables" << endl;
-            cout << "*Enter 7 to convert temperature (C and F)" << endl;
-            cout << "Enter 8 to find the area of circle" << endl;
-            cout << "*Enter 9 to find the reverse of number" << endl;
-            cout << "Enter 10 to find the sum of all digits entered" << endl;
-    
-            cout << endl;
-            int prog1;
-            cout << "Enter the program number: ";
-            cin >> prog1;
-    switch(prog1) {
-        case 1: 
+    case 1:
+        // programs listing:
+        cout << "---Simple Programs---" << endl;
+        cout << endl;
+        cout << "Enter 1 to print hello world" << endl;
+        cout << "Enter 2 to find addition of two int no." << endl;
+        cout << "Enter 3 to find addition of two float no." << endl;
+        cout << "Enter 4 to find average of two no." << endl;
+        cout << "Enter 5 to find average marks scored in five subjects" << endl;
+        cout << "*Enter 6 to exchange value of two variables" << endl;
+        cout << "*Enter 7 to convert temperature (C and F)" << endl;
+        cout << "Enter 8 to find the area of circle" << endl;
+        cout << "*Enter 9 to find the reverse of number" << endl;
+        cout << "Enter 10 to find the sum of all digits entered" << endl;
+
+        cout << endl;
+        int prog1;
+        cout << "Enter the program number: ";
+        cin >> prog1;
+        switch(prog1) {
+        case 1:
             printHello();
             break;
-            
+
         case 2:
             addTwoInt();
             break;
-            
+
         case 3:
             addTwoFloat();
             break;
-            
+
         case 4:
             findAvg();
             break;
-            
+
         case 5:
             findAvgFiveSub();
             break;
-            
+
         case 6:
             findExchange();
             break;
-            
+
         case 7:
             convertTemp();
             break;
-            
+
         case 8:
             findArea();
             break;
-            
+
         case 9:
             revNum();
             break;
-            
+
         case 10:
             numSum();
             break;
-    }
-            break;
-            
-        case 2:
-            // programs listing
-    cout << "---If else Programs---" << endl;
-    cout << endl;
-    cout << "Enter 1 to find the maximum age between two students" << endl;
-    cout << "Enter 2 to find largest number among three no." << endl;
-    cout << "Enter 3 to find whether a number is negative or positive." << endl;
-    cout << "Enter 4 to check if the number is even or odd." << endl;
-    cout << "*Enter 5 to check whether a year is a leap year or not." << endl;
-    cout << "Enter 6 to check whether the entered character is a vowel or consonant." << endl;
-    cout << "Enter 7 to find the largest number among two numbers." << endl;
-    cout << "---Switch Case progs---" << endl;
-    cout << "Enter 8 to access the calculator." << endl;
-    cout << "Enter 9 to check whether the entered character is a vowel or consonant." << endl;
-    cout << "***Enter 10 to display day of week as your choice." << endl;
-    
-    cout << endl;
-    int prog2;
-    cout << "Enter the program number: ";
-    cin >> prog2;
-    switch(prog2) {
+        }
+        break;
+
+    case 2:
+        // programs listing
+        cout << "---If else Programs---" << endl;
+        cout << endl;
+        cout << "Enter 1 to find the maximum age between two students" << endl;
+        cout << "Enter 2 to find largest number among three no." << endl;
+        cout << "Enter 3 to find whether a number is negative or positive." << endl;
+        cout << "Enter 4 to check if the number is even or odd." << endl;
+        cout << "*Enter 5 to check whether a year is a leap year or not." << endl;
+        cout << "Enter 6 to check whether the entered character is a vowel or consonant." << endl;
+        cout << "Enter 7 to find the largest number among two numbers." << endl;
+        cout << "---Switch Case progs---" << endl;
+        cout << "Enter 8 to access the calculator." << endl;
+        cout << "Enter 9 to check whether the entered character is a vowel or consonant." << endl;
+        cout << "***Enter 10 to display day of week as your choice." << endl;
+
+        cout << endl;
+        int prog2;
+        cout << "Enter the program number: ";
+        cin >> prog2;
+        switch(prog2) {
         case 1:
             findMaxAge();
             break;
-            
+
         case 2:
             findLargestAmongThree();
             break;
-            
+
         case 3:
             isNegative();
             break;
-            
+
         case 4:
             isOdd();
             break;
-            
+
         case 5:
             isLeapYear();
             break;
-            
+
         case 6:
             isVowel();
             break;
-            
+
         case 7:
             findLargestAmongTwo();
             break;
-            
+
         case 8:
             calculator();
             break;
-            
+
         case 9:
             isVowelBySwitch();
             break;
-            
+
         case 10:
             displayDay();
             break;
-    }
-            break;
-            
-        case 3:
-            // programs listing:
-    cout << "---Loops Programs---" << endl;
-    
-   cout << "Enter 1 to print Hello World five times " << endl;
-   cout << "Enter 2 to print num (1-10) " << endl;
-   cout << "Enter 3 to print num (10-1) " << endl;
-   cout << "Enter 4 to print factorial " << endl;
-   cout << "Enter 5 to print Fibonacci series until given terms " << endl;
-   cout << "Enter 6 to display the sum of n natural numbers " << endl;
-   cout << "Enter 7 to display reverse of any number " << endl;
-   cout << "Enter 8 to sum all the numbers until the you enters 0: " << endl;
-   cout << "Enter 9 to display reverse of any five digit number " << endl;
-   cout << "Enter 10 to print numbers within the range given by the you: " << endl;
-   cout << "Enter 11 to print number table using multiplication operation." << endl;
-   cout << "Enter 12 to print number table using addition operator." << endl;
-   cout << "*Enter 13 to generate prime numbers series up to n numbers." << endl;
-   cout << "Enter 14 to find the sum of all digits of a digit" << endl;
-   
-    
-    cout << endl;
-    int prog3;
-    cout << "Enter the program number: ";
-    cin >> prog3;
-    switch(prog3) {
-        case 1: 
+        }
+        break;
+
+    case 3:
+        // programs listing:
+        cout << "---Loops Programs---" << endl;
+
+        cout << "Enter 1 to print Hello World five times " << endl;
+        cout << "Enter 2 to print num (1-10) " << endl;
+        cout << "Enter 3 to print num (10-1) " << endl;
+        cout << "Enter 4 to print factorial " << endl;
+        cout << "Enter 5 to print Fibonacci series until given terms " << endl;
+        cout << "Enter 6 to display the sum of n natural numbers " << endl;
+        cout << "Enter 7 to display reverse of any number " << endl;
+        cout << "Enter 8 to sum all the numbers until the you enters 0: " << endl;
+        cout << "Enter 9 to display reverse of any five digit number " << endl;
+        cout << "Enter 10 to print numbers within the range given by the you: " << endl;
+        cout << "Enter 11 to print number table using multiplication operation." << endl;
+        cout << "Enter 12 to print number table using addition operator." << endl;
+        cout << "*Enter 13 to generate prime numbers series up to n numbers." << endl;
+        cout << "Enter 14 to find the sum of all digits of a digit" << endl;
+
+
+        cout << endl;
+        int prog3;
+        cout << "Enter the program number: ";
+        cin >> prog3;
+        switch(prog3) {
+        case 1:
             helloFive();
             break;
-            
+
         case 2:
             loop2();
             break;
-            
+
         case 3:
             loop3();
             break;
-            
+
         case 4:
             factoLoop();
             break;
-            
+
         case 5:
             fiboLoop();
             break;
-            
+
         case 6:
             sumoLoop();
             break;
-            
+
         case 7:
             revoLoop();
             break;
-            
+
         case 8:
             sumoLoopTillZero();
             break;
-            
+
         case 9:
             revoFiveLoop();
             break;
-            
+
         case 10:
             loop10();
             break;
-            
+
         case 11:
             multiNumTable();
             break;
@@ -2157,167 +2321,167 @@ int main() {
         case 13:
             findPrimeUptoN();
             break;
-            
+
         case 14:
             allDigitSum();
             break;
-    }
-            break;
-            
-        case 4:
-            // programs listing:
-    cout << "---Super 100 programs by Mukhtar Khan---" << endl;
-    cout << endl;
-    cout << "Enter 1 to print: " << endl << "* " << endl <<
-    "* * "<< endl << "* * * "<< endl << "* * * * "<< endl << "* * * * * "<< endl;
-    cout << "Enter 2 to print: " << endl << "1 " << endl <<
-    "1 2 "<< endl << "1 2 3 "<< endl << "1 2 3 4 "<< endl << "1 2 3 4 5 "<< endl;
-    cout << "Enter 3 to print: " << endl << "A " << endl <<
-    "A B "<< endl << "A B C "<< endl << "A B C D "<< endl << "A B C D E "<< endl;
-    cout << "Enter 4 to print: " << endl << "1 " << endl <<
-    "1 2 "<< endl << "1 2 3 " << endl << "1 2 3 4 "<< endl << "1 2 3 4 5 "<< endl;
-    cout << "Enter 5 to print: " << endl << "* * * * * " << endl <<
-    "* * * * "<< endl << "* * * "<< endl << "* * "<< endl << "* "<< endl;
-    cout << "Enter 6 to print: " << endl << "1 2 3 4 5 " << endl <<
-    "1 2 3 4 "<< endl << "1 2 3 "<< endl << "1 2 "<< endl << "1 "<< endl;
-    cout << "Enter 7 to print: " << endl << "A B C D E " << endl <<
-    "A B C D "<< endl << "A B C "<< endl << "A B "<< endl << "A "<< endl;
-    cout << "*Enter 8 to print: " << endl << "1 2 3 4 5 " << endl << "2 3 4 5 "<< endl << "3 4 5 "<< endl << "4 5 "<< endl << "5 "<< endl;
-    cout << "*Enter 9 to print: " << endl << "         *" << endl << "       * *"<< endl << "     * * *"<< endl << "   * * * *"<< endl << " * * * * *"<< endl;
-    cout << "Enter 10 to print: " << endl << "         1" << endl << "       1 2"<< endl << "     1 2 3"<< endl << "   1 2 3 4"<< endl << " 1 2 3 4 5"<< endl;
-    cout << "Enter 11 to print: " << endl << "         A" << endl << "       A B"<< endl << "     A B C"<< endl << "   A B C D"<< endl << " A B C D E"<< endl;
-    cout << "*Enter 12 to print: " << endl << "         1" << endl << "       2 3"<< endl << "     3 4 5"<< endl << "   4 5 6 7"<< endl << " 5 6 7 8 9"<< endl;
-    cout << "*Enter 13 to print: " << endl << "& & & & &" << endl << "  & & & &"<< endl << "    & & &"<< endl << "      & &"<< endl << "        &"<< endl;
-    cout << "Enter 14 to print: " << endl << "1 2 3 4 5" << endl <<
-    "  1 2 3 4"<< endl << "    1 2 3"<< endl << "      1 2"<< endl << "        1"<< endl;
-    cout << "Enter 15 to print: " << endl << "A B C D E" << endl <<
-    "  A B C D"<< endl << "    A B C"<< endl << "      A B"<< endl << "        A"<< endl;
-    cout << "Enter 16 to print: " << endl << "1 2 3 4 5" << endl <<
-    "  2 3 4 5"<< endl << "    3 4 5"<< endl << "      4 5"<< endl << "        5"<< endl;
-    cout << "Enter 17 to print: " << endl << "     &     " << endl << "    & &     "<< endl << "   & & &      "<< endl << "  & & & &      "<< endl << " & & & & &      "<< endl;
-   cout << "Enter 18 to print: " << endl << " & & & & &      " << endl << "  & & & &      "<< endl << "   & & &      "<< endl << "    & &     "<< endl << "     &     "<< endl;
-   cout << "Enter 19 to print: " << endl << "     &" << endl << "    &&&"<< endl << "   &&&&&"<< endl << "  &&&&&&&"<< endl << " &&&&&&&&&"<< endl;
-   cout << "Enter 20 to print: " << endl << " &&&&&&&&&"<< endl << "  &&&&&&&" << endl << "   &&&&&"<< endl << "    &&&"<< endl << "     &"<< endl;
-   cout << "Enter 21 to print: " << endl << "     &" << endl << "    &&&"<< endl << "   &&&&&"<< endl << "  &&&&&&&"<< endl << " &&&&&&&&&"<< endl << "  &&&&&&&" << endl << "   &&&&&"<< endl << "    &&&"<< endl << "     &"<< endl;
-   cout << "***Enter 22 to print: " << endl << "&&&&&&&&&" << endl << "&&&& &&&&" << endl << "&&&   &&&" << endl << "&&     &&" << endl << "&       &" << endl << "&&     &&" << endl << "&&&   &&&" << endl << "&&&& &&&&" << endl << "&&&&&&&&&" << endl;
-   
-   
-    
-    cout << endl;
-    int prog4;
-    cout << "Enter the program number: ";
-    cin >> prog4;
-    switch(prog4) {
-        case 1: 
+        }
+        break;
+
+    case 4:
+        // programs listing:
+        cout << "---Super 100 programs by Mukhtar Khan---" << endl;
+        cout << endl;
+        cout << "Enter 1 to print: " << endl << "* " << endl <<
+             "* * "<< endl << "* * * "<< endl << "* * * * "<< endl << "* * * * * "<< endl;
+        cout << "Enter 2 to print: " << endl << "1 " << endl <<
+             "1 2 "<< endl << "1 2 3 "<< endl << "1 2 3 4 "<< endl << "1 2 3 4 5 "<< endl;
+        cout << "Enter 3 to print: " << endl << "A " << endl <<
+             "A B "<< endl << "A B C "<< endl << "A B C D "<< endl << "A B C D E "<< endl;
+        cout << "Enter 4 to print: " << endl << "1 " << endl <<
+             "1 2 "<< endl << "1 2 3 " << endl << "1 2 3 4 "<< endl << "1 2 3 4 5 "<< endl;
+        cout << "Enter 5 to print: " << endl << "* * * * * " << endl <<
+             "* * * * "<< endl << "* * * "<< endl << "* * "<< endl << "* "<< endl;
+        cout << "Enter 6 to print: " << endl << "1 2 3 4 5 " << endl <<
+             "1 2 3 4 "<< endl << "1 2 3 "<< endl << "1 2 "<< endl << "1 "<< endl;
+        cout << "Enter 7 to print: " << endl << "A B C D E " << endl <<
+             "A B C D "<< endl << "A B C "<< endl << "A B "<< endl << "A "<< endl;
+        cout << "*Enter 8 to print: " << endl << "1 2 3 4 5 " << endl << "2 3 4 5 "<< endl << "3 4 5 "<< endl << "4 5 "<< endl << "5 "<< endl;
+        cout << "*Enter 9 to print: " << endl << "         *" << endl << "       * *"<< endl << "     * * *"<< endl << "   * * * *"<< endl << " * * * * *"<< endl;
+        cout << "Enter 10 to print: " << endl << "         1" << endl << "       1 2"<< endl << "     1 2 3"<< endl << "   1 2 3 4"<< endl << " 1 2 3 4 5"<< endl;
+        cout << "Enter 11 to print: " << endl << "         A" << endl << "       A B"<< endl << "     A B C"<< endl << "   A B C D"<< endl << " A B C D E"<< endl;
+        cout << "*Enter 12 to print: " << endl << "         1" << endl << "       2 3"<< endl << "     3 4 5"<< endl << "   4 5 6 7"<< endl << " 5 6 7 8 9"<< endl;
+        cout << "*Enter 13 to print: " << endl << "& & & & &" << endl << "  & & & &"<< endl << "    & & &"<< endl << "      & &"<< endl << "        &"<< endl;
+        cout << "Enter 14 to print: " << endl << "1 2 3 4 5" << endl <<
+             "  1 2 3 4"<< endl << "    1 2 3"<< endl << "      1 2"<< endl << "        1"<< endl;
+        cout << "Enter 15 to print: " << endl << "A B C D E" << endl <<
+             "  A B C D"<< endl << "    A B C"<< endl << "      A B"<< endl << "        A"<< endl;
+        cout << "Enter 16 to print: " << endl << "1 2 3 4 5" << endl <<
+             "  2 3 4 5"<< endl << "    3 4 5"<< endl << "      4 5"<< endl << "        5"<< endl;
+        cout << "Enter 17 to print: " << endl << "     &     " << endl << "    & &     "<< endl << "   & & &      "<< endl << "  & & & &      "<< endl << " & & & & &      "<< endl;
+        cout << "Enter 18 to print: " << endl << " & & & & &      " << endl << "  & & & &      "<< endl << "   & & &      "<< endl << "    & &     "<< endl << "     &     "<< endl;
+        cout << "Enter 19 to print: " << endl << "     &" << endl << "    &&&"<< endl << "   &&&&&"<< endl << "  &&&&&&&"<< endl << " &&&&&&&&&"<< endl;
+        cout << "Enter 20 to print: " << endl << " &&&&&&&&&"<< endl << "  &&&&&&&" << endl << "   &&&&&"<< endl << "    &&&"<< endl << "     &"<< endl;
+        cout << "Enter 21 to print: " << endl << "     &" << endl << "    &&&"<< endl << "   &&&&&"<< endl << "  &&&&&&&"<< endl << " &&&&&&&&&"<< endl << "  &&&&&&&" << endl << "   &&&&&"<< endl << "    &&&"<< endl << "     &"<< endl;
+        cout << "***Enter 22 to print: " << endl << "&&&&&&&&&" << endl << "&&&& &&&&" << endl << "&&&   &&&" << endl << "&&     &&" << endl << "&       &" << endl << "&&     &&" << endl << "&&&   &&&" << endl << "&&&& &&&&" << endl << "&&&&&&&&&" << endl;
+
+
+
+        cout << endl;
+        int prog4;
+        cout << "Enter the program number: ";
+        cin >> prog4;
+        switch(prog4) {
+        case 1:
             print1();
             break;
-            
+
         case 2:
             print2();
             break;
-            
+
         case 3:
             print3();
             break;
-            
+
         case 4:
             print4();
             break;
-            
+
         case 5:
             print5();
             break;
-            
+
         case 6:
             print6();
             break;
-            
+
         case 7:
             print7();
             break;
-            
+
         case 8:
             print8();
             break;
-            
+
         case 9:
             print9();
             break;
-            
+
         case 10:
             print10();
             break;
-            
-        case 11: 
+
+        case 11:
             print11();
             break;
-            
+
         case 12:
             print12();
             break;
-            
+
         case 13:
             print13();
             break;
-            
+
         case 14:
             print14();
             break;
-            
+
         case 15:
             print15();
             break;
-            
+
         case 16:
             print16();
             break;
-            
+
         case 17:
             print17();
             break;
-            
+
         case 18:
             print18();
             break;
-            
+
         case 19:
             print19();
             break;
-            
+
         case 20:
             print20();
             break;
-            
-        case 21: 
+
+        case 21:
             print21();
             break;
-            
+
         case 22:
             print22();
             break;
-    }
-            break;
-            
-        case 5:
-            cout << "---Array Programs---" << endl;
+        }
+        break;
 
-    cout << "Enter 1 to print the array: " << endl;
-    cout << "Enter 2 to take an array from user: " << endl;
-    cout << "Enter 3 to find the sum of five subjects: " << endl;
-    cout << "Enter 4 to search an element in an array: " << endl;
-    cout << "Enter 5 to print the largest element in an array: " << endl;
-    cout << "Enter 6 to print smallest element in an array: " << endl;
-    cout << "*Enter 7 to print the second largest element of an array: " << endl;
-    cout << "*Enter 8 to print addition of two matrices using a multidimentional array: " << endl;
-    cout << "***Enter 9 to print multiplication of two matrices using a multidimentional array: " << endl;
+    case 5:
+        cout << "---Array Programs---" << endl;
 
-    cout << endl;
-    int prog5;
-    cout << "Enter the program number: ";
-    cin >> prog5;
+        cout << "Enter 1 to print the array: " << endl;
+        cout << "Enter 2 to take an array from user: " << endl;
+        cout << "Enter 3 to find the sum of five subjects: " << endl;
+        cout << "Enter 4 to search an element in an array: " << endl;
+        cout << "Enter 5 to print the largest element in an array: " << endl;
+        cout << "Enter 6 to print smallest element in an array: " << endl;
+        cout << "*Enter 7 to print the second largest element of an array: " << endl;
+        cout << "*Enter 8 to print addition of two matrices using a multidimentional array: " << endl;
+        cout << "***Enter 9 to print multiplication of two matrices using a multidimentional array: " << endl;
 
-    switch(prog5) {
-        case 1: 
+        cout << endl;
+        int prog5;
+        cout << "Enter the program number: ";
+        cin >> prog5;
+
+        switch(prog5) {
+        case 1:
             array();
             break;
 
@@ -2352,40 +2516,40 @@ int main() {
         case 9:
             multiMatrix();
             break;
-    }
-            break;
-            
-        case 6:
-            // programs listing:
-    cout << "---Function programs---" << endl;
-    cout << endl;
-    cout << "Enter 1 to swap two number." << endl;
-    cout << "Enter 2 to find simple interest." << endl;
-    cout << "Enter 3 to access the value of variable through a pointer." << endl;
-    cout << "Enter 4 to find sum of first N natural number using recursion." << endl;
-    cout << "Enter 5 to print Fibonacci series using recursion." << endl;
-    cout << "Enter 6 to find the factorial of number using recursion" << endl;
-    
-    cout << endl;
-    int prog6;
-    cout << "Enter the program number: ";
-    cin >> prog6;
-    switch(prog6) {
-        case 1: 
+        }
+        break;
+
+    case 6:
+        // programs listing:
+        cout << "---Function programs---" << endl;
+        cout << endl;
+        cout << "Enter 1 to swap two number." << endl;
+        cout << "Enter 2 to find simple interest." << endl;
+        cout << "Enter 3 to access the value of variable through a pointer." << endl;
+        cout << "Enter 4 to find sum of first N natural number using recursion." << endl;
+        cout << "Enter 5 to print Fibonacci series using recursion." << endl;
+        cout << "Enter 6 to find the factorial of number using recursion" << endl;
+
+        cout << endl;
+        int prog6;
+        cout << "Enter the program number: ";
+        cin >> prog6;
+        switch(prog6) {
+        case 1:
             swapFunction();
             break;
-            
+
         case 2:
             simpleInterest();
             break;
-            
+
         case 3:
             int number;
             cout << "Enter any number: ";
             cin >> number;
             accessValuePointer(number);
             break;
-            
+
         case 4:
             int number1;
             cout << "Enter the number till you want to print the sum: ";
@@ -2394,7 +2558,7 @@ int main() {
             sum = recurSum(number1);
             cout << "Sum = " << sum << endl;
             break;
-            
+
         case 5:
             // starting terms
             int first;
@@ -2411,39 +2575,39 @@ int main() {
             } else if(term == 1) {
                 cout << first << endl;
             } else if(term == 2) {
-                cout << first << " " << sec << endl; 
+                cout << first << " " << sec << endl;
             } else if(term > 2) {
                 cout << first << " " << sec << " "; //if considering this first and sec term..
-                recurFibo(term, first, sec, nTerm); 
+                recurFibo(term, first, sec, nTerm);
             }
             break;
-            
+
         case 6:
             int number2;
             int ans;
             cout << "Enter the number to print factorial: ";
             cin >> number2;
-            
+
             ans = recurFact(number2);
             cout << "Factorial of " << number2 << " = " << ans << endl;
             break;
-    }
-            break;
-            
-        case 7:
-            // programs listing:
-    cout << "---Structure and Union Programs---" << endl;
-    cout << endl;
-    cout << "Enter 1 to display records of students using Structure." << endl;
-    cout << "Enter 2 to display records of students using the Union." << endl;
-    cout << "Enter 3 to display records of five students using Structure." << endl;
-    
-    cout << endl;
-    int prog7;
-    cout << "Enter the program number: ";
-    cin >> prog7;
-    if(prog7 == 1) {
-        struct student1 mukhtar;    //without short-cut
+        }
+        break;
+
+    case 7:
+        // programs listing:
+        cout << "---Structure and Union Programs---" << endl;
+        cout << endl;
+        cout << "Enter 1 to display records of students using Structure." << endl;
+        cout << "Enter 2 to display records of students using the Union." << endl;
+        cout << "Enter 3 to display records of five students using Structure." << endl;
+
+        cout << endl;
+        int prog7;
+        cout << "Enter the program number: ";
+        cin >> prog7;
+        if(prog7 == 1) {
+            struct student1 mukhtar;    //without short-cut
             mukhtar.name = "Mukhtar Khan";
             mukhtar.rollNo = 75;
             mukhtar.age = 20;
@@ -2452,7 +2616,7 @@ int main() {
             cout << "Roll No = " << mukhtar.rollNo << endl;
             cout << "Age = " << mukhtar.age << endl;
             cout << "Cgpa = " << mukhtar.cgpa << endl << endl;
-            
+
             st kaif;    //Mentos zindagi
             kaif.name = "Muhammad Kaif Sheikh";
             kaif.rollNo = 72;
@@ -2462,7 +2626,7 @@ int main() {
             cout << "Roll No = " << kaif.rollNo << endl;
             cout << "Age = " << kaif.age << endl;
             cout << "Cgpa = " << kaif.cgpa << endl << endl;
-            
+
             st ali;
             ali.name = "Muhammad Ali Khan";
             ali.rollNo = 27;
@@ -2472,7 +2636,7 @@ int main() {
             cout << "Roll No = " << ali.rollNo << endl;
             cout << "Age = " << ali.age << endl;
             cout << "Cgpa = " << ali.cgpa << endl << endl;
-            
+
             st kazim;
             kazim.name = "Muhammad Kazim Sheikh";
             kazim.rollNo = 71;
@@ -2482,7 +2646,7 @@ int main() {
             cout << "Roll No = " << kazim.rollNo << endl;
             cout << "Age = " << kazim.age << endl;
             cout << "Cgpa = " << kazim.cgpa << endl << endl;
-            
+
             st dhairya;
             dhairya.name = "Dhairya Solanki";
             dhairya.rollNo = 16;
@@ -2492,8 +2656,8 @@ int main() {
             cout << "Roll No = " << dhairya.rollNo << endl;
             cout << "Age = " << dhairya.age << endl;
             cout << "Cgpa = " << dhairya.cgpa << endl << endl;
-    } else if(prog7 == 3) {
-        cout << "Here is the record of five students: " << endl;
+        } else if(prog7 == 3) {
+            cout << "Here is the record of five students: " << endl;
             struct student1 mukhtar;
             mukhtar.name = "Mukhtar Khan";
             mukhtar.rollNo = 75;
@@ -2503,7 +2667,7 @@ int main() {
             cout << "Roll No = " << mukhtar.rollNo << endl;
             cout << "Age = " << mukhtar.age << endl;
             cout << "Cgpa = " << mukhtar.cgpa << endl << endl;
-            
+
             struct student1 kaif;
             kaif.name = "Muhammad Kaif Sheikh";
             kaif.rollNo = 72;
@@ -2513,7 +2677,7 @@ int main() {
             cout << "Roll No = " << kaif.rollNo << endl;
             cout << "Age = " << kaif.age << endl;
             cout << "Cgpa = " << kaif.cgpa << endl << endl;
-            
+
             struct student1 ali;
             ali.name = "Muhammad Ali Khan";
             ali.rollNo = 27;
@@ -2523,7 +2687,7 @@ int main() {
             cout << "Roll No = " << ali.rollNo << endl;
             cout << "Age = " << ali.age << endl;
             cout << "Cgpa = " << ali.cgpa << endl << endl;
-            
+
             struct student1 kazim;
             kazim.name = "Muhammad Kazim Sheikh";
             kazim.rollNo = 71;
@@ -2533,7 +2697,7 @@ int main() {
             cout << "Roll No = " << kazim.rollNo << endl;
             cout << "Age = " << kazim.age << endl;
             cout << "Cgpa = " << kazim.cgpa << endl << endl;
-            
+
             struct student1 dhairya;
             dhairya.name = "Dhairya Solanki";
             dhairya.rollNo = 16;
@@ -2543,60 +2707,60 @@ int main() {
             cout << "Roll No = " << dhairya.rollNo << endl;
             cout << "Age = " << dhairya.age << endl;
             cout << "Cgpa = " << dhairya.cgpa << endl << endl;
-    } else if(prog7 == 2) {
-        union money m;
-        m.salary = 20000;
-        m.moneySymbol = 'R';
-        m.fitna = true;
-        
-        // teeno m se use sirf ek ko kr skte at a time (rule of union -> bcoz the union shares same memory for all data types)
-        cout << "Engg avg monthly salary (in binary formate) = " << m.salary << "k" << endl;
-        // cout << "Money in india is called as = " << m.moneySymbol << endl;
-        // cout << "is Money fitna, Ans = " << m.fitna << endl;
-    }
-            break;
-            
-        case 8:
-            // programs listing:
-    cout << "---OOPM programs--- " << endl;
-    cout << "Enter 1 to demontrate class and objects." << endl;
-    cout << "Enter 2 to add two numbers using member functions of a class." << endl;
-    cout << "Enter 3 to demonstrate the use of scope resolution operator." << endl << endl;
-    
-    cout << "Constructor and destructor programs: " << endl;
-    cout << "Enter 4 to display the concept of constructor & destructor." << endl;
-    cout << "Enter 5 for Constructor overloading." << endl << endl;
-    
-    cout << "Inheritance programs: " << endl;
-    cout << "Enter 6 to demonstrate the single inheritance." << endl;
-    cout << "Enter 7 to demonstrate the multilevel inheritance." << endl;
-    cout << "Enter 8 to demonstrate the multiple inheritance." << endl;
-    cout << "Enter 9  to demonstrate the hierarchical inheritance." << endl;
-    cout << "Enter 10 to demonstrate the hybrid inheritance." << endl << endl;
-    
-    cout << "Friend programs:" << endl;
-    cout << "Enter 11 to demonstrate the use of friend function." << endl;
-    cout << "Enter 12 to demonstrate the use of operator overloading using friend function." << endl << endl;
-    
-    cout << "Polymorphism programs:" << endl;
-    cout << "Enter 13 to demonstrate the use of unary operator overloading." << endl;
-    cout << "Enter 14 to demonstrate the use of binary operator overloading" << endl;
-    cout << "Enter 15 to demonstrate the use of function overloading." << endl;
-    cout << "Enter 16 to demonstrate the use of function overriding." << endl;
-    cout << "Enter 17 to demonstrate the use of virtual functions." << endl << endl;
-      
-    cout << endl;
-    int prog8;
-    cout << "Enter the program number: ";
-    cin >> prog8;
-    switch(prog8) {
+        } else if(prog7 == 2) {
+            union money m;
+            m.salary = 20000;
+            m.moneySymbol = 'R';
+            m.fitna = true;
+
+            // teeno m se use sirf ek ko kr skte at a time (rule of union -> bcoz the union shares same memory for all data types)
+            cout << "Engg avg monthly salary (in binary formate) = " << m.salary << "k" << endl;
+            // cout << "Money in india is called as = " << m.moneySymbol << endl;
+            // cout << "is Money fitna, Ans = " << m.fitna << endl;
+        }
+        break;
+
+    case 8:
+        // programs listing:
+        cout << "---OOPM programs--- " << endl;
+        cout << "Enter 1 to demontrate class and objects." << endl;
+        cout << "Enter 2 to add two numbers using member functions of a class." << endl;
+        cout << "Enter 3 to demonstrate the use of scope resolution operator." << endl << endl;
+
+        cout << "Constructor and destructor programs: " << endl;
+        cout << "Enter 4 to display the concept of constructor & destructor." << endl;
+        cout << "Enter 5 for Constructor overloading." << endl << endl;
+
+        cout << "Inheritance programs: " << endl;
+        cout << "Enter 6 to demonstrate the single inheritance." << endl;
+        cout << "Enter 7 to demonstrate the multilevel inheritance." << endl;
+        cout << "Enter 8 to demonstrate the multiple inheritance." << endl;
+        cout << "Enter 9  to demonstrate the hierarchical inheritance." << endl;
+        cout << "Enter 10 to demonstrate the hybrid inheritance." << endl << endl;
+
+        cout << "Friend programs:" << endl;
+        cout << "Enter 11 to demonstrate the use of friend function." << endl;
+        cout << "Enter 12 to demonstrate the use of operator overloading using friend function." << endl << endl;
+
+        cout << "Polymorphism programs:" << endl;
+        cout << "Enter 13 to demonstrate the use of unary operator overloading." << endl;
+        cout << "Enter 14 to demonstrate the use of binary operator overloading" << endl;
+        cout << "Enter 15 to demonstrate the use of function overloading." << endl;
+        cout << "Enter 16 to demonstrate the use of function overriding." << endl;
+        cout << "Enter 17 to demonstrate the use of virtual functions." << endl << endl;
+
+        cout << endl;
+        int prog8;
+        cout << "Enter the program number: ";
+        cin >> prog8;
+        switch(prog8) {
         case 1: {
             It obj;
             obj.setValue();
             obj.getValue();
             break;
         }
-            
+
         case 2: {
             Addition obj2;
             obj2.setValue();
@@ -2604,7 +2768,7 @@ int main() {
             obj2.addValue();
             break;
         }
-            
+
         case 3: {
             ScopeRes obj3;
             int localVar = 10;
@@ -2615,24 +2779,24 @@ int main() {
             obj3.globalFun();
             break;
         }
-            
+
         case 4: {
             Car obj4;
             break;
         }
-    
+
         case 5: {
-            A obj5; 
+            A obj5;
             A obj6(50,100);
             cout << "Constructor overloaded." << endl;
             // or simply,
             // A obj5, obj6(5,10);
             break;
-        } 
+        }
         case 6: {
-            Base obj;  // no need 
+            Base obj;  // no need
             Derived obj2;
-        
+
             cout << "Inside Base Class" << endl;
             // obj.setValue();  it will give garbage value in Derived class...
             obj2.setValue();    //calling Base class function with Derived class object...
@@ -2645,7 +2809,7 @@ int main() {
             // Animal obj;
             // Cat obj2;
             Kitten obj3;
-            
+
             obj3.setValue();
             obj3.setValue2();
             obj3.setValue3();
@@ -2655,23 +2819,23 @@ int main() {
         }
         case 8: {
             Child obj3;
-            
+
             // obj3.sayName(); -> this will give ambiguity
             obj3.Father::sayName();
             obj3.Mother::sayName();
-            obj3.msg(); 
+            obj3.msg();
             break;
         }
         case 9: {
             Vehicle obj;
             Scooty obj1;
             Bike obj2;
-            
+
             // obj.setValue();
             obj1.setValue();
             obj1.setValue1();
             obj1.display1();
-            
+
             obj2.setValue();
             obj2.setValue2();
             obj2.display2();
@@ -2682,19 +2846,19 @@ int main() {
             // Laptop obj2;
             // Computer obj3;
             Coding obj4;
-            
+
             // ...normal approach...
             // obj4.display();
-            
+
             // ***pointerISH approach***
-            Technology *p;  
+            Technology *p;
             p = &obj4;
             p -> display();
             break;
         }
         case 11: {
             Dost obj;
-            
+
             obj.setValue();
             obj.showValue();
             addValue(obj);
@@ -2703,13 +2867,13 @@ int main() {
         }
         case 12: {
             Chappu obj1, obj2, obj3;
-            
+
             int a,b;
             cout << "Enter the value of A: ";
             cin >> a;
             cout << "Enter the value of B: ";
             cin >> b;
-            
+
             obj1.get(a);
             obj2.get(b);
             cout << "After overloading: " << endl;
@@ -2717,16 +2881,16 @@ int main() {
             obj3.display();
             break;
         }
-        
+
         case 13: {
             Sample obj;
-            
+
             int a,b;
             cout << "Enter the value of A: ";
             cin >> a;
             cout << "Enter the value of B: ";
             cin >> b;
-            
+
             obj.get(a,b);
             cout << "Before overloading: " << endl;
             obj.display();
@@ -2735,7 +2899,7 @@ int main() {
             obj.display();
             break;
         }
-        
+
         case 14: {
             Complex obj1, obj2, obj3;
             obj1 = Complex(1,5);
@@ -2747,18 +2911,18 @@ int main() {
             obj3.display();
             break;
         }
-        
+
         case 15: {
             cout << "Addition = " << add(5,2) << endl;
             cout << "Addition = " << add(5,2,2.1) << endl;
             break;
         }
-        
+
         case 16: {
             derivedClass obj;
             // obj.baseClass::fun();
             obj.fun();
-            
+
             // pointer approach
             // agr virtual lga diya to pointer base class k fun() ko call nhi kr skte... (see line 362)
             baseClass *p;
@@ -2766,7 +2930,7 @@ int main() {
             p -> fun();
             break;
         }
-        
+
         case 17: {
             der obj;
             bas *p;
@@ -2774,101 +2938,101 @@ int main() {
             p -> disp(5,10);
             break;
         }
-    }
-            break;
-            
-        case 9:
-            // programs listing:
-    cout << "---Data Structure programs--- " << endl;
-    cout << "Enter 1 to demonstrate the array using row major order and column major order." << endl;
-    cout << "Enter 2 to demonstrate the use of Stack." << endl;
-    cout << "Enter 3 to demonstrate the use of Queue." << endl;
-    cout << "Enter 4 to to demonstrate the use of Linked List." << endl;
-    
-    cout << endl;
-    int prog9;
-    cout << "Enter the program number: ";
-    cin >> prog9;
-    switch(prog9) {
+        }
+        break;
+
+    case 9:
+        // programs listing:
+        cout << "---Data Structure programs--- " << endl;
+        cout << "Enter 1 to demonstrate the array using row major order and column major order." << endl;
+        cout << "Enter 2 to demonstrate the use of Stack." << endl;
+        cout << "Enter 3 to demonstrate the use of Queue." << endl;
+        cout << "Enter 4 to to demonstrate the use of Linked List." << endl;
+
+        cout << endl;
+        int prog9;
+        cout << "Enter the program number: ";
+        cin >> prog9;
+        switch(prog9) {
         case 1: {
-            int n = 3; //row size 
-            int m = 4; //col size 
+            int n = 3; //row size
+            int m = 4; //col size
 
             int arr[][4] = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
-    
+
             cout << "Given array:" << endl;
             for(int i=0; i<n; i++) {
                 for(int j=0; j<m; j++) {
                     cout << arr[i][j] << " ";
                 }
                 cout << endl;
-                }
+            }
             cout << endl;
-                
+
             cout << "Row major order:" << endl;
             rowMajor(arr, n, m);
             cout << "Col major order:" << endl;
             colMajor(arr, n, m);
-            
+
             break;
         }
-        
+
         case 2: {
             int n = 5;
             int arr[n];
-            
+
             Stack s;
             s.push(arr, n, 5);
             s.push(arr, n, 10);
             s.push(arr, n, 12);
             s.push(arr, n, 50);
             s.push(arr, n, 1);
-            
+
             s.push(arr, n, 2);
             // stack overflow;
-            
+
             s.peek(arr, n);
             // 1
-            
+
             s.size(arr, n);
             // 4
-            
+
             s.pop(arr, n);
-            
+
             s.size(arr, n);
             // 3
-            
+
             s.pop(arr, n);
-            
+
             s.peek(arr, n);
             // 12
-            
+
             s.pop(arr, n);
             s.pop(arr, n);
             s.pop(arr, n);
-            
+
             s.pop(arr, n);
             // stack underflow;
-            
+
             s.size(arr, n);
             // stack underflow
-            
+
             s.isEmpty(arr, n);
-            
+
             // cout << "loop hole 2 = " << arr[3] << endl;
             // still memory is not free...
-            
+
             break;
         }
-        
+
         case 3: {
             Queue q;
             int n = 5;
             int arr[n];
-            
+
             q.pop(arr, n);
             // queue underflow
-            
+
             q.push(arr, n, 1);
             q.push(arr, n, 2);
             q.push(arr, n, 3);
@@ -2876,70 +3040,68 @@ int main() {
             q.push(arr, n, 5);
             q.push(arr, n, 6);
             // queue overflow
-            
+
             q.size(arr, n);
             // 5
-            
+
             q.pop(arr, n);
             q.pop(arr, n);
             q.pop(arr, n);
-            
+
             q.getRear(arr, n);
             q.getFront(arr, n);
-            
+
             q.pop(arr, n);
             q.pop(arr, n);
-            
+
             q.isEmpty(arr, n);
             break;
         }
-        
+
         case 4: {
-            Node* node1 = new Node(5); // dynamic memory allocation... 
+            Node* node1 = new Node(5); // dynamic memory allocation...
             // here, new Node() allocates memory for a Node class object/node object.
             // node1 is a pointer that now holds the memory address of the dynamically allocated Node class object/ node object.
-            
+
             Node* node2 = new Node(4);
             Node* node3 = new Node(7);
             Node* node4 = new Node(2);
             Node* node5 = new Node(9);
-            
+
             node1 -> next = node2;
             node2 -> next = node3;
             node3 -> next = node4;
             node4 -> next = node5;
             node5 -> next = NULL;
-            
+
             cout << "Data of node1 = ";
             cout << node1 -> data << endl;
             cout << "Next address of node1 = ";
             cout << node1 -> next << endl;
-            
+
             cout << "Data of node2 = ";
             cout << node2 -> data << endl;
             cout << "Next address of node2 = ";
             cout << node2 -> next << endl;
-            
+
             cout << "Data of node3 = ";
             cout << node3 -> data << endl;
             cout << "Next address of node3 = ";
             cout << node3 -> next << endl;
-            
+
             cout << "Data of node4 = ";
             cout << node4 -> data << endl;
             cout << "Next address of node4 = ";
             cout << node4 -> next << endl;
-            
+
             cout << "Data of node5 = ";
             cout << node5 -> data << endl;
             cout << "Next address of node5 = ";
             cout << node5 -> next << endl;
             break;
         }
-    }
-            break;
-            
-            
+        }
+        break;
     }
     return 0;
 }
