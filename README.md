@@ -30,13 +30,13 @@ To explore and run the programs in this repository, follow these simple steps:
 ```bash 
 git clone https://github.com/MUKHTAR-02/super_100_programs/tree/main
 ````
-###Navigate to the Project Directory
+### Navigate to the Project Directory
 Navigate to the Project Directory, where ever you have clone this repo.
 
-###Compile and Run Programs
+### Compile and Run Programs
 Compile and Run Programs on your favourite compiler.
 
-###Follow On-Screen Instructions
+### Follow On-Screen Instructions
 Follow On-Screen Instructions to make the life easier.
 
 ```bash
