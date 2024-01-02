@@ -32,6 +32,7 @@ Dive into the world of C++ with our comprehensive repository featuring over 100 
 
 ### Prerequisites
 - Have a knowledge of any programing language is better, but the door for learners is always open...
+- To run all the program in the single try, just copy super_program file.
 
 ### Clone the Repository
 ```bash 
