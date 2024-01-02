@@ -8,4 +8,4 @@ To explore and run the programs in this repository, follow these simple steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone [https://github.com/your-username/your-repo.git](https://github.com/MUKHTAR-02/super_100_programs)https://github.com/MUKHTAR-02/super_100_programs
