@@ -1935,7 +1935,7 @@ class Node{
 };
 
 
-// flagu
+// flag
 int main() {
     // programs listing:
     cout << "---Super 100 programs by Mukhtar Khan---" << endl;
