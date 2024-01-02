@@ -12,7 +12,7 @@ Welcome to the C++ Programming Examples repository! This project contains over 1
   - [Navigate to the Project Directory](#navigate-to-the-project-directory)
   - [Compile and Run Programs](#compile-and-run-programs)
   - [Follow On-Screen Instructions](#follow-on-screen-instructions)
-- [Program Categories](#programs-categories)
+- [Program Categories](#program-categories)
 - [Contributions](#contributions)
 - [License](#license)
 
@@ -47,7 +47,7 @@ git clone https://github.com/MUKHTAR-02/super_100_programs/tree/main
 - Follow On-Screen Instructions to make the life easier.
 
 ## Program Categories
-- [Simple Programs]
+  - Simple Programs
   - If-Else Programs
   - Loops
   - Patterns
