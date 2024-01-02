@@ -29,32 +29,33 @@ Welcome to the C++ Programming Examples repository! This project contains over 1
 Dive into the world of C++ with our comprehensive repository featuring over 100 programs. Whether you're a beginner or an experienced developer, this collection covers essential concepts like loops, if-else statements, arrays, functions, data structures, and intricate patterns.
 
 ## Features
-🚀 Elevate Your C++ Skills: Perfect for learners and developers seeking to deepen their understanding of the language.
+- 🚀 Elevate Your C++ Skills: Perfect for learners and developers seeking to deepen their understanding of the language.
 
-🌐 Easy Navigation: Organized into categories for simple exploration of various programming concepts.
+- 🌐 Easy Navigation: Organized into categories for simple exploration of various programming concepts.
 
-🖥️ Interactive Interface: A user-friendly interface lets you easily navigate and run programs with just a few keystrokes.
+- 🖥️ Interactive Interface: A user-friendly interface lets you easily navigate and run programs with just a few keystrokes.
 
 ## Getting Started
 
-To explore and run the programs in this repository, follow these simple steps:
+- To explore and run the programs in this repository, follow these simple steps:
 
 ### Prerequisites
-Have a knowledge of any programing language is better, but the door for learners is always open...
+- Have a knowledge of any programing language is better, but the door for learners is always open...
 
 ### Clone the Repository
 ```bash 
 git clone https://github.com/MUKHTAR-02/super_100_programs/tree/main
 ````
 ### Navigate to the Project Directory
-Navigate to the Project Directory, where ever you have clone the repositories.
+- Navigate to the Project Directory, where ever you have clone the repositories.
 
 ### Compile and Run Programs
-Compile and Run Programs on your favourite compiler.
+- Compile and Run Programs on your favourite compiler.
 
 ### Follow On-Screen Instructions
-Follow On-Screen Instructions to make the life easier.
+- Follow On-Screen Instructions to make the life easier.
 
-
+## Contributions
+- Join us in building a rich learning environment. Contribute new programs, refine existing ones, or suggest improvements.
 
    
